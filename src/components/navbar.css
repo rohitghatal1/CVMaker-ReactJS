@@ -1,0 +1,23 @@
+nav{
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.navitems{
+    display: flex;
+    justify-content: space-around;
+    gap: 0.8rem;
+}
