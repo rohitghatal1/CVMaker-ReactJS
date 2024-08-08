@@ -12,6 +12,9 @@ export default function Navbar() {
                 <span className="navlinks">Services</span>
                 <span className="navlinks">About</span>
             </div>
+            <div className="loginSignup">
+                <button className='loginbtn'>Login</button>
+            </div>
         </div>
       </nav>
     </div>
