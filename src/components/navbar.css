@@ -1,5 +1,5 @@
 nav{
-    background-color: black;
+    background-color: #ccc;
     color: #fff;
     padding: 0.5rem;
     position: fixed;
@@ -11,6 +11,7 @@ nav{
 .navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: auto;
     padding: 0.5rem;

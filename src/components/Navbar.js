@@ -9,6 +9,7 @@ export default function Navbar() {
             <div className="logo">CV Maker</div>
             <div className="navitems">
                 <span className="navlinks">Home</span>
+                <span className="navlinks">Templates</span>
                 <span className="navlinks">Services</span>
                 <span className="navlinks">About</span>
             </div>
