@@ -1,9 +1,18 @@
 .banner{
-    height: 100vh;
-    background-color: antiquewhite;
+    height: 95.5vh;
+    background-color: skyblue;
     color: black;
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bannerInfo{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.bannerInfo h3{
+    color: #1a1a7d;
 }

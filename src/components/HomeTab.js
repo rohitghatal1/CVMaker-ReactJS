@@ -6,7 +6,8 @@ export default function HomeTab() {
         <div>
             <div className="banner">
                 <div className="bannerInfo">
-                    <h3>BUILD YOUR PROFESSIONAL CV/RESUME IN JUST FEW MINUTS</h3>
+                    <h2>BUILD YOUR PROFESSIONAL CV/RESUME</h2>
+                    <h3>IN JUST FEW MINUTS</h3>
                     <p>Time saving. Easy to Use. Professional</p>
                 </div>
             </div>
