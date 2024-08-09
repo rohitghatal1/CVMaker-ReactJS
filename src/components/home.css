@@ -16,3 +16,23 @@
 .bannerInfo h3{
     color: #1a1a7d;
 }
+
+.bannerInfo i{
+    color: #1a1a7d;
+    font-size: 1.8rem;
+}
+
+.getStartedbtn{
+    background-color: #1a1a7d;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    transition: all 0.8s ease;
+}
+
+.getStartedbtn:hover{
+    background-color: skyblue;
+    color: black;
+}
