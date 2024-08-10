@@ -1,4 +1,5 @@
 body::-webkit-scrollbar {
+    display: none;
     width: 7px;
     background: transparent;
 }
@@ -10,4 +11,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: #1a1a7d;
     border-radius: 0.6rem; 
+}
+
+.showScrollbar::-webkit-scrollbar{
+    display: block;
 }

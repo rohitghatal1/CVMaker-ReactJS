@@ -23,6 +23,7 @@ nav{
 .logo{
     width: 18rem;
     height: 6rem;
+    cursor: pointer;
 }
 
 .logo img{
@@ -36,6 +37,7 @@ nav{
 }
 .navlinks{
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .loginbtn{
@@ -47,7 +49,7 @@ nav{
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.8s es;
+    transition: all 0.8s ease;
 }
 
 .loginbtn:hover{
