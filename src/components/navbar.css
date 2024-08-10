@@ -47,7 +47,7 @@ nav{
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.8s ease;
+    transition: all 0.8s es;
 }
 
 .loginbtn:hover{

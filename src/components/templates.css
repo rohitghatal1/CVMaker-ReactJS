@@ -1,0 +1,18 @@
+.templatesSection{
+    background-color: skyblue;
+    padding: 1rem;
+    text-align: center;
+}
+
+.templatesSection h2{
+    font-size: 2rem;
+}
+.templatesSection h2>span{
+    color: #1a1a7d;
+}
+
+.templatesSection p{
+    font-size: 1.5rem;
+    width: 27.5rem;
+    margin: auto;
+}
