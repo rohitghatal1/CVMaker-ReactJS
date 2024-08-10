@@ -12,6 +12,45 @@ export default function HomeTab() {
                     <button className='getStartedbtn'>Get Started !</button>
                 </div>
             </div>
+            <section className="stepsInfo">
+                <div className="stepsContainer">
+                    <h2>Create your perfect Resume in just few easy steps</h2>
+                    <p>Create your job-worthy Resume without making any extra efforts that</p>
+                    <p>gets you <span>HIRED</span> faster</p>
+
+                    <div className="stepsDesc">
+                        <div className="step">
+                            <div className="logo">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <div className="aboutStep">
+                                <h3>Choose a template</h3>
+                                <p>Choose a template of your choice from the list of templates</p>
+                            </div>
+                        </div>
+
+                        <div className="step">
+                            <div className="logo">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <div className="aboutStep">
+                                <h3>Choose a template</h3>
+                                <p>Choose a template of your choice from the list of templates</p>
+                            </div>
+                        </div>
+                        
+                        <div className="step">
+                            <div className="logo">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <div className="aboutStep">
+                                <h3>Choose a template</h3>
+                                <p>Choose a template of your choice from the list of templates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }
