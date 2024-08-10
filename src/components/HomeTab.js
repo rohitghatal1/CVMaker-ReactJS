@@ -31,21 +31,21 @@ export default function HomeTab() {
 
                         <div className="step">
                             <div className="logo">
-                                <i class="fa-regular fa-copy"></i>
+                                <i class="fa-regular fa-file-lines"></i>
                             </div>
                             <div className="aboutStep">
-                                <h3>Choose a template</h3>
-                                <p>Choose a template of your choice from the list of templates</p>
+                                <h3>Fill your Information</h3>
+                                <p>Provide your information for Resume</p>
                             </div>
                         </div>
                         
                         <div className="step">
                             <div className="logo">
-                                <i class="fa-regular fa-copy"></i>
+                                <i class="fa-solid fa-download"></i>
                             </div>
                             <div className="aboutStep">
-                                <h3>Choose a template</h3>
-                                <p>Choose a template of your choice from the list of templates</p>
+                                <h3>Quick Download</h3>
+                                <p>Download instantly as the CV process completes</p>
                             </div>
                         </div>
                     </div>

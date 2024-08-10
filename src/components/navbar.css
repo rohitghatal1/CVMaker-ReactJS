@@ -47,4 +47,11 @@ nav{
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.loginbtn:hover{
+    background-color: #fff;
+    color: #1a1a7d;
+    border: 1px solid #1a1a7d;
 }
