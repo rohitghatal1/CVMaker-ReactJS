@@ -32,7 +32,9 @@ export default function professionalTemplate() {
                 <h1>Rohit Ghatal</h1>
                 <hr />
                 <p className="summary">
-                    Highly motivated <strong>Frontend</strong> and <strong>Backend</strong> web developer with a strong foundation in both client-side and server-side technologies. Proven ability to design and implement responsive, user-friendly web applications. Seeking a web developer position to contribute my expertise in full-stack development while achieving professional growth in a dynamic and innovative environment.
+                    Highly motivated <strong>Frontend</strong> and <strong>Backend</strong> web developer with a strong foundation in both client-side 
+                    and server-side technologies. Proven ability to design and implement responsive, user-friendly web applications. Seeking a web developer 
+                    position to contribute my expertise in full-stack development while achieving professional growth in a dynamic and innovative environment.
                 </p>
 
                 <section className="education">
@@ -41,7 +43,10 @@ export default function professionalTemplate() {
                     <div className="education-item">
                         <h3>BCA</h3>
                         <p><strong>Vedas College, Lalitpur</strong><br />Mar 2021 - Present</p>
-                        <p>This course provided a comprehensive education in both theoretical and practical aspects of computer applications. Key programming languages and technologies studied includes C, Java, HTML, CSS, PHP, MySQL, DotNet C#, and ASP.NET, equipping me with a solid foundation in software development and web technologies. Additionally, the course covered essential business and management subjects such as Financial Accounting and Introduction to Management, which enhanced my understanding of the organizational and financial aspects of the IT industry.</p>
+                        <p>This course provided a comprehensive education in both theoretical and practical aspects of computer applications. Key programming 
+                        languages and technologies studied includes C, Java, HTML, CSS, PHP, MySQL, DotNet C#, and ASP.NET, equipping me with a solid foundation
+                         in software development and web technologies. Additionally, the course covered essential business and management subjects such as Financial 
+                         Accounting and Introduction to Management, which enhanced my understanding of the organizational and financial aspects of the IT industry.</p>
                     </div>
                 </section>
 
