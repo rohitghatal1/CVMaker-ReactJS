@@ -1,4 +1,5 @@
 import React from 'react'
+import './professionalTemplate.css'
 
 export default function professionalTemplate() {
     return (
@@ -39,7 +40,7 @@ export default function professionalTemplate() {
                     <hr />
                     <div className="education-item">
                         <h3>BCA</h3>
-                        <p><strong>Vedas College, Lalitpur</strong><br/>Mar 2021 - Present</p>
+                        <p><strong>Vedas College, Lalitpur</strong><br />Mar 2021 - Present</p>
                         <p>This course provided a comprehensive education in both theoretical and practical aspects of computer applications. Key programming languages and technologies studied includes C, Java, HTML, CSS, PHP, MySQL, DotNet C#, and ASP.NET, equipping me with a solid foundation in software development and web technologies. Additionally, the course covered essential business and management subjects such as Financial Accounting and Introduction to Management, which enhanced my understanding of the organizational and financial aspects of the IT industry.</p>
                     </div>
                 </section>
