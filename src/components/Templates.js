@@ -13,8 +13,8 @@ export default function Templates() {
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
           <Swiper
-            spaceBetween={30}
-            slidesPerView = {3}
+            // spaceBetween={30}
+            slidesPerView = {1}
             loop = {true}
             pagination = {{clickable: true}}
             navigation = {true}
@@ -35,7 +35,7 @@ export default function Templates() {
         {selectedTemplate && (
           <div className="templatePreview">
             <h2>Preview of Selected Template</h2>
-            <selectedTemplate data = {lkjlk}/>
+            <selectedTemplate data = {{}}/>
           </div>
         )}
       </section>

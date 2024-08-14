@@ -1,11 +1,11 @@
-import { Component } from "react";
 import professionalTemplate from "../allTemplates/professionalTemplate/ProfessionalTemplate";
+import photo1 from '../assets/images/professionalTemplate.png'
 
 const templateData = [
     {
         id: 1,
         name: 'Professional Template',
-        image: '../assets/images/professionalTemplate.png',
+        image: photo1,
         component: professionalTemplate
     }
 ];
