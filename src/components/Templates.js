@@ -13,11 +13,14 @@ export default function Templates() {
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
           <Swiper
-            // spaceBetween={30}
+            spaceBetween={0}
             slidesPerView = {1}
             loop = {true}
             pagination = {{clickable: true}}
-            navigation = {true}
+            navigation = {{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev'
+            }}
           >
           {templateData.map((template) =>(
             <SwiperSlide key={template.id}>
