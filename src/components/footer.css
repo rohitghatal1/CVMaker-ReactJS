@@ -1,4 +1,5 @@
 footer{
+    background-color: aliceblue;
     padding: 1rem;
 }
 
@@ -8,4 +9,11 @@ footer{
     align-items: center;
     width: 90%;
     margin: auto;
+}
+
+.quickLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 }

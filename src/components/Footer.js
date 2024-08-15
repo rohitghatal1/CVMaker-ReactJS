@@ -16,6 +16,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="quickLinks">
+                <h2>Go to:</h2>
                 <span className="links">Home</span>
                 <span className="links">Templates</span>
                 <span className="links">About</span>
