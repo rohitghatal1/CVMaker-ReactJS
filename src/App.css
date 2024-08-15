@@ -1,26 +1,26 @@
-/* Initially hiding scrollbar */
+/* Initially hiding scrollbar by making it transparent */
 body::-webkit-scrollbar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    width: 0; /* Hide scrollbar */
-    background: transparent;
-    transition: width 1.5s ease;
+    width: 7px; /* Keep the width consistent */
+    background: transparent; /* Transparent background */
+    transition: background 1.5s ease;
 }
 
 /* Scrollbar track styling */
 body::-webkit-scrollbar-track {
-    background-color: skyblue;
+    background-color: transparent; /* Keep track transparent when hidden */
 }
 
 /* Scrollbar thumb styling */
 body::-webkit-scrollbar-thumb {
-    background-color: #1a1a7d;
+    background-color: transparent; /* Keep thumb transparent when hidden */
     border-radius: 0.6rem; 
 }
 
 /* Show scrollbar when scrolling */
-.showScrollbar::-webkit-scrollbar {
-    width: 7px;
+.showScrollbar::-webkit-scrollbar-track {
+    background-color: skyblue; /* Show track color */
+}
+
+.showScrollbar::-webkit-scrollbar-thumb {
+    background-color: #1a1a7d; /* Show thumb color */
 }
