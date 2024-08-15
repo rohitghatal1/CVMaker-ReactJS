@@ -13,7 +13,7 @@ export default function Templates() {
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
           <Swiper
-            spaceBetween={0}
+            // spaceBetween={0}
             slidesPerView = {1}
             loop = {true}
             pagination = {{clickable: true}}

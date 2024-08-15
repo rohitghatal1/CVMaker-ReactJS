@@ -21,29 +21,32 @@
 
 .templateContainer{
     position: relative;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .templateCard{
     padding: 0.5rem;
     height: 40rem;
-    width: 35rem;
+    width: 40rem;
 }
 
 .templateCard img{
     width: 100%;
     height: 90%;
+    object-fit: contain;
 }
 
+.swiper{
+    z-index: 1;
+}
 
 .swiper-button-prev,
 .swiper-button-next{
     color: blue;
-
     position: absolute;
     top: 50%;
     transform: translate(-50%);
