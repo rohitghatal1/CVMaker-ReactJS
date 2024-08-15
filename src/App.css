@@ -1,5 +1,9 @@
 /* Initially hiding scrollbar */
 body::-webkit-scrollbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
     width: 0; /* Hide scrollbar */
     background: transparent;
     transition: width 1.5s ease;

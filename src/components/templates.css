@@ -2,6 +2,7 @@
     background-color: skyblue;
     padding: 1rem;
     text-align: center;
+    position: relative;
     z-index: 3;
 }
 
@@ -40,10 +41,6 @@
     object-fit: contain;
 }
 
-.swiper{
-    z-index: 1;
-}
-
 .swiper-button-prev,
 .swiper-button-next{
     color: blue;
@@ -54,10 +51,3 @@
     height: 44px;
 }
 
-.swiper-button-prev{
-    left: -50px;
-}
-
-.swiper-button-next{
-    right: -50px;
-}
