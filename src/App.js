@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import Templates from './components/Templates';
@@ -22,6 +23,7 @@ function App() {
       <Navbar/>
       <HomeTab/>
       <Templates/>
+      <Footer/>
     </>
   );
 }

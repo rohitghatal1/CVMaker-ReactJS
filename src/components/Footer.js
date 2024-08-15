@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from './CVCraft.png'
+import logo from '../CVCraft.png'
+import './footer.css'
 
 export default function Footer() {
   return (
@@ -28,7 +29,7 @@ export default function Footer() {
                     <span><i className='fab fa-instagram'></i></span>
                 </div>
                 <div className="socialLinks">
-                    <span><i className='fab fa-linkedIn'></i></span>
+                    <span><i className="fa-brands fa-linkedin-in"></i></span>
                 </div>
             </div>
         </div>

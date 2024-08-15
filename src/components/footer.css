@@ -1,0 +1,11 @@
+footer{
+    padding: 1rem;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
