@@ -1,7 +1,6 @@
 footer{
     background-color: aliceblue;
     padding: 1rem;
-    padding-bottom: 2rem;
 }
 
 .footerContainer{
@@ -10,6 +9,7 @@ footer{
     align-items: center;
     width: 90%;
     margin: auto;
+    padding-bottom: 2rem;
 }
 
 .aboutApp{
@@ -35,6 +35,7 @@ footer{
     font-weight: bold;
     font-size: 1.3rem;
 }
+
 .quickLinks{
     display: flex;
     flex-direction: column;
@@ -106,3 +107,18 @@ footer{
     color: #004182;
 }
 
+.aboutDeveloper{
+    padding-top: 1rem;
+    border-top: 1px solid #1a1a7d;
+}
+
+.aboutDeveloper .developerInfo{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.aboutDeveloper .developerInfo span{
+    font-size: 2rem;
+    color: #1a1a7d;
+    font-weight: bold;
+}

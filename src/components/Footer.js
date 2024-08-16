@@ -34,6 +34,9 @@ export default function Footer() {
                 </div>
             </div>
         </div>
+        <div className="aboutDeveloper">
+            <p className='developerInfo'>Designed & Developed by <span>Rohit Ghatal</span>.</p>
+        </div>
       </footer>
     </div>
   )
