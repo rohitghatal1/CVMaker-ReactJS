@@ -22,15 +22,15 @@ export default function Footer() {
                 <span className="links">About</span>
             </div>
             <div className="socialSection">
-                <h3>Follow Us:</h3>
+                <h2>Follow Us:</h2>
                 <div className="socialLinks">
-                    <span><i className='fab fa-facebook'></i></span>
+                    <span><i className='fab fa-facebook'></i> Facebook</span>
                 </div>
                 <div className="socialLinks">
-                    <span><i className='fab fa-instagram'></i></span>
+                    <span><i className='fab fa-instagram'></i> Instagram</span>
                 </div>
                 <div className="socialLinks">
-                    <span><i className="fa-brands fa-linkedin-in"></i></span>
+                    <span><i className="fa-brands fa-linkedin-in"></i> Linked In</span>
                 </div>
             </div>
         </div>
