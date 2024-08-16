@@ -17,3 +17,32 @@ footer{
     align-items: flex-start;
     gap: 1rem;
 }
+
+.quickLinks .links{
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.aboutApp{
+    width: 40%;
+}
+
+.aboutApp .applogo{
+    width: 18rem;
+    height: 8rem;
+}
+.aboutApp .applogo img{
+    width: 100%;
+    height: 100%;
+}
+
+.aboutApp .appDesc{
+    width: 20rem;
+}
+.quickLinks{
+    width: 30%;
+}
+
+.socialSection{
+    width: 30%;
+}
