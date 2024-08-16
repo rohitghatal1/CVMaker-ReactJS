@@ -74,15 +74,18 @@ footer{
     font: 1.2rem
 }
 
-.socialSection .facebookIcon{
+.socialLinks a{
+    text-decoration: none;
+}
+.socialSection .facebookIcon a{
     color: #0866ff;
 }
 
-.socialSection .instagramIcon{
+.socialSection .instagramIcon a{
     color: #fb0c64;
 }
 
-.socialSection .linkedInIcon{
+.socialSection .linkedInIcon a{
     color: #0a66c2;
 }
 
