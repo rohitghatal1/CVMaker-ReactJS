@@ -1,0 +1,43 @@
+.CVContainer{
+    padding: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.infoAndSkillsSection{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.infoAndSkillsSection .photo{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.infoAndSkillsSection .photo img{
+    width: 100%;
+    height: 100%;
+}
+
+.infoAndSkills{
+    width: 80%;
+    text-align: right;
+}
+
+.skillbar{
+    width: 10rem;
+    background-color: #d5d5d5;
+    border-radius: 0.5rem;
+    height: 0.6rem;
+    overflow: hidden;
+}
+
+.skillbar .fill{
+    background-color: #2b2b2b;
+    height: 100%;
+    border-radius: 0.5rem;
+}

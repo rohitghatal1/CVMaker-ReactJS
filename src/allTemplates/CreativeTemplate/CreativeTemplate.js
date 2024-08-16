@@ -1,5 +1,6 @@
 import React from 'react'
 import personPhoto from '../../assets/personPhotos/rohit2.jpg'
+import './creativeTemplate.css'
 
 export default function CreativeTemplate() {
   return (
@@ -20,8 +21,8 @@ export default function CreativeTemplate() {
                         <h2><i class="fa-solid fa-code-compare"></i> Skills</h2>
 
                         <div className="skillItem">
-                            <p>Html</p>
-                            <div className="skillbar"><div className="fill"></div></div>
+                            <p>HTML</p>
+                            <div className="skillbar"><div className="fill" style={{width: '80%'}}></div></div>
                         </div>
                     </div>
                 </div>
