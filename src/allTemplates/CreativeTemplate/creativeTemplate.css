@@ -23,9 +23,36 @@
     height: 100%;
 }
 
-.infoAndSkills{
+.infoAndSkillsSection .infoAndSkills{
     width: 80%;
     text-align: right;
+}
+
+.infoAndSkillsSection .infoAndSkills .personInfo h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+}
+.infoAndSkillsSection .infoAndSkills .personInfo p{
+    font-size: 1.5rem;
+    color: #717171;
+}
+.contactAndSkills{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.skills{
+    width: 21rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.skillItemContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .skillbar{
@@ -40,4 +67,23 @@
     background-color: #2b2b2b;
     height: 100%;
     border-radius: 0.5rem;
+}
+
+.contactContainer{
+    margin-top: 2.3rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.contactItems{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactItems i{
+    margin-right: 0.8rem;
 }
