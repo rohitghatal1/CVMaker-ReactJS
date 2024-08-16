@@ -1,4 +1,5 @@
 
+import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
 import './App.css';
 import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
@@ -20,10 +21,11 @@ function App() {
   
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/>
       <HomeTab/>
       <Templates/>
-      <Footer/>
+      <Footer/> */}
+      <CreativeTemplate/>
     </>
   );
 }

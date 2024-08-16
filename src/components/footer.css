@@ -1,6 +1,6 @@
 footer{
     background-color: aliceblue;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .footerContainer{
@@ -111,7 +111,7 @@ footer{
 }
 
 .aboutDeveloper{
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     border-top: 1px solid #1a1a7d;
 }
 
