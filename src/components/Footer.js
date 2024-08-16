@@ -12,7 +12,7 @@ export default function Footer() {
                     <img src={logo} alt="CVCraft" />
                 </div>
                 <div className="appDesc">
-                    <p>CVCraft is a Web Application where you can create your CV/Resumes quickly and easily.</p>
+                    <p>CVCraft is a Web Application where you can create your <span> CV/Resumes </span> quickly and easily.</p>
                 </div>
             </div>
             <div className="quickLinks">
