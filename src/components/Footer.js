@@ -23,13 +23,13 @@ export default function Footer() {
             </div>
             <div className="socialSection">
                 <h2>Follow Us:</h2>
-                <div className="socialLinks">
+                <div className="socialLinks facebookIcon">
                     <span><i className='fab fa-facebook'></i> Facebook</span>
                 </div>
-                <div className="socialLinks">
+                <div className="socialLinks instagramIcon">
                     <span><i className='fab fa-instagram'></i> Instagram</span>
                 </div>
-                <div className="socialLinks">
+                <div className="socialLinks linkedInIcon">
                     <span><i className="fa-brands fa-linkedin-in"></i> Linked In</span>
                 </div>
             </div>

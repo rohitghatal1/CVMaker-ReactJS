@@ -1,6 +1,7 @@
 footer{
     background-color: aliceblue;
     padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 .footerContainer{
@@ -28,7 +29,7 @@ footer{
 }
 
 .aboutApp .applogo{
-    width: 18rem;
+    width: 20rem;
     height: 8rem;
 }
 .aboutApp .applogo img{
@@ -43,6 +44,7 @@ footer{
     width: 30%;
 }
 .quickLinks h2{
+    color: #1a1a7d;
     font-size: 2rem;
     text-align: center;
 }
@@ -56,9 +58,21 @@ footer{
 
 .socialSection h2{
     font-size: 2rem;
-    text-align: center;
+    color: #1a1a7d;
 }
 .socialSection .socialLinks{
     cursor: pointer;
     font: 1.2rem
+}
+
+.socialSection .facebookIcon{
+    color: #0866ff;
+}
+
+.socialSection .instagramIcon{
+    color: #fb0c64;
+}
+
+.socialSection .linkedInIcon{
+    color: #0a66c2;
 }

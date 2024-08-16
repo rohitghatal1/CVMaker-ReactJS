@@ -4,6 +4,7 @@
     text-align: center;
     position: relative;
     z-index: 3;
+    padding-bottom: 3rem;
 }
 
 .templatesSection h2{
