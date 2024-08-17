@@ -76,7 +76,7 @@ export default function CreativeTemplate() {
                 </section>
 
                 <section className="summarySection">
-                    <div className="summaryContainer">
+                    <div className="summaryContainer sectionContainer">
                         <div className="line"></div>
                         <div className="summaryContent">
                             <div className="icon">
@@ -97,30 +97,28 @@ export default function CreativeTemplate() {
                             </div>
                         </div>
                     </div>
-                    <hr style={{ width: '82%', margin: '20px auto 0', marginLeft: '8.6rem' }} />
+                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '7rem' }} />
                 </section>
 
                 <section class="education-section">
-                    <div class="left-column">
-                        <h3>BACHELORS IN COMPUTER APPLICATION</h3>
-                        <p>March, 2021 - <br/> Present</p>
-                    </div>
-                    <div class="right-column">
+                    <div className="educationContainer sectionContainer">
                         <div class="line"></div>
                         <div class="content">
                             <div class="icon">
                                 <i class="fas fa-graduation-cap"></i>
+                                <h2>ACADEMY</h2>
                             </div>
                             <div class="text">
-                                <h2>ACADEMY</h2>
-                                <h4>Vedas College , Lalitpur</h4>
-                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies, and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
+                                <h3>Vedas College , Lalitpur</h3>
+                                <h2>BACHELORS IN COMPUTER APPLICATION</h2>
+                                <p className='courseTime'>March, 2021 - Present</p>
+                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies, 
+                                and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
                             </div>
                         </div>
                     </div>
+                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '7rem' }} />
                 </section>
-                <hr />
-
             </div>
         </div>
     )

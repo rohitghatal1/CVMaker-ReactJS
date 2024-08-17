@@ -73,50 +73,26 @@
     border-radius: 0.5rem;
 }
 
-.contactContainer{
-    margin-top: 3rem;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.contactItems{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contactItems i{
-    margin-right: 0.8rem;
-}
-
-/* .summarySection{
-    padding: 5px;
-} */
-.summaryContainer{
-    margin-left: 7rem;
+.sectionContainer {
+    margin-left: 4rem;
     padding: 1rem;
     display: flex;
     align-items: flex-start;
     position: relative;
-    text-align: justify;
-    padding-bottom: 2rem;
+    margin-top: 2rem;
 }
 
-.line {
-    margin-top: 3.5rem;
+.sectionContainer .line {
+    margin-top: 4.5rem;
     width: 2px;
     background-color: black;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 20px;
-    margin-left: -20px;
+    left: 0;
 }
 
-.line::before{
+.sectionContainer .line::before {
     content: '';
     width: 0.5rem;
     height: 0.5rem;
@@ -127,36 +103,73 @@
     left: -3px;
 }
 
-.summaryContent {
+.sectionContainer .content {
     display: flex;
-    align-items: flex-start;
-    margin-left: 30px;
     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
 }
 
-.summaryContent .icon {
+.sectionContainer .icon {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     font-size: 20px;
     margin-bottom: 10px;
+    color: black;
 }
 
-.summaryContent .icon i{
+.sectionContainer .icon i {
     background-color: #1c1c1c;
     color: #fff;
     padding: 0.5rem;
     border-radius: 50%;
 }
-.summaryContent .icon h2 {
+
+.sectionContainer .icon h2,
+.sectionContainer .text h2 {
     margin: 0;
     font-size: 22px;
     font-weight: bold;
+    text-transform: uppercase;
+    color: black;
 }
 
-.summaryDetails p {
-    margin: 0;
+.sectionContainer .text {
+    margin-top: 1rem;
+}
+
+.sectionContainer .text h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: black;
+}
+
+.sectionContainer .text p {
+    margin: 5px 0;
     font-size: 14px;
-    margin-top: 5px;
     color: #1c1c1c;
+}
+
+.summaryContent{
+    margin-left: 1rem;
+}
+.summaryContainer {
+    margin-top: 3.5rem;
+}
+
+.educationContainer {
+    margin-left: 4rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.educationContainer .line{
+    margin-top: 5.4rem;
+}
+
+.educationContainer .courseTime{
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
 }
