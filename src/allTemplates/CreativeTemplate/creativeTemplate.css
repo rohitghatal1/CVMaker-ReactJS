@@ -120,3 +120,30 @@
     top: 0;
     left: -3px;
 }
+
+.summaryContent {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 30px;
+    flex-direction: column;
+}
+
+.summaryContent .icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.summaryContent .icon h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.summaryDetails p {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 5px;
+}

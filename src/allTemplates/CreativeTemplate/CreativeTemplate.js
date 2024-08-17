@@ -80,6 +80,7 @@ export default function CreativeTemplate() {
                     <div className="summaryContent">
                         <div className="icon">
                             <i className='fas fa-user'></i>
+                            <h2>Summary</h2>
                         </div>
                         <div className="summaryDetails">
                             <p>
