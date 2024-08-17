@@ -74,18 +74,26 @@ export default function CreativeTemplate() {
                         <hr />
                     </div>
                 </section>
-                <section className='summarySection'>
-                    <h2><i class="fa-solid fa-circle-info"></i> Summary</h2>
-                    <p>
-                        A passionate Front-End & Back-End developer with a knack for designing user interfaces.
-                        With over 2 years of experience in web development.
-                    </p>
-                    <p>
-                        Beyond my professional life, I'm an avid tech enthusiast, which keeps me inspired and
-                        constantly seeking new ways to infuse creativity into my work. Whether it's through
-                        developing my own websites or exploring the latest trends in web development, I believe in
-                        continuous learning and growth.
-                    </p>
+
+                <section className="summarySection">
+                    <div className="line"></div>
+                    <div className="summaryContent">
+                        <div className="icon">
+                            <i className='fas fa-user'></i>
+                        </div>
+                        <div className="summaryDetails">
+                            <p>
+                                A passionate Front-End & Back-End developer with a knack for designing user interfaces.
+                                With over 2 years of experience in web development.
+                            </p>
+                            <p>
+                                Beyond my professional life, I'm an avid tech enthusiast, which keeps me inspired and
+                                constantly seeking new ways to infuse creativity into my work. Whether it's through
+                                developing my own websites or exploring the latest trends in web development, I believe in
+                                continuous learning and growth.
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
