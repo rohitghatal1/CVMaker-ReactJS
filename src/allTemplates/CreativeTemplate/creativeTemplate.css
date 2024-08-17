@@ -45,6 +45,7 @@
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    padding-bottom: 2rem;
 }
 .skills{
     width: 21rem;
@@ -91,16 +92,21 @@
     margin-right: 0.8rem;
 }
 
-.summarySection{
+/* .summarySection{
+    padding: 5px;
+} */
+.summaryContainer{
     margin-left: 7rem;
     padding: 1rem;
     display: flex;
     align-items: flex-start;
     position: relative;
     text-align: justify;
+    padding-bottom: 2rem;
 }
 
 .line {
+    margin-top: 3.5rem;
     width: 2px;
     background-color: black;
     position: absolute;
@@ -136,6 +142,12 @@
     margin-bottom: 10px;
 }
 
+.summaryContent .icon i{
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
 .summaryContent .icon h2 {
     margin: 0;
     font-size: 22px;
@@ -146,4 +158,5 @@
     margin: 0;
     font-size: 14px;
     margin-top: 5px;
+    color: #1c1c1c;
 }
