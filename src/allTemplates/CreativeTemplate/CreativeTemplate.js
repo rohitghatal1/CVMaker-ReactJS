@@ -8,7 +8,7 @@ export default function CreativeTemplate() {
             <div className="CVContainer">
                 <section className="infoAndSkillsSection">
                     <div className="photo">
-                        <img src={personPhoto} alt="photo" />
+                        <img src={personPhoto} />
                     </div>
                     <div className="infoAndSkills">
                         <div className="personInfo">
@@ -66,10 +66,26 @@ export default function CreativeTemplate() {
                                     <span><i class="fab fa-facebook"></i> https://www.facebook.com/</span>
                                     <span><i class="fab fa-instagram"></i> https://www.instagram.com/</span>
                                     <span><i className="fa-brands fa-linkedin-in"></i> https://www.linkedin.com/in/rohit-ghatal-7823111b4/</span>
+                                    <span><i class="fa-brands fa-github"></i> https://github.com/rohitghatal1</span>
+                                    <span><i class="fa-solid fa-link"></i> https://www.rohitghatal.com.np/</span>
                                 </div>
                             </div>
                         </div>
+                        <hr />
                     </div>
+                </section>
+                <section className='summarySection'>
+                    <h2><i class="fa-solid fa-circle-info"></i> Summary</h2>
+                    <p>
+                        A passionate Front-End & Back-End developer with a knack for designing user interfaces.
+                        With over 2 years of experience in web development.
+                    </p>
+                    <p>
+                        Beyond my professional life, I'm an avid tech enthusiast, which keeps me inspired and
+                        constantly seeking new ways to infuse creativity into my work. Whether it's through
+                        developing my own websites or exploring the latest trends in web development, I believe in
+                        continuous learning and growth.
+                    </p>
                 </section>
             </div>
         </div>

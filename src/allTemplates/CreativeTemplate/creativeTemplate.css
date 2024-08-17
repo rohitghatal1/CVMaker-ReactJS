@@ -11,8 +11,9 @@
 }
 
 .infoAndSkillsSection .photo{
-    width: 8rem;
-    height: 8rem;
+    margin-top: 3.2rem;
+    width: 8.5rem;
+    height: 8.5rem;
     border-radius: 50%;
     overflow: hidden;
     object-fit: contain;
@@ -34,7 +35,9 @@
     color: #333333;
     text-transform: uppercase;
 }
+
 .infoAndSkillsSection .infoAndSkills .personInfo p{
+    margin-top: -24px;
     font-size: 1.5rem;
     color: #717171;
 }
@@ -70,7 +73,7 @@
 }
 
 .contactContainer{
-    margin-top: 2.3rem;
+    margin-top: 3rem;
     padding: 0.5rem;
     text-align: left;
 }
