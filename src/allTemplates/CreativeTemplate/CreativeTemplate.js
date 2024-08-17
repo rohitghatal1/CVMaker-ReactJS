@@ -99,6 +99,28 @@ export default function CreativeTemplate() {
                     </div>
                     <hr style={{ width: '82%', margin: '20px auto 0', marginLeft: '8.6rem' }} />
                 </section>
+
+                <section class="education-section">
+                    <div class="left-column">
+                        <h3>BACHELORS IN COMPUTER APPLICATION</h3>
+                        <p>March, 2021 - <br/> Present</p>
+                    </div>
+                    <div class="right-column">
+                        <div class="line"></div>
+                        <div class="content">
+                            <div class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="text">
+                                <h2>ACADEMY</h2>
+                                <h4>Vedas College , Lalitpur</h4>
+                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies, and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr />
+
             </div>
         </div>
     )
