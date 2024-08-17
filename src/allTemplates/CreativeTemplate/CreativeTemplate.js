@@ -63,11 +63,11 @@ export default function CreativeTemplate() {
                                     <span><i class="fa-solid fa-phone"></i> 9875468459</span>
                                     <span><i class="fa-regular fa-envelope"></i> rohitghatal@gmail.com</span>
                                     <span><i class="fa-solid fa-location-dot"></i> Thasikhel, Lalitpur</span>
-                                    <span><i class="fab fa-facebook"></i> https://www.facebook.com/</span>
-                                    <span><i class="fab fa-instagram"></i> https://www.instagram.com/</span>
-                                    <span><i className="fa-brands fa-linkedin-in"></i> https://www.linkedin.com/in/rohit-ghatal-7823111b4/</span>
-                                    <span><i class="fa-brands fa-github"></i> https://github.com/rohitghatal1</span>
-                                    <span><i class="fa-solid fa-link"></i> https://www.rohitghatal.com.np/</span>
+                                    <span><i class="fab fa-facebook"></i> facebook.com/rohit.rohit.ghatal</span>
+                                    <span><i class="fab fa-instagram"></i> instagram.com/_rohit.ghatal_/</span>
+                                    <span><i className="fa-brands fa-linkedin-in"></i> linkedin.com/in/rohit-ghatal-7823111b4/</span>
+                                    <span><i class="fa-brands fa-github"></i> github.com/rohitghatal1</span>
+                                    <span><i class="fa-solid fa-link"></i> rohitghatal.com.np/</span>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ export default function CreativeTemplate() {
                             </div>
                         </div>
                     </div>
-                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '7rem' }} />
+                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
 
                 <section class="education-section">
@@ -117,7 +117,7 @@ export default function CreativeTemplate() {
                             </div>
                         </div>
                     </div>
-                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '7rem' }} />
+                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
             </div>
         </div>
