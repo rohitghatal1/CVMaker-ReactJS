@@ -76,7 +76,6 @@ export default function CreativeTemplate() {
 
                 <section className="summarySection">
                     <div className="summaryContainer sectionContainer">
-                        <div className="line"></div>
                         <div className="summaryContent">
                             <div className="icon">
                                 <i className='fas fa-user'></i>
@@ -96,12 +95,10 @@ export default function CreativeTemplate() {
                             </div>
                         </div>
                     </div>
-                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
 
                 <section className="education-section">
                     <div className="educationContainer sectionContainer">
-                        <div className="line"></div>
                         <div className="content">
                             <div className="icon">
                                 <i className="fas fa-graduation-cap"></i>
@@ -116,15 +113,14 @@ export default function CreativeTemplate() {
                             </div>
                         </div>
                     </div>
-                    <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
 
                 <section className="projects-section">
                     <div className="section-header">
                         <div className="icon">
                             <i className="fas fa-rocket"></i>
+                            <h2>Projects</h2>
                         </div>
-                        <h2>Projects</h2>
                     </div>
 
                     <div className="project-item">
@@ -166,8 +162,8 @@ export default function CreativeTemplate() {
                     <div className="section-header">
                         <div className="icon">
                             <i className="fas fa-briefcase"></i>
+                            <h2>Work Experience</h2>
                         </div>
-                        <h2>Work Experience</h2>
                     </div>
 
                     <div className="work-item">
@@ -193,29 +189,26 @@ export default function CreativeTemplate() {
                     <div className="section-header">
                         <div className="icon">
                             <i className="fas fa-trophy"></i>
-                        </div>
-                        <h2>Achievements</h2>
-                    </div>
-
-                    <div className="achievement-item">
-                        <div className="line"></div>
-                        <div className="achievement-content">
-                            <h3>Best Project Award</h3>
-                            <p><strong>2023</strong></p>
-                            <p>Received the Best Project Award for developing an innovative e-commerce platform during the university's annual tech showcase.</p>
+                            <h2>Achievements</h2>
                         </div>
                     </div>
 
                     <div className="achievement-item">
                         <div className="line"></div>
                         <div className="achievement-content">
-                            <h3>Top Performer in Web Development</h3>
-                            <p><strong>2022</strong></p>
-                            <p>Recognized as the top performer in web development for demonstrating exceptional skills and creativity in multiple projects.</p>
+                            <h3>Winner of Web Development Hackathon</h3>
+                            <p>Won first place in a national-level web development hackathon organized by XYZ Tech.</p>
+                        </div>
+                    </div>
+
+                    <div className="achievement-item">
+                        <div className="line"></div>
+                        <div className="achievement-content">
+                            <h3>Top Performer in Coding Challenge</h3>
+                            <p>Achieved top rank in a global coding challenge hosted by ABC Coding Platform.</p>
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
     );
