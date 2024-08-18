@@ -11,7 +11,7 @@
     font-size: 2rem;
 }
 
-.templatesSection h2>span{
+.templatesSection h2 > span{
     color: #1a1a7d;
 }
 
@@ -24,32 +24,26 @@
 .templateContainer{
     position: relative;
     width: 100%;
+    max-width: 50rem; /* Restrict the max-width for better alignment */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    overflow: hidden; /* Ensure nothing overflows the container */
 }
 
-.templateCard{
+.templateCard {
     padding: 0.5rem;
-    height: 40rem;
-    width: 40rem;
+    min-height: 38rem;
+    max-width: 40rem;  
+    display: block;
 }
 
-.templateCard img{
-    width: 100%;
-    height: 90%;
+.templateCard img {
+    aspect-ratio: 1/3;
+    /* width: 100%;
+    height: 90%; */
     object-fit: contain;
-}
-
-.swiper-button-prev,
-.swiper-button-next{
-    color: blue;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%);
-    width: 44px;
-    height: 44px;
 }
 
 .seeMoreTemplateBtn{
@@ -60,6 +54,7 @@
     font-size: 1rem;
     border: 1px solid black;
     transition: all 0.8s ease;
+    margin-top: 1rem;
 }
 
 .seeMoreTemplateBtn:hover{
