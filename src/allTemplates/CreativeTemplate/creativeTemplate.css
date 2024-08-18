@@ -1,6 +1,6 @@
-/* Common styling for the template */
+
 .CVContainer {
-    width: 90%;
+    width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -21,8 +21,21 @@
     margin-left: 20px;
 }
 
+.personInfo {
+    text-align: right;
+}
 .personInfo h2 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     margin: 0;
+}
+
+.personInfo p{
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    color: #333;
 }
 
 .contactAndSkills {

@@ -46,18 +46,16 @@ h2 {
     font-size: 20px;
     margin-bottom: 15px;
     position: relative;
-    padding-left: 30px;
 }
 
-.section h3:before {
-    content: "\f05a";
+/* .section h3:before {
     font-family: FontAwesome;
     position: absolute;
     left: 0;
     top: 0;
     font-size: 24px;
     color: #000000;
-}
+} */
 
 .section ul {
     list-style: none;
@@ -106,4 +104,36 @@ h2 {
     font-size: 16px;
     display: block;
     margin-bottom: 5px;
+}
+.section.skills {
+    margin-top: 2rem;
+}
+
+.skills h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.skillItemContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillItem {
+    margin-bottom: 10px;
+}
+
+.skillbar {
+    background: #ccc;
+    height: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.skillbar .fill {
+    background: #333;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
