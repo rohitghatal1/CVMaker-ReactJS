@@ -24,27 +24,53 @@
 .templateContainer{
     position: relative;
     width: 100%;
-    max-width: 50rem; /* Restrict the max-width for better alignment */
+    max-width: 50rem; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    overflow: hidden; /* Ensure nothing overflows the container */
+    overflow: hidden;
 }
 
 .templateCard {
     padding: 0.5rem;
-    min-height: 38rem;
-    max-width: 40rem;  
-    display: block;
+    width: 40rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
-.templateCard img {
-    aspect-ratio: 1/3;
-    /* width: 100%;
-    height: 90%; */
-    object-fit: contain;
+.imageContainer {
+    margin-left: 12rem;
+    width: 40rem;
+    min-height: 43rem;
+    height: 45rem;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease; 
+}
+
+.imageContainer img:hover {
+    transform: scale(1.05);
+}
+
+.templateCard h3 {
+    margin-left: 11rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
 
 .seeMoreTemplateBtn{
     background-color: #1a1a7d;

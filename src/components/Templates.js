@@ -24,11 +24,10 @@ export default function Templates() {
           >
             {templateData.map((template) => (
               <SwiperSlide key={template.id}>
-                <div
-                  className="templateCard"
-                  onClick={() => setSelectedTemplate(() => template.component)}
-                >
-                  <img src={template.image} alt={template.name} />
+                <div className="templateCard" onClick={() => setSelectedTemplate(() => template.component)}>
+                  <figure className="imageContainer">
+                    <img src={template.image} alt={template.name} />
+                  </figure>
                   <h3>{template.name}</h3>
                 </div>
               </SwiperSlide>
