@@ -1,4 +1,5 @@
 
+import BasicTemplate from './allTemplates/basicTemplate/BasicTemplate';
 import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
 import './App.css';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ function App() {
       <Templates/>
       <Footer/> */}
       <CreativeTemplate/>
+      {/* <BasicTemplate/> */}
     </>
   );
 }

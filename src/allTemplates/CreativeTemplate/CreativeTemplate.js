@@ -1,6 +1,6 @@
-import React from 'react'
-import personPhoto from '../../assets/personPhotos/rohit2.jpg'
-import './creativeTemplate.css'
+import React from 'react';
+import personPhoto from '../../assets/personPhotos/rohit2.jpg';
+import './creativeTemplate.css';
 
 export default function CreativeTemplate() {
     return (
@@ -8,7 +8,7 @@ export default function CreativeTemplate() {
             <div className="CVContainer">
                 <section className="infoAndSkillsSection">
                     <div className="photo">
-                        <img src={personPhoto} />
+                        <img src={personPhoto} alt="Person" />
                     </div>
                     <div className="infoAndSkills">
                         <div className="personInfo">
@@ -18,7 +18,7 @@ export default function CreativeTemplate() {
                         <hr />
                         <div className="contactAndSkills">
                             <div className="skills">
-                                <h2><i class="fa-solid fa-code-compare"></i> Skills</h2>
+                                <h2><i className="fa-solid fa-code-compare"></i> Skills</h2>
                                 <div className="skillItemContainer">
                                     <div className="skillItem">
                                         <p>HTML</p>
@@ -57,17 +57,16 @@ export default function CreativeTemplate() {
                                 </div>
                             </div>
                             <div className="contactContainer">
-                                <h2><i class="fa-solid fa-child-reaching"></i> Contact Me</h2>
-
+                                <h2><i className="fa-solid fa-child-reaching"></i> Contact Me</h2>
                                 <div className="contactItems">
-                                    <span><i class="fa-solid fa-phone"></i> 9875468459</span>
-                                    <span><i class="fa-regular fa-envelope"></i> rohitghatal@gmail.com</span>
-                                    <span><i class="fa-solid fa-location-dot"></i> Thasikhel, Lalitpur</span>
-                                    <span><i class="fab fa-facebook"></i> facebook.com/rohit.rohit.ghatal</span>
-                                    <span><i class="fab fa-instagram"></i> instagram.com/_rohit.ghatal_/</span>
+                                    <span><i className="fa-solid fa-phone"></i> 9875468459</span>
+                                    <span><i className="fa-regular fa-envelope"></i> rohitghatal@gmail.com</span>
+                                    <span><i className="fa-solid fa-location-dot"></i> Thasikhel, Lalitpur</span>
+                                    <span><i className="fab fa-facebook"></i> facebook.com/rohit.rohit.ghatal</span>
+                                    <span><i className="fab fa-instagram"></i> instagram.com/_rohit.ghatal_/</span>
                                     <span><i className="fa-brands fa-linkedin-in"></i> linkedin.com/in/rohit-ghatal-7823111b4/</span>
-                                    <span><i class="fa-brands fa-github"></i> github.com/rohitghatal1</span>
-                                    <span><i class="fa-solid fa-link"></i> rohitghatal.com.np/</span>
+                                    <span><i className="fa-brands fa-github"></i> github.com/rohitghatal1</span>
+                                    <span><i className="fa-solid fa-link"></i> rohitghatal.com.np/</span>
                                 </div>
                             </div>
                         </div>
@@ -100,15 +99,15 @@ export default function CreativeTemplate() {
                     <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
 
-                <section class="education-section">
+                <section className="education-section">
                     <div className="educationContainer sectionContainer">
-                        <div class="line"></div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="fas fa-graduation-cap"></i>
+                        <div className="line"></div>
+                        <div className="content">
+                            <div className="icon">
+                                <i className="fas fa-graduation-cap"></i>
                                 <h2>ACADEMY</h2>
                             </div>
-                            <div class="text">
+                            <div className="text">
                                 <h3>Vedas College , Lalitpur</h3>
                                 <h2>BACHELORS IN COMPUTER APPLICATION</h2>
                                 <p className='courseTime'>March, 2021 - Present</p>
@@ -120,50 +119,104 @@ export default function CreativeTemplate() {
                     <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
 
-                <section class="projects-section">
-                    <div class="section-header">
-                        <div class="icon">
-                            <i class="fas fa-rocket"></i>
+                <section className="projects-section">
+                    <div className="section-header">
+                        <div className="icon">
+                            <i className="fas fa-rocket"></i>
                         </div>
                         <h2>Projects</h2>
                     </div>
 
-                    <div class="project-item">
-                        <div class="line"></div>
-                        <div class="project-content">
+                    <div className="project-item">
+                        <div className="line"></div>
+                        <div className="project-content">
                             <h3>E-Commerce Website</h3>
                             <p>This website is basically an E-Commerce Site for buying Laptops, Mobiles & Smart Watches named as "GadgetHub"</p>
-                            <a href="https://rohighta1.github.io/E-CommerceCite-GadjetHub-/" target="_blank">https://rohighta1.github.io/E-CommerceCite-GadjetHub-/</a>
+                            <a href="https://rohighta1.github.io/E-CommerceCite-GadjetHub-/" target="_blank" rel="noopener noreferrer">https://rohighta1.github.io/E-CommerceCite-GadjetHub-/</a>
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <div class="line"></div>
-                        <div class="project-content">
+                    <div className="project-item">
+                        <div className="line"></div>
+                        <div className="project-content">
                             <h3>Online Hotel Booking</h3>
                             <p>This website helps users to easily book/cancel rooms of a hotel with accurate room availability information.</p>
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <div class="line"></div>
-                        <div class="project-content">
+                    <div className="project-item">
+                        <div className="line"></div>
+                        <div className="project-content">
                             <h3>Facebook Clone</h3>
                             <p>This is just an interface design of the "FACEBOOK" without backend and chatting function.</p>
-                            <a href="https://rohighta1.github.io/facebookClone/" target="_blank">https://rohighta1.github.io/facebookClone/</a>
+                            <a href="https://rohighta1.github.io/facebookClone/" target="_blank" rel="noopener noreferrer">https://rohighta1.github.io/facebookClone/</a>
                         </div>
                     </div>
 
-                    <div class="project-item">
-                        <div class="line"></div>
-                        <div class="project-content">
+                    <div className="project-item">
+                        <div className="line"></div>
+                        <div className="project-content">
                             <h3>News App Using ReactJs</h3>
                             <p>This project is a news showing app named "NewsPortal" created using ReactJs.</p>
                         </div>
                     </div>
                 </section>
 
+                <section className="workExperience-section">
+                    <div className="section-header">
+                        <div className="icon">
+                            <i className="fas fa-briefcase"></i>
+                        </div>
+                        <h2>Work Experience</h2>
+                    </div>
+
+                    <div className="work-item">
+                        <div className="line"></div>
+                        <div className="work-content">
+                            <h3>Front-End Developer at Tech Solutions</h3>
+                            <p><strong>January 2022 - Present</strong></p>
+                            <p>Worked on creating user-friendly web pages and applications, implementing responsive designs, and optimizing website performance.</p>
+                        </div>
+                    </div>
+
+                    <div className="work-item">
+                        <div className="line"></div>
+                        <div className="work-content">
+                            <h3>Intern at Web Innovators</h3>
+                            <p><strong>June 2021 - December 2021</strong></p>
+                            <p>Assisted in developing and maintaining web applications, working closely with senior developers, and gaining hands-on experience in various web technologies.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="achievements-section">
+                    <div className="section-header">
+                        <div className="icon">
+                            <i className="fas fa-trophy"></i>
+                        </div>
+                        <h2>Achievements</h2>
+                    </div>
+
+                    <div className="achievement-item">
+                        <div className="line"></div>
+                        <div className="achievement-content">
+                            <h3>Best Project Award</h3>
+                            <p><strong>2023</strong></p>
+                            <p>Received the Best Project Award for developing an innovative e-commerce platform during the university's annual tech showcase.</p>
+                        </div>
+                    </div>
+
+                    <div className="achievement-item">
+                        <div className="line"></div>
+                        <div className="achievement-content">
+                            <h3>Top Performer in Web Development</h3>
+                            <p><strong>2022</strong></p>
+                            <p>Recognized as the top performer in web development for demonstrating exceptional skills and creativity in multiple projects.</p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }

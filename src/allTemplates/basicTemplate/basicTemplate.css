@@ -1,90 +1,109 @@
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.header {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-pic {
+.left-section, .right-section {
+    padding: 20px;
+}
+
+.left-section {
+    width: 35%;
+    background-color: #f9f9f9;
+    padding-left: 40px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.right-section {
+    width: 65%;
+}
+
+.profile-picture img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-right: 20px;
-}
-
-.name-title h1 {
-    font-size: 36px;
-    margin: 0;
-    font-weight: bold;
-}
-
-.name-title p {
-    font-size: 18px;
-    margin: 5px 0 0;
-    color: #777;
-}
-
-.summary-section,
-.contact-section,
-.education-section,
-.work-experience-section {
     margin-bottom: 20px;
 }
 
-.summary-section h2,
-.contact-section h2,
-.education-section h2,
-.work-experience-section h2 {
+h1 {
     font-size: 24px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #000;
+    margin: 0;
+    padding-bottom: 5px;
 }
 
-.summary-section p {
-    line-height: 1.6;
+h2 {
+    font-size: 18px;
+    color: #666666;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
-.contact-section ul {
-    list-style-type: none;
+.section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.section h3:before {
+    content: "\f05a";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    color: #000000;
+}
+
+.section ul {
+    list-style: none;
     padding: 0;
 }
 
-.contact-section ul li {
-    margin-bottom: 10px;
+.section ul li {
+    display: flex;
+    align-items: center;
     font-size: 14px;
+    padding: 5px 0;
+    color: #333333;
 }
 
-.contact-section ul li i {
+.section ul li i {
     margin-right: 10px;
-}
-
-.education-section .education-details h3,
-.work-experience-section .job-details h3 {
     font-size: 18px;
-    margin: 10px 0 5px;
+    color: #666666;
 }
 
-.education-section .education-details p,
-.work-experience-section .job-details p {
+.section p {
     font-size: 14px;
-    margin: 0 0 10px;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-.work-experience-section .job-details ul {
-    margin: 0;
-    padding-left: 20px;
+.awards p, .achievements p {
+    margin-bottom: 20px;
 }
 
-.work-experience-section .job-details ul li {
-    list-style-type: disc;
+.awards strong, .achievements strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summary {
+    padding-bottom: 20px;
+}
+
+.education p, .work-experience p {
+    margin-bottom: 20px;
+}
+
+.education strong, .work-experience strong {
+    font-size: 16px;
+    display: block;
     margin-bottom: 5px;
 }

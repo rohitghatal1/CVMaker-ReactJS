@@ -1,5 +1,6 @@
 import React from 'react'
 import './basicTemplate.css'
+import peronPhoto from '../../assets/personPhotos/rohit2.jpg'
 
 export default function BasicTemplate() {
     return (
@@ -7,7 +8,7 @@ export default function BasicTemplate() {
             <div class="container">
                 <div class="left-section">
                     <div class="profile-picture">
-                        <img src="profile.jpg" alt="Profile Picture" />
+                        <img src={peronPhoto} alt="Profile Picture" />
                     </div>
                     <h1>SUJAN KAYSTHA</h1>
                     <h2>INTERFACE DESIGNER</h2>

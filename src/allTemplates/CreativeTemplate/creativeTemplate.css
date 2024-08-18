@@ -1,274 +1,110 @@
-.CVContainer{
-    padding: 0.8rem;
-    max-width: 960px;
-    margin: auto;
+/* Common styling for the template */
+.CVContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.infoAndSkillsSection{
+.infoAndSkillsSection {
     display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
+    justify-content: space-between;
 }
 
-.infoAndSkillsSection .photo{
-    margin-top: 3.2rem;
-    width: 8.5rem;
-    height: 8.5rem;
+.photo img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    overflow: hidden;
-    object-fit: contain;
 }
 
-.infoAndSkillsSection .photo img{
-    width: 100%;
-    height: 100%;
-}
-
-.infoAndSkillsSection .infoAndSkills{
-    width: 80%;
-    text-align: right;
-}
-
-.infoAndSkillsSection .infoAndSkills .personInfo h2{
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333333;
-    text-transform: uppercase;
-}
-
-.infoAndSkillsSection .infoAndSkills .personInfo p{
-    margin-top: -24px;
-    font-size: 1.5rem;
-    color: #717171;
-}
-.contactAndSkills{
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-}
-.skills{
-    width: 22rem;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.skillItemContainer{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skillbar{
-    width: 10rem;
-    background-color: #d5d5d5;
-    border-radius: 0.5rem;
-    height: 0.6rem;
-    overflow: hidden;
-}
-
-.skillbar .fill{
-    background-color: #2b2b2b;
-    height: 100%;
-    border-radius: 0.5rem;
-}
-
-.contactContainer{
-    margin-top: 3rem;
-    padding: 0.2rem;
-    text-align: left;
-}
-
-.contactItems{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contactItems i{
-    margin-right: 0.6rem;
-}
-
-.sectionContainer {
-    margin-left: 4rem;
-    padding: 1rem;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    margin-top: 2rem;
-}
-
-.sectionContainer .line {
-    margin-top: 4.5rem;
-    width: 2px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.sectionContainer .line::before {
-    content: '';
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: -3px;
-}
-
-.sectionContainer .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.infoAndSkills {
+    flex: 1;
     margin-left: 20px;
 }
 
-.sectionContainer .icon {
+.personInfo h2 {
+    margin: 0;
+}
+
+.contactAndSkills {
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 20px;
+    justify-content: space-between;
+}
+
+.skills {
+    flex: 1;
+}
+
+.skillItemContainer {
+    margin-top: 20px;
+}
+
+.skillItem {
     margin-bottom: 10px;
-    color: black;
 }
 
-.sectionContainer .icon i {
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 50%;
-}
-
-.sectionContainer .icon h2,
-.sectionContainer .text h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-}
-
-.sectionContainer .text {
-    margin-top: 1rem;
-}
-
-.sectionContainer .text h3 {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: black;
-}
-
-.sectionContainer .text p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #1c1c1c;
-}
-
-.summaryContent{
-    margin-left: 1rem;
-}
-.summaryContainer {
-    margin-top: 3.5rem;
-}
-
-.educationContainer {
-    margin-left: 4rem;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.educationContainer .line{
-    margin-top: 5.4rem;
-}
-
-.educationContainer .courseTime{
-    font-size: 1rem;
-    color: black;
-    font-weight: bold;
-}
-
-
-.projects-section {
-    margin-left: 4rem;
-}
-
-.section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    margin-left: 2rem;
-}
-
-.section-header .icon {
-    font-size: 1rem;
-    margin-right: 0.5rem;
-}
-
-.section-header .icon i{
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 50%;
-}
-
-.section-header h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.project-item {
+.skillbar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 5px;
+    width: 100%;
     position: relative;
-    padding-left: 2.5rem;
-    margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
-.project-item .line {
+.fill {
+    background-color: #4caf50;
+    height: 100%;
     position: absolute;
+    top: 0;
     left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: black;
 }
 
-.project-item .line::before {
-    content: '';
-    position: absolute;
-    left: -4px;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
+.contactContainer {
+    flex: 1;
 }
 
-.project-content h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
+.contactItems {
+    margin-top: 10px;
+}
+
+.contactItems span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summarySection {
+    margin-top: 30px;
+}
+
+.sectionContainer {
+    margin: 20px 0;
+}
+
+.summaryContainer, .educationContainer, .projects-section, .workExperience-section, .achievements-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.line {
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+.icon h2 {
     margin: 0;
-    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
-.project-content p {
-    margin: 0.5rem 0;
-    color: #333;
+.project-item, .work-item, .achievement-item {
+    margin: 15px 0;
 }
 
-.project-content a {
-    color: #1c1c1c;
-    text-decoration: none;
-    font-size: 0.9rem;
+.project-content, .work-content, .achievement-content {
+    padding-left: 20px;
 }
 
-.project-content a:hover {
-    text-decoration: underline;
+.project-content h3, .work-content h3, .achievement-content h3 {
+    margin: 5px 0;
 }
 
