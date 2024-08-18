@@ -1,4 +1,5 @@
 import React from 'react'
+import './basicTemplate.css'
 
 export default function BasicTemplate() {
     return (

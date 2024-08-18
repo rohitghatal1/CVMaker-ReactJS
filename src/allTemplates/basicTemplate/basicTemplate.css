@@ -1,0 +1,90 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.name-title h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.name-title p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.summary-section,
+.contact-section,
+.education-section,
+.work-experience-section {
+    margin-bottom: 20px;
+}
+
+.summary-section h2,
+.contact-section h2,
+.education-section h2,
+.work-experience-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.summary-section p {
+    line-height: 1.6;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.contact-section ul li i {
+    margin-right: 10px;
+}
+
+.education-section .education-details h3,
+.work-experience-section .job-details h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.education-section .education-details p,
+.work-experience-section .job-details p {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.work-experience-section .job-details ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.work-experience-section .job-details ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
