@@ -192,3 +192,83 @@
     color: black;
     font-weight: bold;
 }
+
+
+.projects-section {
+    margin-left: 4rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+}
+
+.section-header .icon {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.section-header .icon i{
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.project-item {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-item .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+
+.project-item .line::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.project-content p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.project-content a {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
+}
+

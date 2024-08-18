@@ -112,13 +112,57 @@ export default function CreativeTemplate() {
                                 <h3>Vedas College , Lalitpur</h3>
                                 <h2>BACHELORS IN COMPUTER APPLICATION</h2>
                                 <p className='courseTime'>March, 2021 - Present</p>
-                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies, 
-                                and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
+                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies,
+                                    and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
                             </div>
                         </div>
                     </div>
                     <hr style={{ width: '85%', margin: '20px auto 0', marginLeft: '6rem' }} />
                 </section>
+
+                <section class="projects-section">
+                    <div class="section-header">
+                        <div class="icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h2>Projects</h2>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="line"></div>
+                        <div class="project-content">
+                            <h3>E-Commerce Website</h3>
+                            <p>This website is basically an E-Commerce Site for buying Laptops, Mobiles & Smart Watches named as "GadgetHub"</p>
+                            <a href="https://rohighta1.github.io/E-CommerceCite-GadjetHub-/" target="_blank">https://rohighta1.github.io/E-CommerceCite-GadjetHub-/</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="line"></div>
+                        <div class="project-content">
+                            <h3>Online Hotel Booking</h3>
+                            <p>This website helps users to easily book/cancel rooms of a hotel with accurate room availability information.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="line"></div>
+                        <div class="project-content">
+                            <h3>Facebook Clone</h3>
+                            <p>This is just an interface design of the "FACEBOOK" without backend and chatting function.</p>
+                            <a href="https://rohighta1.github.io/facebookClone/" target="_blank">https://rohighta1.github.io/facebookClone/</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="line"></div>
+                        <div class="project-content">
+                            <h3>News App Using ReactJs</h3>
+                            <p>This project is a news showing app named "NewsPortal" created using ReactJs.</p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </div>
     )
