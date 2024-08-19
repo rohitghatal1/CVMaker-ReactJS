@@ -48,14 +48,6 @@
     position: relative;
 }
 
-/* .section h3:before {
-    font-family: FontAwesome;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 24px;
-    color: #000000;
-} */
 
 .section ul {
     list-style: none;
@@ -114,7 +106,7 @@
     margin-bottom: 10px;
 }
 
-.skillItemContainer {
+.right-section .skillItemContainer {
     display: flex;
     flex-direction: column;
 }
