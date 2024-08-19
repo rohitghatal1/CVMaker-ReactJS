@@ -26,8 +26,8 @@ function App() {
       <HomeTab/>
       <Templates/>
       <Footer/> */}
-      <CreativeTemplate/>
-      {/* <BasicTemplate/>/ */}
+      {/* <CreativeTemplate/> */}
+      <BasicTemplate/>/
     </>
   );
 }

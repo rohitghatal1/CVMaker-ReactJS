@@ -43,60 +43,61 @@
     justify-content: space-between;
 }
 
-.skills {
+.contactAndSkills .skills {
     width: 22rem;
     padding: 0.5rem;
     text-align: left;
 }
 
-.skills h2{
+.contactAndSkills .skills h2{
     color: #000;
     font-size: 1.5rem;
 }
 
-.skillItemContainer {
+.contactAndSkills .skillItemContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.skillItem {
+.contactAndSkills .skillItem {
     width: 10rem;
 }
 
-.skillItem p {
+.contactAndSkills .skillItem p {
     margin: 0 0 0.5rem 0;
 }
 
-.skillbar {
+.contactAndSkills .skillbar {
     background-color: #d5d5d5;
     height: 0.6rem;
     overflow: hidden;
 }
 
-.skillbar .fill {
+.contactAndSkills .skillbar .fill {
     background-color: #2b2b2b;
     height: 100%;
 }
 
-.contactContainer {
+.contactAndSkills .contactContainer {
     margin-top: 2rem;
     padding-top: 1rem;
     width: 50%;
 }
-.contactContainer h2{
+
+.contactAndSkills .contactContainer h2{
     color: #000;
     font-size: 1.5rem;
 }
 
-.contactItems {
+.contactAndSkills .contactItems {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contactItems span {
+.contactAndSkills .contactItems span {
     display: block;
     margin-bottom: 5px;
 }

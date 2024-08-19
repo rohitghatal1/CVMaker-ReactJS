@@ -97,11 +97,13 @@
     display: block;
     margin-bottom: 5px;
 }
-.section.skills {
+
+.right-section .skills {
     margin-top: 2rem;
+    width: 100%;
 }
 
-.skills h3 {
+.right-section .skills h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -111,18 +113,19 @@
     flex-direction: column;
 }
 
-.skillItem {
-    margin-bottom: 10px;
+.right-section .skillItem {
+    margin-bottom: 5px;
 }
 
-.skillbar {
+.right-section .skillbar {
     background: #ccc;
     height: 10px;
     width: 100%;
     position: relative;
 }
 
-.skillbar .fill {
+.right-section .skillbar .fill {
+    border-radius: 4px;
     background: #333;
     height: 100%;
     position: absolute;
