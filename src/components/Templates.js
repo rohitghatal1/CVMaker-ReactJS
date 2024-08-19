@@ -15,8 +15,8 @@ export default function Templates() {
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
           <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
+            spaceBetween={30}
+            slidesPerView={2}
             loop={true}
             pagination={{ clickable: true }}
             navigation={true}
@@ -24,11 +24,13 @@ export default function Templates() {
           >
             {templateData.map((template) => (
               <SwiperSlide key={template.id}>
-                <div className="templateCard" onClick={() => setSelectedTemplate(() => template.component)}>
-                  <figure className="imageContainer">
-                    <img src={template.image} alt={template.name} />
-                  </figure>
-                  <h3>{template.name}</h3>
+                <div className="templateCardContainer">
+                  <div className="templateCard" onClick={() => setSelectedTemplate(() => template.component)}>
+                    <figure className="imageContainer">
+                      <img src={template.image} alt={template.name} />
+                    </figure>
+                    <h3>{template.name}</h3>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

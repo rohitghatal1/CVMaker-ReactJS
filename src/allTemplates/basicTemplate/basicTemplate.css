@@ -39,15 +39,17 @@
     font-size: 18px;
     color: #666666;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
+.left-section ul li{
+    cursor: pointer;
+}
 .section h3 {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     position: relative;
 }
-
 
 .section ul {
     list-style: none;
@@ -84,10 +86,6 @@
     margin-bottom: 5px;
 }
 
-.summary {
-    padding-bottom: 20px;
-}
-
 .education p, .work-experience p {
     margin-bottom: 20px;
 }
@@ -105,7 +103,7 @@
 
 .right-section .skills h3 {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .right-section .skillItemContainer {
@@ -113,12 +111,9 @@
     flex-direction: column;
 }
 
-.right-section .skillItem {
-    margin-bottom: 5px;
-}
-
 .right-section .skillbar {
     background: #ccc;
+    border-radius: 4px;
     height: 10px;
     width: 100%;
     position: relative;
