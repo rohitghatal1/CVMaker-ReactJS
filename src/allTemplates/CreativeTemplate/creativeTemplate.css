@@ -109,6 +109,11 @@
     margin: 20px 0;
 }
 
+.projects-section .project-item .project-content h3,
+.workExperience-section .work-item .work-content h3,
+.achievements-section .achievement-item .achievement-content h3{
+    margin-top: 1rem;
+}
 .summaryContainer, .educationContainer, .projects-section, .workExperience-section, .achievements-section {
     margin-top: 1rem;
     border: 1px solid #ddd;

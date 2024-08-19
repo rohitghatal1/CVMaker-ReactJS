@@ -54,6 +54,11 @@ export default function CreativeTemplate() {
                                         <p>C</p>
                                         <div className="skillbar"><div className="fill" style={{ width: '70%' }}></div></div>
                                     </div>
+
+                                    <div className="skillItem">
+                                        <p>React</p>
+                                        <div className="skillbar"><div className="fill" style={{ width: '40%' }}></div></div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="contactContainer">
