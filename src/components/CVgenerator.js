@@ -1,4 +1,5 @@
 import React from 'react'
+import './cvgenerator.css'
 
 export default function CVgenerator() {
     return (
@@ -8,37 +9,37 @@ export default function CVgenerator() {
                     <div className="stepItemsContainer">
                         <div className="stepItem">
                             <i class="fa-regular fa-copy"></i>
-                            <h3>Templates</h3>
+                            <h4>Templates</h4>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-regular fa-user"></i>
-                            <h3>Personal</h3>
+                            <h4>Personal</h4>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-graduation-cap"></i>
-                            <h3>Education</h3>
+                            <h4>Education</h4>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-layer-group"></i>
-                            <h3>Experience</h3>
+                            <h4>Experience</h4>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-rocket"></i>
-                            <h3>Projects</h3>
+                            <h4>Projects</h4>
                         </div>
 
                         <div className="stepItem">
                             <i className="fa-solid fa-code-compare"></i>
-                            <h3>Skills</h3>
+                            <h4>Skills</h4>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-star"></i>
-                            <h3>Achievement</h3>
+                            <h4>Achievement</h4>
                         </div>
                     </div>
                 </aside>

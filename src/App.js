@@ -2,6 +2,7 @@
 import BasicTemplate from './allTemplates/basicTemplate/BasicTemplate';
 import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
 import './App.css';
+import CVgenerator from './components/CVgenerator';
 import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
@@ -22,10 +23,11 @@ function App() {
   
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/>
       <HomeTab/>
       <Templates/>
-      <Footer/>
+      <Footer/> */}
+      <CVgenerator/>
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
     </>

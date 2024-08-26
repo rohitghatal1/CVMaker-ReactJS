@@ -1,0 +1,26 @@
+.cvGeneratorContainer{
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+.cvGeneratorContainer .stepsIdicator{
+    position: fixed;
+    left: 0;
+    top: 2rem;
+    padding: 1rem;
+}
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem{
+    background-color: rgb(46, 115, 205);
+    color: rgb(67, 247, 1);
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    text-align: center;
+}
