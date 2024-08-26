@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './cvgenerator.css'
+import TemplatesDisplay from '../componentsInner/TemplatesDisplay';
 
 export default function CVgenerator() {
     const[activeStep, setActiveStep] = useState('Templates');
@@ -44,7 +45,7 @@ export default function CVgenerator() {
                         </div>
                     </div>
                     <div className="stepInfo">
-                        {activeStep == 'Templates' && "roht"}
+                        {activeStep == 'Templates' && <TemplatesDisplay />}
                     </div>
                 </aside>
             </div>
