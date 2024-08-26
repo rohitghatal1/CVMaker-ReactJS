@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="navitems">
                 <span className="navlinks">Home</span>
                 <span className="navlinks">Templates</span>
-                <span className="navlinks">Services</span>
+                <span className="navlinks">CV-Generator</span>
                 <span className="navlinks">About</span>
             </div>
             <div className="loginSignup">
