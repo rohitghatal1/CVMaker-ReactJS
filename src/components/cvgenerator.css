@@ -4,7 +4,8 @@
 }
 
 .cvGeneratorContainer .stepsIdicator{
-    position: fixed;
+    position: sticky;
+    width: 8rem;
     left: 0;
     top: 0;
     padding: 1rem;
