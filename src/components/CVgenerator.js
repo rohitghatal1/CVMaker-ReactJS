@@ -9,37 +9,37 @@ export default function CVgenerator() {
                     <div className="stepItemsContainer">
                         <div className="stepItem">
                             <i class="fa-regular fa-copy"></i>
-                            <h4>Templates</h4>
+                            <p>Templates</p>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-regular fa-user"></i>
-                            <h4>Personal</h4>
+                            <p>Personal</p>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-graduation-cap"></i>
-                            <h4>Education</h4>
+                            <p>Education</p>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-layer-group"></i>
-                            <h4>Experience</h4>
+                            <p>Experience</p>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-rocket"></i>
-                            <h4>Projects</h4>
+                            <p>Projects</p>
                         </div>
 
                         <div className="stepItem">
                             <i className="fa-solid fa-code-compare"></i>
-                            <h4>Skills</h4>
+                            <p>Skills</p>
                         </div>
 
                         <div className="stepItem">
                             <i class="fa-solid fa-star"></i>
-                            <h4>Achievement</h4>
+                            <p>Achievement</p>
                         </div>
                     </div>
                 </aside>

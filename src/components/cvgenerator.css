@@ -6,7 +6,7 @@
 .cvGeneratorContainer .stepsIdicator{
     position: fixed;
     left: 0;
-    top: 2rem;
+    top: 0;
     padding: 1rem;
 }
 
@@ -15,12 +15,26 @@
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
+    padding-right: 1rem;
+    border-right: 1px solid #ddd;
 }
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem{
-    background-color: rgb(46, 115, 205);
-    color: rgb(67, 247, 1);
+    background-color: rgb(125, 231, 208);
+    color: rgb(38, 85, 255);
     border-radius: 0.4rem;
     padding: 0.5rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem i{
+    font-size: 1.3rem;
+}
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem p{
+    font-size: 1rem;
 }
