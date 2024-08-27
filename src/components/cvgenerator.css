@@ -3,14 +3,16 @@
     padding: 1rem;
     display: flex;
     gap: 1rem;
+    position: relative;
 }
 
 .cvGeneratorContainer .stepsIdicator{
-    position: sticky;
+    position: fixed;
     width: 8rem;
     left: 0;
     top: 0;
     padding: 1rem;
+    overflow-y: scroll;
 }
 
 .cvGeneratorContainer .stepsIdicator{
@@ -19,6 +21,7 @@
 
 .cvGeneratorContainer .stepInfo{
     width: 88%;
+    margin: auto;
 }
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer{
     display: flex;
