@@ -1,5 +1,5 @@
 .allTemplateDisplay{
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: aliceblue;
     text-align: center;
 }
@@ -8,7 +8,23 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.allTemplateDisplay .allTemplateContainer 
+.allTemplateDisplay .allTemplateContainer .templateCard{
+    width: 26rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard figure{
+   width: 100%; 
+   height: 90%;
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard figure img{
+    width: 100%;
+    height: 100%;
+}

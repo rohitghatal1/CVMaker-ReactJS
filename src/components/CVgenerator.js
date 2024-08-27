@@ -9,37 +9,37 @@ export default function CVgenerator() {
             <div className="cvGeneratorContainer">
                 <aside className='stepsIdicator'>
                     <div className="stepItemsContainer">
-                        <div className="stepItem" onClick={() => setActiveStep('Templates')}>
+                        <div className={`stepItem ${activeStep === 'Templates'? 'active' : ''}`} onClick={() => setActiveStep('Templates')}>
                             <i class="fa-regular fa-copy"></i>
                             <p>Templates</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Personal')}>
+                        <div className={`stepItem ${activeStep === 'Personal'? 'active' : ''}`} onClick={() => setActiveStep('Personal')}>
                             <i class="fa-regular fa-user"></i>
                             <p>Personal</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Eduation')}>
+                        <div className={`stepItem ${activeStep === 'Education'? 'active' : ''}`} onClick={() => setActiveStep('Education')}>
                             <i class="fa-solid fa-graduation-cap"></i>
                             <p>Education</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Experience')}>
+                        <div className={`stepItem ${activeStep === 'Experience'? 'active' : ''}`} onClick={() => setActiveStep('Experience')}>
                             <i class="fa-solid fa-layer-group"></i>
                             <p>Experience</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Projects')}>
+                        <div className={`stepItem ${activeStep === 'Projects'? 'active' : ''}`} onClick={() => setActiveStep('Projects')}>
                             <i class="fa-solid fa-rocket"></i>
                             <p>Projects</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Skills')}>
+                        <div className={`stepItem ${activeStep === 'Skills'? 'active' : ''}`} onClick={() => setActiveStep('Skills')}>
                             <i className="fa-solid fa-code-compare"></i>
                             <p>Skills</p>
                         </div>
 
-                        <div className="stepItem" onClick={() => setActiveStep('Achievement')}>
+                        <div className={`stepItem ${activeStep === 'Achievement'? 'active' : ''}`} onClick={() => setActiveStep('Achievement')}>
                             <i class="fa-solid fa-star"></i>
                             <p>Achievement</p>
                         </div>

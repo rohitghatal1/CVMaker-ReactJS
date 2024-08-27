@@ -30,8 +30,8 @@
 }
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem{
-    background-color: rgb(125, 231, 208);
-    color: rgb(38, 85, 255);
+    background: linear-gradient(135deg, #6b8e23, #228b22);
+    color: white;
     border-radius: 0.4rem;
     padding: 0.5rem;
     text-align: center;
@@ -40,6 +40,19 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.8s ease;
+}
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem:hover {
+    background: linear-gradient(135deg, #3a5f23, #1c7b1c);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem.active{
+    background: linear-gradient(135deg, #228b22, #006400);
+    color: #f5f5f5;
+    transform: scale(1.1);
 }
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem i{
