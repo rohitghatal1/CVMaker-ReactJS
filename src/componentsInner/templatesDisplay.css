@@ -1,0 +1,14 @@
+.allTemplateDisplay{
+    padding: 1rem;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.allTemplateDisplay .allTemplateContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.allTemplateDisplay .allTemplateContainer 

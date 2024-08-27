@@ -1,6 +1,8 @@
 .cvGeneratorContainer{
     background-color: aliceblue;
     padding: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .cvGeneratorContainer .stepsIdicator{
@@ -11,6 +13,13 @@
     padding: 1rem;
 }
 
+.cvGeneratorContainer .stepsIdicator{
+    width: 10%;
+}
+
+.cvGeneratorContainer .stepInfo{
+    width: 88%;
+}
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer{
     display: flex;
     flex-direction: column;

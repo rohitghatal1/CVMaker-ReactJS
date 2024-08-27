@@ -44,10 +44,10 @@ export default function CVgenerator() {
                             <p>Achievement</p>
                         </div>
                     </div>
-                    <div className="stepInfo">
-                        {activeStep == 'Templates' && <TemplatesDisplay />}
-                    </div>
                 </aside>
+                    <div className="stepInfo">
+                        {activeStep === 'Templates' && <TemplatesDisplay />}
+                    </div>
             </div>
         </div>
     )
