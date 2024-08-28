@@ -4,6 +4,26 @@
     text-align: center;
 }
 
+.allTemplateDisplay .templateContainerHeading{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.allTemplateDisplay .templateContainerHeading .nextbtn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    border: none;
+    font-size: 15px;
+    width: 6rem;
+    cursor: pointer;
+}
 .allTemplateDisplay .allTemplateContainer{
     display: flex;
     justify-content: space-around;

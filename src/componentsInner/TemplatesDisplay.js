@@ -9,23 +9,22 @@ export default function TemplatesDisplay() {
 
   const handleCardClick = (template) => {
     setSelectedTemplate(template.component);
+    setBorderColor({[template.id]: 'blue'})
   };
 
-  const changeborderColor = (templateId) => {
-    setBorderColor((prevColors) => ({
-      ...prevColors,
-      [templateId]: 'blue'
-    }));
-  }
   return (
     <div>
       <div className="allTemplateDisplay">
+      <div className="templateContainerHeading">
         <h2>Select a Template</h2>
+        <button className='nextbtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
         <div className="allTemplateInfo">
           <h3>Here are some of the available Template for CV</h3>
           <div className="allTemplateContainer">
             {templateData.map((template) => (
-              <div className="templateCard" key={template.id} onClick={()=> {handleCardClick(template); changeborderColor(template.id)}} style={{borderColor: borderColor[template.id]}}>
+              <div className="templateCard" key={template.id} 
+                onClick={()=> handleCardClick(template)} style={{borderColor: borderColor[template.id] || 'transparent'}}>
                 <figure className="templateImage">
                   <img src={template.image} alt="basicTemplate" />
                 </figure>
