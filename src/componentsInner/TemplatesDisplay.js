@@ -5,6 +5,18 @@ import BasicTemplate from '../allTemplates/basicTemplate/BasicTemplate';
 
 export default function TemplatesDisplay() {
   const [selectedTemplate, setSelectedTemplate] = useState(BasicTemplate);
+  const [borderColor, setBorderColor] = useState({});
+
+  const handleCardClick = (template) => {
+    setSelectedTemplate(template.component);
+  };
+
+  const changeborderColor = (templateId) => {
+    setBorderColor((prevColors) => ({
+      ...prevColors,
+      [templateId]: 'blue'
+    }));
+  }
   return (
     <div>
       <div className="allTemplateDisplay">
@@ -13,7 +25,7 @@ export default function TemplatesDisplay() {
           <h3>Here are some of the available Template for CV</h3>
           <div className="allTemplateContainer">
             {templateData.map((template) => (
-              <div className={`templateCard ${selectedTemplate === template.component? 'selectedCard' : ''}`} key={template.id} onClick={()=> setSelectedTemplate(template.component)}>
+              <div className="templateCard" key={template.id} onClick={()=> {handleCardClick(template); changeborderColor(template.id)}} style={{borderColor: borderColor[template.id]}}>
                 <figure className="templateImage">
                   <img src={template.image} alt="basicTemplate" />
                 </figure>
