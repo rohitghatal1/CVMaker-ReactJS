@@ -1,5 +1,6 @@
 import React from 'react'
 import './personal.css'
+import personPhoto from '../assets/personPhotos/rohit2.jpg'
 
 export default function PersonalData() {
   return (
@@ -10,8 +11,9 @@ export default function PersonalData() {
 
         <div className="personalInformation">
             <div className="photoSection">
-                <input type="file" />
-                <label htmlFor="photo">Upload Photo</label>
+                <figure className='personPhoto'>
+                    <img src={personPhoto} alt="photo" />
+                </figure>
 
             </div>
         </div>
