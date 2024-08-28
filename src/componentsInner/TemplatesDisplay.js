@@ -13,7 +13,7 @@ export default function TemplatesDisplay() {
           <h3>Here are some of the available Template for CV</h3>
           <div className="allTemplateContainer">
             {templateData.map((template) => (
-              <div className="templateCard" key={template.id} onClick={()=> setSelectedTemplate(template.component)}>
+              <div className={`templateCard ${selectedTemplate === template.component? 'selectedCard' : ''}`} key={template.id} onClick={()=> setSelectedTemplate(template.component)}>
                 <figure className="templateImage">
                   <img src={template.image} alt="basicTemplate" />
                 </figure>

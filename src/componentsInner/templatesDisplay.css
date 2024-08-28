@@ -17,6 +17,15 @@
     height: 38rem;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard.selectedCard {
+    border: 2px solid #007bff;
+    transform: scale(1.2);
 }
 
 .allTemplateDisplay .allTemplateContainer .templateCard figure{
