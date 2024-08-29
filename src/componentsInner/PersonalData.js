@@ -20,6 +20,21 @@ export default function PersonalData() {
               <span className='deletebtn'><i class="fa-regular fa-trash-can"></i> Delete Photo</span>
             </div>
           </div>
+
+          <div className="infoForm">
+            <form>
+              <div className="row">
+                <div className="col">
+                  <label htmlFor="fname">First Name</label>
+                  <input type="text" placeholder='First Name' />
+                </div>
+                <div className="col">
+                  <label htmlFor="lname">Last Name</label>
+                  <input type="text" placeholder='Last Name' />
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

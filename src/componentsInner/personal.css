@@ -1,5 +1,5 @@
 .personalInfoCollector{
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     background-color: aliceblue;
     display: flex;
@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    background-color: #fff;
 }
 
 .personalInfoCollector .personalInformation .photoSection{
@@ -48,4 +49,32 @@
 
 .personalInfoCollector .personalInformation .photoSection .uploadDeleteBtn .deletebtn{
     color: #ff4000;
+}
+
+.personalInfoCollector .personalInformation .infoForm{
+    padding: 1rem;
+}
+
+.personalInfoCollector .personalInformation .infoForm .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.personalInfoCollector .personalInformation .infoForm .col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.personalInfoCollector .personalInformation .infoForm .col input{
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    background-color: aliceblue;
 }
