@@ -106,4 +106,12 @@
     border: none;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.personalInfoCollector .personalInformation .socialLinkSection .addNewLink:hover{
+    background-color: aliceblue;
+    color: #15bdfa;
+    border: 1px solid #15bdfa;
+    transform: scale(1.01);
 }
