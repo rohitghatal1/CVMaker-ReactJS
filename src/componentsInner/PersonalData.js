@@ -74,7 +74,7 @@ export default function PersonalData() {
 
           <section className="socialLinkSection">
             <div className="currentLinks">
-
+              
             </div>
 
             <button className="addNewLink">
