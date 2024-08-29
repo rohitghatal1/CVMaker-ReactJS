@@ -67,10 +67,20 @@ export default function PersonalData() {
 
               <div className="fullWidthInput">
                 <label htmlFor="summary">Summary</label>
-                <textarea></textarea>
+                <textarea rows={5}></textarea>
               </div>
             </form>
           </div>
+
+          <section className="socialLinkSection">
+            <div className="currentLinks">
+
+            </div>
+
+            <button className="addNewLink">
+              <i className='fa fa-plus'></i> Add Social Link
+            </button>
+          </section>
         </div>
       </div>
     </div>

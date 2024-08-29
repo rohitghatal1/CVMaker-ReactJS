@@ -95,3 +95,15 @@
     border-radius: 0.5rem;
     background-color: aliceblue;
 }
+
+.personalInfoCollector .personalInformation .socialLinkSection .addNewLink{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
