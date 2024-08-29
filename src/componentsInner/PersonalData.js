@@ -24,14 +24,50 @@ export default function PersonalData() {
           <div className="infoForm">
             <form>
               <div className="row">
+
                 <div className="col">
                   <label htmlFor="fname">First Name</label>
                   <input type="text" placeholder='First Name' />
                 </div>
+
                 <div className="col">
                   <label htmlFor="lname">Last Name</label>
                   <input type="text" placeholder='Last Name' />
                 </div>
+              </div>
+
+              <div className="fullWidthInput">
+                <label htmlFor="designattion">Specialist on</label>
+                <input type="text" placeholder='ex: Web Developer, Python, React Developer etc' />
+              </div>
+
+              <div className="row">
+                <div className="col">
+                  <label htmlFor="address">Address</label>
+                  <input type="text" placeholder='address' />
+                </div>
+
+                <div className="col">
+                  <label htmlFor="city">City</label>
+                  <input type="text" placeholder='city' />
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" placeholder='email address'/>
+                </div>
+
+                <div className="col">
+                  <label htmlFor="phone">Contact No.</label>
+                  <input type="text" placeholder='contact number' />
+                </div>
+              </div>
+
+              <div className="fullWidthInput">
+                <label htmlFor="summary">Summary</label>
+                <textarea></textarea>
               </div>
             </form>
           </div>
