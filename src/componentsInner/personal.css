@@ -96,8 +96,9 @@
     background-color: aliceblue;
 }
 
-
-
+.personalInfoCollector .personalInformation .socialLinkSection .currentLinks .socialLinkItem{
+    text-align: left;
+}
 .personalInfoCollector .personalInformation .socialLinkSection .newLinkSection{
     margin-top: 0.5rem;
     padding: 0.5rem;
@@ -114,6 +115,12 @@
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     font-size: 15px;
+}
+
+.personalInfoCollector .personalInformation .socialLinkSection p{
+    text-align: left;
+    font: 12px;
+    color: #333;
 }
 
 .personalInfoCollector .personalInformation .socialLinkSection .addNewLink{
