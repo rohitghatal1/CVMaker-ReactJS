@@ -96,6 +96,26 @@
     background-color: aliceblue;
 }
 
+
+
+.personalInfoCollector .personalInformation .socialLinkSection .newLinkSection{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.personalInfoCollector .personalInformation .socialLinkSection .newLinkSection .newlinkForm{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.personalInfoCollector .personalInformation .socialLinkSection .newLinkSection .newlinkForm input, select{
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 15px;
+}
+
 .personalInfoCollector .personalInformation .socialLinkSection .addNewLink{
     padding: 0.5rem;
     border-radius: 0.2rem;
@@ -114,5 +134,4 @@
     background-color: aliceblue;
     color: #15bdfa;
     border: 1px solid #15bdfa;
-    transform: scale(1.01);
 }

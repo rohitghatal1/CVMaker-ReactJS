@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import './personal.css'
 import personPhoto from '../assets/personPhotos/rohit2.jpg'
 
 export default function PersonalData() {
+  const [socialLinks, setSocialLinks] = useState([]);
+  const [newLink, setNewLink] = useState({platform:'Facebook', url: ''})
   return (
     <div>
       <div className="personalInfoCollector">
@@ -73,11 +75,13 @@ export default function PersonalData() {
           </div>
 
           <section className="socialLinkSection">
+          <p>Social Links</p>
             <div className="currentLinks">
 
             </div>
 
             <div className="newLinkSection">
+            <p>New Link</p>
               <div className="newlinkForm">
                 <select id="socialPlatform">
                   <option value="Facebook">Facebook</option>
