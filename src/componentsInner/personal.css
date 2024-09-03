@@ -97,8 +97,8 @@
 }
 
 .personalInfoCollector .personalInformation .socialLinkSection .addNewLink{
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
     font-weight: bold;
     text-align: center;
     background-color: #15bdfa;
@@ -107,6 +107,7 @@
     font-size: 15px;
     cursor: pointer;
     transition: all 0.8s ease;
+    margin-top: 0.5rem;
 }
 
 .personalInfoCollector .personalInformation .socialLinkSection .addNewLink:hover{

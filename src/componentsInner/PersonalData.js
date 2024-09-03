@@ -56,7 +56,7 @@ export default function PersonalData() {
               <div className="row">
                 <div className="col">
                   <label htmlFor="email">Email</label>
-                  <input type="email" placeholder='email address'/>
+                  <input type="email" placeholder='email address' />
                 </div>
 
                 <div className="col">
@@ -74,12 +74,24 @@ export default function PersonalData() {
 
           <section className="socialLinkSection">
             <div className="currentLinks">
-              
+
             </div>
 
-            <button className="addNewLink">
-              <i className='fa fa-plus'></i> Add Social Link
-            </button>
+            <div className="newLinkSection">
+              <div className="newlinkForm">
+                <select id="socialPlatform">
+                  <option value="Facebook">Facebook</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="GitHub">GitHub</option>
+                </select>
+                <input type="text" />
+              </div>
+              <button className="addNewLink">
+                <i className='fa fa-plus'></i> Add Link
+              </button>
+            </div>
           </section>
         </div>
       </div>
