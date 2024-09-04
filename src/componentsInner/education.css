@@ -11,15 +11,22 @@
 .educationComponent .educationSection{
     padding: 0.5rem;
     background-color: #fff;
+    text-align: left;
+    width: 60%;
+    margin: auto;
 }
 
 .educationComponent .educationSection p{
-    text-align: left;
+    font-size: 12px;
+    color: #999;
 }
-
 .educationComponent .educationSection .addNewEducationDetail .addNewEducationbtn{
     padding: 0.8rem;
     background-color: #15bdfa;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
     border-radius: 0.4rem;
     border: none;
+    margin-top: 0.5rem;
 }
