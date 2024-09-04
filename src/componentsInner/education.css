@@ -1,0 +1,9 @@
+.educationComponent{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+.educationComponent h2{
+    font-size: 32px;
+}
