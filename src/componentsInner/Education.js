@@ -9,7 +9,12 @@ export default function Education() {
         <p>Provide your Education Details here</p>
 
         <section className='educationSection'>
+            <div className="currentEducationDetails">
 
+            </div>
+            <div className="addNewEducationDetail">
+                <button><i className='fas fa-plus'></i> Add Education</button>
+            </div>
         </section>
       </div>
     </div>
