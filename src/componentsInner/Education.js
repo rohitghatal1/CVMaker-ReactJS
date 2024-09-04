@@ -10,10 +10,11 @@ export default function Education() {
 
         <section className='educationSection'>
             <div className="currentEducationDetails">
-
+                <p>Current Details:</p>
             </div>
             <div className="addNewEducationDetail">
-                <button><i className='fas fa-plus'></i> Add Education</button>
+                <p>New Details</p>
+                <button className='addNewEducationbtn'><i className='fas fa-plus'></i> Add Education</button>
             </div>
         </section>
       </div>

@@ -7,3 +7,19 @@
 .educationComponent h2{
     font-size: 32px;
 }
+
+.educationComponent .educationSection{
+    padding: 0.5rem;
+    background-color: #fff;
+}
+
+.educationComponent .educationSection p{
+    text-align: left;
+}
+
+.educationComponent .educationSection .addNewEducationDetail .addNewEducationbtn{
+    padding: 0.8rem;
+    background-color: #15bdfa;
+    border-radius: 0.4rem;
+    border: none;
+}
