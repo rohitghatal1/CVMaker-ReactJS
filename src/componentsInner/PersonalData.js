@@ -136,6 +136,11 @@ export default function PersonalData() {
               </button>
             </div>
           </section>
+
+          <div className="nextAndBackBtn">
+            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
         </div>
       </div>
     </div>

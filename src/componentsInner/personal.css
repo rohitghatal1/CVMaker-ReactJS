@@ -15,6 +15,8 @@
     align-items: center;
     padding: 1rem;
     background-color: #fff;
+    width: 50%;
+    margin: auto;
 }
 
 .personalInfoCollector .personalInformation .photoSection{
@@ -146,4 +148,31 @@
     background-color: aliceblue;
     color: #15bdfa;
     border: 1px solid #15bdfa;
+}
+
+.personalInfoCollector .personalInformation .nextAndBackBtn{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.personalInfoCollector .personalInformation .nextAndBackBtn button{
+    padding: 0.7rem;
+    font-size: 14px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.personalInfoCollector .personalInformation .nextAndBackBtn .nextBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.personalInfoCollector .personalInformation .nextAndBackBtn .prevBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
 }
