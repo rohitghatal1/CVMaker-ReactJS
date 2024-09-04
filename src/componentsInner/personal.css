@@ -98,6 +98,11 @@
 
 .personalInfoCollector .personalInformation .socialLinkSection .currentLinks .socialLinkItem{
     text-align: left;
+    display: flex;
+    gap: 1rem;
+}
+.personalInfoCollector .personalInformation .socialLinkSection .currentLinks .socialLinkItem .deleteLinkbtn{
+    cursor: pointer;
 }
 .personalInfoCollector .personalInformation .socialLinkSection .newLinkSection{
     margin-top: 0.5rem;

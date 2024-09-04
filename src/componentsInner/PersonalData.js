@@ -27,6 +27,11 @@ export default function PersonalData() {
     }
   };
 
+  const handleDeleteLink = (index) => {
+    const updatedLinks = socialLinks.filter((_, i) => i !== index);
+    setSocialLinks(updatedLinks);
+  };
+
   return (
     <div>
       <div className="personalInfoCollector">
@@ -98,6 +103,9 @@ export default function PersonalData() {
               {socialLinks.map((link, index) => (
                 <div key={index} className="socialLinkItem">
                   <span>{link.platform}: {link.url}</span>
+                  <span className='deleteLinkbtn' onClick={() => handleDeleteLink(index)}>
+                    <i className='fas fa-trash'></i>
+                  </span>
                 </div>
               ))}
             </div>
