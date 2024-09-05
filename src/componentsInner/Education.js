@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import './education.css'
 
 export default function Education() {
-  const [education, setEduacation] = useState([]);
+  const [education, setEducation] = useState([]);
   const [newEducation, setNewEducation] = useState();
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
   const [isModalOpen, setisModalOpen] = useState(false);
@@ -52,7 +52,7 @@ export default function Education() {
 
                       <div className="submitAndCloseBtns">
                         <button className='submitBtn' onClick={handleFormSubmit}>Submit</button>
-                        <button className='clsoeBtn' onClick={handleCloseForm}>Close</button>
+                        <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                       </div>
                     </form>
                   </div>

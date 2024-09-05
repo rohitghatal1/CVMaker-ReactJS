@@ -38,6 +38,33 @@
     border-radius: 0.4rem;
     border: 1px solid #ccc;
 }
+
+.educationComponent .addNewEducationDetail .addEducationModal .submitAndCloseBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.educationComponent .addNewEducationDetail .addEducationModal .submitAndCloseBtns button{
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.educationComponent .addNewEducationDetail .addEducationModal .submitAndCloseBtns .submitBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.educationComponent .addNewEducationDetail .addEducationModal .submitAndCloseBtns .closeBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid #aaa;
+}
 .educationComponent .educationSection .addNewEducationDetail .addNewEducationbtn{
     padding: 0.8rem;
     background-color: #15bdfa;
