@@ -20,6 +20,24 @@
     font-size: 12px;
     color: #999;
 }
+
+.educationComponent .addNewEducationDetail .addEducationModal{
+    padding: 0.5rem;
+    margin-top: 0;
+}
+
+.educationComponent .addNewEducationDetail .addEducationModal .educationForm{
+    padding: 1rem;
+}
+.educationComponent .addNewEducationDetail .addEducationModal .educationForm input{
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+}
 .educationComponent .educationSection .addNewEducationDetail .addNewEducationbtn{
     padding: 0.8rem;
     background-color: #15bdfa;

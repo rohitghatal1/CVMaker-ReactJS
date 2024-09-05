@@ -19,11 +19,13 @@ export default function Education() {
             <div className="currentEducationDetails">
                 <p>Current Details:</p>
             </div>
+            
             <div className="addNewEducationDetail">
                 <p>New Details</p>
+
                 {isModalOpen && (
                   <div className="addEducationModal">
-                    <h2>Education Details</h2>
+                    <h4>Education Details</h4>
                     <form className="educationForm">
                       <label htmlFor="Degree">Degree:</label>
                       <input type="text" placeholder='eg. Bachelors, masters etc.' />
@@ -33,7 +35,7 @@ export default function Education() {
 
                       <label htmlFor="started">Started Date</label>
                       <input type="date" />
-                      
+
                       <label htmlFor="passedYear">Passed Date</label>
                       <input type="date" />
                     </form>
