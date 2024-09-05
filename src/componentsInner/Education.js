@@ -68,6 +68,7 @@ export default function Education() {
             )}
             {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
           </div>
+          
           <div className="nextAndBackBtn">
             <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
             <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
