@@ -4,10 +4,21 @@ import './education.css'
 export default function Education() {
   const [education, setEduacation] = useState([]);
   const [newEducation, setNewEducation] = useState();
+  const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
   const [isModalOpen, setisModalOpen] = useState(false);
 
   const hanldeAddEducation = ()=> {
     setisModalOpen(true);
+    setIsAddButtonVisible(false);
+  }
+
+  const handleFormSubmit = () => {
+
+  }
+
+  const handleCloseForm = () => {
+    setisModalOpen(false);
+    setIsAddButtonVisible(true);
   }
   return (
     <div>
@@ -19,7 +30,7 @@ export default function Education() {
             <div className="currentEducationDetails">
                 <p>Current Details:</p>
             </div>
-            
+
             <div className="addNewEducationDetail">
                 <p>New Details</p>
 
@@ -38,10 +49,15 @@ export default function Education() {
 
                       <label htmlFor="passedYear">Passed Date</label>
                       <input type="date" />
+
+                      <div className="submitAndCloseBtns">
+                        <button className='submitBtn' onClick={handleFormSubmit}>Submit</button>
+                        <button className='clsoeBtn' onClick={handleCloseForm}>Close</button>
+                      </div>
                     </form>
                   </div>
                 )}
-                <button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>
+                {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
             </div>
         </section>
       </div>
