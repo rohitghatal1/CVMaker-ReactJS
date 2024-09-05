@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './education.css'
 
 export default function Education() {
@@ -12,14 +12,14 @@ export default function Education() {
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
   const [isModalOpen, setisModalOpen] = useState(false);
 
-  const hanldeAddEducation = ()=> {
+  const hanldeAddEducation = () => {
     setisModalOpen(true);
     setIsAddButtonVisible(false);
   }
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setNewEducation({...newEducation, [name]: value});
+    const { name, value } = e.target;
+    setNewEducation({ ...newEducation, [name]: value });
   }
   const handleFormSubmit = () => {
 
@@ -36,38 +36,42 @@ export default function Education() {
         <p>Provide your Education Details here</p>
 
         <section className='educationSection'>
-            <div className="currentEducationDetails">
-                <p>Current Details:</p>
-            </div>
+          <div className="currentEducationDetails">
+            <p>Current Details:</p>
+          </div>
 
-            <div className="addNewEducationDetail">
-                <p>New Details</p>
+          <div className="addNewEducationDetail">
+            <p>New Details</p>
 
-                {isModalOpen && (
-                  <div className="addEducationModal">
-                    <h4>Education Details</h4>
-                    <form className="educationForm">
-                      <label htmlFor="Degree">Degree:</label>
-                      <input type="text" placeholder='eg. Bachelors, masters etc.' name='degree' value={newEducation.degree} onChange={handleInputChange}/>
+            {isModalOpen && (
+              <div className="addEducationModal">
+                <h4>Education Details</h4>
+                <form className="educationForm">
+                  <label htmlFor="Degree">Degree:</label>
+                  <input type="text" placeholder='eg. Bachelors, masters etc.' name='degree' value={newEducation.degree} onChange={handleInputChange} />
 
-                      <label htmlFor="clz">College Name:</label>
-                      <input type="text" placeholder='Enter name of college' name='college' value={newEducation.college} onChange={handleInputChange} />
+                  <label htmlFor="clz">College Name:</label>
+                  <input type="text" placeholder='Enter name of college' name='college' value={newEducation.college} onChange={handleInputChange} />
 
-                      <label htmlFor="started">Started Date</label>
-                      <input type="date" name='startDate' value={newEducation.startDate} onChange={handleInputChange}/>
+                  <label htmlFor="started">Started Date</label>
+                  <input type="date" name='startDate' value={newEducation.startDate} onChange={handleInputChange} />
 
-                      <label htmlFor="passedYear">Passed Date</label>
-                      <input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange}/>
+                  <label htmlFor="passedYear">Passed Date</label>
+                  <input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
 
-                      <div className="submitAndCloseBtns">
-                        <button className='submitBtn' onClick={handleFormSubmit}>Submit</button>
-                        <button className='closeBtn' onClick={handleCloseForm}>Close</button>
-                      </div>
-                    </form>
+                  <div className="submitAndCloseBtns">
+                    <button className='submitBtn' onClick={handleFormSubmit}>Submit</button>
+                    <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                   </div>
-                )}
-                {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
-            </div>
+                </form>
+              </div>
+            )}
+            {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
+          </div>
+          <div className="nextAndBackBtn">
+            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
         </section>
       </div>
     </div>
