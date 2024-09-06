@@ -25,10 +25,11 @@ export default function Education() {
     setIsAddButtonVisible(false);
   }
 
-  const deleteEducation = (indexTodelete) => {
-    const updatedEducation = education.filter((_, index) => index !== indexTodelete);
+  const deleteEducation = (indexToDelete) => {
+    const updatedEducation = education.filter((_, index) => index !== indexToDelete);
     setEducation(updatedEducation);
-  }
+    localStorage.setItem('education', JSON.stringify(updatedEducation));
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -75,7 +76,7 @@ export default function Education() {
                 </div>
               ))
             ) : (
-              <p>No Education Details added yet.</p>
+              <p className='noeducation'>No Education Details added yet.</p>
             )}
           </div>
 

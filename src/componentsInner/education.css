@@ -41,6 +41,14 @@
     color: black;
     font-weight: bold;
 }
+
+.educationComponent .educationSection .currentEducationDetails .educationItem .degree .deleteEducationBtn{
+    background-color: #fff;
+    color: red;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
 .educationComponent .educationSection .currentEducationDetails .educationItem .collegeDetail{
     width: 90%;
     margin: auto;
@@ -49,6 +57,13 @@
 .educationComponent .educationSection .currentEducationDetails .educationItem .collegeDetail p{
     color: black;
     font-size: 14px;
+}
+
+.educationComponent .educationSection .currentEducationDetails .noeducation{
+    width: 90%;
+    margin: auto;
+    font-size: 14px;
+    color: #999;
 }
 .educationComponent .addNewEducationDetail .addEducationModal{
     padding: 0.5rem;
