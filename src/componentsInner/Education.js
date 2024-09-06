@@ -25,6 +25,11 @@ export default function Education() {
     setIsAddButtonVisible(false);
   }
 
+  const deleteEducation = (indexTodelete) => {
+    const updatedEducation = education.filter((_, index) => index !== indexTodelete);
+    setEducation(updatedEducation);
+  }
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewEducation({ ...newEducation, [name]: value });
@@ -58,13 +63,15 @@ export default function Education() {
             {education.length > 0 ? (
               education.map((edu, index) => (
                 <div className="educationItem" key={index}>
-                  <div className="degree">{edu.degree}</div>
-                  <div className="collegeDetail">
-                    <p>{edu.college}</p>
-                    <p>{edu.startDate}</p>
-                    <p>{edu.passDate}</p>
+                  <div className="degree">
+                    <span>{edu.degree}</span>
+                    <button className='deleteEducationBtn' onClick={() => deleteEducation(index)}><i className='fas fa-trash'></i></button>
                   </div>
-                  <button><i className='fas fa-trash'></i></button>
+                  <div className="collegeDetail">
+                    <p><strong>College:</strong> {edu.college}</p>
+                    <p><strong>Start Date:</strong> {edu.startDate}</p>
+                    <p><strong>Passed Date:</strong> {edu.passDate}</p>
+                  </div>
                 </div>
               ))
             ) : (

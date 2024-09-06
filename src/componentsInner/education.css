@@ -21,6 +21,35 @@
     color: #999;
 }
 
+.educationComponent .educationSection .currentEducationDetails .educationItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.educationComponent .educationSection .currentEducationDetails .educationItem .degree{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.educationComponent .educationSection .currentEducationDetails .educationItem .degree span{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.educationComponent .educationSection .currentEducationDetails .educationItem .collegeDetail{
+    width: 90%;
+    margin: auto;
+}
+
+.educationComponent .educationSection .currentEducationDetails .educationItem .collegeDetail p{
+    color: black;
+    font-size: 14px;
+}
 .educationComponent .addNewEducationDetail .addEducationModal{
     padding: 0.5rem;
     margin-top: 0;
