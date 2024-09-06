@@ -15,11 +15,11 @@ export default function Education() {
   //load existing education data from local sotrage when component mounts
   useEffect(() => {
     const storedEducation = JSON.parse(localStorage.getItem('educationData'));
-    if(storedEducation){
+    if (storedEducation) {
       setEducation(storedEducation)
     }
-  },[]);
-  
+  }, []);
+
   const hanldeAddEducation = () => {
     setisModalOpen(true);
     setIsAddButtonVisible(false);
@@ -31,14 +31,14 @@ export default function Education() {
   }
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if(newEducation.degree && newEducation.college && newEducation.startDate && newEducation.passDate){
+    if (newEducation.degree && newEducation.college && newEducation.startDate && newEducation.passDate) {
       const updatedEducation = [...education, newEducation];
 
       setEducation(updatedEducation);
       localStorage.setItem('educationData', JSON.stringify(updatedEducation));
       setisModalOpen(false);
       setIsAddButtonVisible(true);
-      setNewEducation({degree: '', college: '', startDate: '', passDate: ''});
+      setNewEducation({ degree: '', college: '', startDate: '', passDate: '' });
     }
   };
 
@@ -55,6 +55,21 @@ export default function Education() {
         <section className='educationSection'>
           <div className="currentEducationDetails">
             <p>Current Details:</p>
+            {education.length > 0 ? (
+              education.map((edu, index) => (
+                <div className="educationItem" key={index}>
+                  <div className="degree">{edu.degree}</div>
+                  <div className="collegeDetail">
+                    <p>{edu.college}</p>
+                    <p>{edu.startDate}</p>
+                    <p>{edu.passDate}</p>
+                  </div>
+                  <button><i className='fas fa-trash'></i></button>
+                </div>
+              ))
+            ) : (
+              <p>No Education Details added yet.</p>
+            )}
           </div>
 
           <div className="addNewEducationDetail">
@@ -85,7 +100,7 @@ export default function Education() {
             )}
             {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
           </div>
-          
+
           <div className="nextAndBackBtn">
             <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
             <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
