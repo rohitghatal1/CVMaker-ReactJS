@@ -47,10 +47,12 @@
 
 .personalInfoCollector .personalInformation .photoSection .uploadDeleteBtn .uploadbtn{
     color: #0007ff;
+    cursor: pointer;
 }
 
 .personalInfoCollector .personalInformation .photoSection .uploadDeleteBtn .deletebtn{
     color: #ff4000;
+    cursor: pointer;
 }
 
 .personalInfoCollector .personalInformation .infoForm{

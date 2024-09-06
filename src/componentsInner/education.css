@@ -74,6 +74,7 @@
     border-radius: 0.4rem;
     border: none;
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 .educationComponent  .nextAndBackBtn{

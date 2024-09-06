@@ -46,7 +46,7 @@ export default function Education() {
             {isModalOpen && (
               <div className="addEducationModal">
                 <h4>Education Details</h4>
-                <form className="educationForm">
+                <form className="educationForm" onSubmit={handleFormSubmit}>
                   <label htmlFor="Degree">Degree:</label>
                   <input type="text" placeholder='eg. Bachelors, masters etc.' name='degree' value={newEducation.degree} onChange={handleInputChange} />
 
@@ -60,7 +60,7 @@ export default function Education() {
                   <input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
 
                   <div className="submitAndCloseBtns">
-                    <button className='submitBtn' onClick={handleFormSubmit}>Submit</button>
+                    <button type='submit' className='submitBtn'>Submit</button>
                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                   </div>
                 </form>
