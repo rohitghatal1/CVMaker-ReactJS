@@ -12,6 +12,14 @@ export default function Education() {
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
   const [isModalOpen, setisModalOpen] = useState(false);
 
+  //load existing education data from local sotrage when component mounts
+  useEffect(() => {
+    const storedEducation = JSON.parse(localStorage.getItem('educationData'));
+    if(storedEducation){
+      setEducation(storedEducation)
+    }
+  },[]);
+  
   const hanldeAddEducation = () => {
     setisModalOpen(true);
     setIsAddButtonVisible(false);
@@ -29,7 +37,7 @@ export default function Education() {
       setEducation(updatedEducation);
       localStorage.setItem('educationData', JSON.stringify(updatedEducation));
       setisModalOpen(false);
-      isAddButtonVisible(true);
+      setIsAddButtonVisible(true);
       setNewEducation({degree: '', college: '', startDate: '', passDate: ''});
     }
   };
