@@ -21,9 +21,18 @@ export default function Education() {
     const { name, value } = e.target;
     setNewEducation({ ...newEducation, [name]: value });
   }
-  const handleFormSubmit = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if(newEducation.degree && newEducation.college && newEducation.startDate && newEducation.passDate){
+      const updatedEducation = [...education, newEducation];
 
-  }
+      setEducation(updatedEducation);
+      localStorage.setItem('educationData', JSON.stringify(updatedEducation));
+      setisModalOpen(false);
+      isAddButtonVisible(true);
+      setNewEducation({degree: '', college: '', startDate: '', passDate: ''});
+    }
+  };
 
   const handleCloseForm = () => {
     setisModalOpen(false);
