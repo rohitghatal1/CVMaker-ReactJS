@@ -8,7 +8,7 @@ export default function Experience() {
         <h2>Experience</h2>
         <p>Provide your Experience details here</p>
 
-        <section className="educationSection">
+        <section className="experienceSection">
             <div className="currentAddedExperience">
                 <p>Experience</p>
             </div>

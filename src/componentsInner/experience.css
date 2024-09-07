@@ -8,7 +8,7 @@
     font-size: 32px;
 }
 
-.experienceComponent .educationSection{
+.experienceComponent .experienceSection{
     padding: 0.5rem;
     background-color: #fff;
     text-align: left;
@@ -16,7 +16,12 @@
     margin: auto;
 }
 
-.experienceComponent .educationSection .addNewExperiecne .addNewExperiencebtn{
+.experienceComponent .experienceSection p{
+    font-size: 12px;
+    color: #999;
+}
+
+.experienceComponent .experienceSection .addNewExperiecne .addNewExperiencebtn{
     padding: 0.8rem;
     background-color: #15bdfa;
     color: #fff;
