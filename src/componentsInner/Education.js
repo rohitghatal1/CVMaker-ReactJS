@@ -28,7 +28,7 @@ export default function Education() {
   const deleteEducation = (indexToDelete) => {
     const updatedEducation = education.filter((_, index) => index !== indexToDelete);
     setEducation(updatedEducation);
-    localStorage.setItem('education', JSON.stringify(updatedEducation));
+    localStorage.setItem('educationData', JSON.stringify(updatedEducation));
   };
 
   const handleInputChange = (e) => {
