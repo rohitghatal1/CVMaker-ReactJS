@@ -9,7 +9,14 @@ export default function Experience() {
         <p>Provide your Experience details here</p>
 
         <section className="educationSection">
+            <div className="currentAddedExperience">
+                <p>Experience</p>
+            </div>
 
+            <div className="addNewExperiecne">
+                <p>New details</p>
+                <button className='addNewExperiencebtn'><i className='fas fa-plus'></i> Add Experience</button>
+            </div>
         </section>
       </div>
     </div>
