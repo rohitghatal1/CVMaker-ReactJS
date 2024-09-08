@@ -3,6 +3,13 @@ import './experience.css'
 
 export default function Experience() {
 
+    const [newExperience, setNewExperience] = useState({
+        jobTitle: '',
+        orgnaization: '',
+        location: '',
+        startDate: '',
+        endDate: ''
+    })
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleCloseForm = ()=> {
@@ -15,6 +22,9 @@ export default function Experience() {
         setIsAddButtonVisible(false);
     }
 
+    const submitExperienceForm = () => {
+        
+    }
     return (
         <div>
             <div className="experienceComponent">
@@ -30,21 +40,21 @@ export default function Experience() {
                         <p>New details</p>
 
                         {isModalOpen && <div className="addExperienceModal">
-                            <form className='addExperienceForm'>
+                            <form className='addExperienceForm' onSubmit={submitExperienceForm}>
                                 <label htmlFor="title">Job Title</label>
-                                <input type="text" name='jobTitle' />
+                                <input type="text" name='jobTitle' value={newExperience.jobTitle} />
 
                                 <label htmlFor="org">Organization</label>
-                                <input type="text" name='organization' />
+                                <input type="text" name='organization' value={newExperience.orgnaization} />
 
                                 <label htmlFor="location">Location</label>
-                                <input type="text" name='location' />
+                                <input type="text" name='location' value={newExperience.location} />
 
                                 <label htmlFor="startDate">Start Date</label>
-                                <input type="date" name='sDate' />
+                                <input type="date" name='sDate' value={newExperience.startDate} />
 
                                 <label htmlFor="endDate">End Date</label>
-                                <input type="date" name='eDate' />
+                                <input type="date" name='eDate' value={newExperience.endDate} />
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>
