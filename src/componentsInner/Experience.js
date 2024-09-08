@@ -3,14 +3,18 @@ import './experience.css'
 
 export default function Experience() {
 
+    const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleCloseForm = ()=> {
-
+        setIsModalOpen(false);
+        setIsAddButtonVisible(true);
     }
 
     const openAddExperienceModal = () => {
         setIsModalOpen(true);
+        setIsAddButtonVisible(false);
     }
+
     return (
         <div>
             <div className="experienceComponent">
@@ -49,7 +53,8 @@ export default function Experience() {
                             </form>
                         </div>
                         }
-                        <button className='addNewExperiencebtn' onClick={openAddExperienceModal}><i className='fas fa-plus'></i> Add Experience</button>
+                        
+                        {isAddButtonVisible && <button className='addNewExperiencebtn' onClick={openAddExperienceModal}><i className='fas fa-plus'></i> Add Experience</button>}
                     </div>
 
                     <div className="nextAndBackBtn">
