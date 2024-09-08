@@ -32,6 +32,11 @@ export default function Experience() {
 
                                 <label htmlFor="endDate">End Date</label>
                                 <input type="date" name='eDate' />
+
+                                <div className="submitAndCloseBtns">
+                                    <button type='submit' className='submitBtn'>Submit</button>
+                                    <button className='closeBtn' onClick={handleCloseForm}>Close</button>
+                                </div>
                             </form>
                         </div>
                         <button className='addNewExperiencebtn'><i className='fas fa-plus'></i> Add Experience</button>
