@@ -37,6 +37,34 @@
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 }
+
+.experienceComponent .experienceSection .addExperienceModal .submitAndCloseBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.experienceComponent .experienceSection .addExperienceModal .submitAndCloseBtns button{
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.experienceComponent .experienceSection .addExperienceModal .submitAndCloseBtns .submitBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.experienceComponent .experienceSection .addExperienceModal .submitAndCloseBtns .closeBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid #aaa;
+}
+
 .experienceComponent .experienceSection .addNewExperiecne .addNewExperiencebtn{
     padding: 0.8rem;
     background-color: #15bdfa;

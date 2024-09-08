@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './experience.css'
 
 export default function Experience() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const handleCloseForm = ()=> {
+
+    }
+
+    const openAddExperienceModal = () => {
+        setIsModalOpen(true);
+    }
     return (
         <div>
             <div className="experienceComponent">
@@ -16,7 +25,7 @@ export default function Experience() {
                     <div className="addNewExperiecne">
                         <p>New details</p>
 
-                        <div className="addExperienceModal">
+                        {isModalOpen && <div className="addExperienceModal">
                             <form className='addExperienceForm'>
                                 <label htmlFor="title">Job Title</label>
                                 <input type="text" name='jobTitle' />
@@ -39,7 +48,8 @@ export default function Experience() {
                                 </div>
                             </form>
                         </div>
-                        <button className='addNewExperiencebtn'><i className='fas fa-plus'></i> Add Experience</button>
+                        }
+                        <button className='addNewExperiencebtn' onClick={openAddExperienceModal}><i className='fas fa-plus'></i> Add Experience</button>
                     </div>
 
                     <div className="nextAndBackBtn">
