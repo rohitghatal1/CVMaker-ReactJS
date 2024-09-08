@@ -10,6 +10,15 @@ export default function Experience() {
         startDate: '',
         endDate: ''
     })
+
+    // fetching data from local storage 
+    useEffect(() => {
+        const storedExperience = json.parse(localStorage.getItem('experienceData'));
+        if(storedExperience){
+            setExperience(storedExperience)
+        }
+    }, []);
+
     const [experience, setExperience] = useState([]);
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +32,10 @@ export default function Experience() {
         setIsAddButtonVisible(false);
     }
 
+    const handleInputChange = (e) => {
+        const {name, value} = e.target;
+        setNewExperience = ({...newExperience, [name]: value})
+    }
     const submitExperienceForm = (e) => {
        e.preventDefault();
        
