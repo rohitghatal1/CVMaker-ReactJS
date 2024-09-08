@@ -17,10 +17,26 @@
 }
 
 .experienceComponent .experienceSection p{
-    font-size: 12px;
+    font-size: 14px;
     color: #999;
 }
 
+.experienceComponent .experienceSection .addNewExperiecne{
+    padding: 1rem;
+}
+.experienceComponent .experienceSection .addNewExperiecne .addExperienceModal{
+    padding: 1rem;
+}
+
+.experienceComponent .experienceSection .addNewExperiecne .addExperienceModal input{
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
 .experienceComponent .experienceSection .addNewExperiecne .addNewExperiencebtn{
     padding: 0.8rem;
     background-color: #15bdfa;

@@ -15,6 +15,25 @@ export default function Experience() {
 
                     <div className="addNewExperiecne">
                         <p>New details</p>
+
+                        <div className="addExperienceModal">
+                            <form className='addExperienceForm'>
+                                <label htmlFor="title">Job Title</label>
+                                <input type="text" name='jobTitle' />
+
+                                <label htmlFor="org">Organization</label>
+                                <input type="text" name='organization' />
+
+                                <label htmlFor="location">Location</label>
+                                <input type="text" name='location' />
+
+                                <label htmlFor="startDate">Start Date</label>
+                                <input type="date" name='sDate' />
+
+                                <label htmlFor="endDate">End Date</label>
+                                <input type="date" name='eDate' />
+                            </form>
+                        </div>
                         <button className='addNewExperiencebtn'><i className='fas fa-plus'></i> Add Experience</button>
                     </div>
 
