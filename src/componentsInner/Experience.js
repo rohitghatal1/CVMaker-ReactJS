@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './experience.css'
 
 export default function Experience() {
@@ -11,18 +11,20 @@ export default function Experience() {
         endDate: ''
     })
 
+
+    const [experience, setExperience] = useState([]);
+
     // fetching data from local storage 
     useEffect(() => {
-        const storedExperience = json.parse(localStorage.getItem('experienceData'));
-        if(storedExperience){
+        const storedExperience = JSON.parse(localStorage.getItem('experienceData'));
+        if (storedExperience) {
             setExperience(storedExperience)
         }
     }, []);
 
-    const [experience, setExperience] = useState([]);
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const handleCloseForm = ()=> {
+    const handleCloseForm = () => {
         setIsModalOpen(false);
         setIsAddButtonVisible(true);
     }
@@ -33,23 +35,23 @@ export default function Experience() {
     }
 
     const handleInputChange = (e) => {
-        const {name, value} = e.target;
-        setNewExperience = ({...newExperience, [name]: value})
+        const { name, value } = e.target;
+        setNewExperience = ({ ...newExperience, [name]: value })
     }
     const submitExperienceForm = (e) => {
-       e.preventDefault();
-       
-       if(newExperience.jobTitle && newExperience.organization && newExperience.location && newExperience.startDate && newExperience.endDate){
-        const updatedExperience = [...experience, newExperience];
+        e.preventDefault();
 
-        setExperience(updatedExperience);
-        localStorage.setItem('experienceData', JSON.stringify(updatedExperience));
-        isModalOpen(false);
-        isAddButtonVisible(true);
-        setNewExperience({
-            jobTitle: '', organization: '', location: '', startDate: '', endDate: ''
-        })
-       }
+        if (newExperience.jobTitle && newExperience.organization && newExperience.location && newExperience.startDate && newExperience.endDate) {
+            const updatedExperience = [...experience, newExperience];
+
+            setExperience(updatedExperience);
+            localStorage.setItem('experienceData', JSON.stringify(updatedExperience));
+            isModalOpen(false);
+            isAddButtonVisible(true);
+            setNewExperience({
+                jobTitle: '', organization: '', location: '', startDate: '', endDate: ''
+            })
+        }
     }
     return (
         <div>
@@ -60,6 +62,24 @@ export default function Experience() {
                 <section className="experienceSection">
                     <div className="currentAddedExperience">
                         <p>Experience</p>
+
+                        {experience.length > 0 ? (
+                            experience.map((exp, index) => (
+                                <div className="experienceItem" key = {index}>
+                                    <div className="title">
+                                        <span>{exp.jobTitle}</span>
+                                    </div>
+                                    <div className="jobDetails">
+                                        <p><strong>Company:</strong>{exp.organization}</p>
+                                        <p><strong>Location:</strong>{exp.location}</p>
+                                        <p><strong>Start Date:</strong>{exp.startDate}</p>
+                                        <p><strong>End Date:</strong>{exp.endDate}</p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No experience added yet!!</p>
+                        )}
                     </div>
 
                     <div className="addNewExperiecne">
@@ -68,19 +88,19 @@ export default function Experience() {
                         {isModalOpen && <div className="addExperienceModal">
                             <form className='addExperienceForm' onSubmit={submitExperienceForm}>
                                 <label htmlFor="title">Job Title</label>
-                                <input type="text" name='jobTitle' value={newExperience.jobTitle} />
+                                <input type="text" name='jobTitle' value={newExperience.jobTitle}  onChange={handleInputChange} />
 
                                 <label htmlFor="org">Organization</label>
-                                <input type="text" name='organization' value={newExperience.orgnaization} />
+                                <input type="text" name='organization' value={newExperience.orgnaization} onChange={handleInputChange} />
 
                                 <label htmlFor="location">Location</label>
-                                <input type="text" name='location' value={newExperience.location} />
+                                <input type="text" name='location' value={newExperience.location}  onChange={handleInputChange}/>
 
                                 <label htmlFor="startDate">Start Date</label>
-                                <input type="date" name='sDate' value={newExperience.startDate} />
+                                <input type="date" name='sDate' value={newExperience.startDate}  onChange={handleInputChange}/>
 
                                 <label htmlFor="endDate">End Date</label>
-                                <input type="date" name='eDate' value={newExperience.endDate} />
+                                <input type="date" name='eDate' value={newExperience.endDate}  onChange={handleInputChange}/>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>
@@ -89,7 +109,7 @@ export default function Experience() {
                             </form>
                         </div>
                         }
-                        
+
                         {isAddButtonVisible && <button className='addNewExperiencebtn' onClick={openAddExperienceModal}><i className='fas fa-plus'></i> Add Experience</button>}
                     </div>
 
