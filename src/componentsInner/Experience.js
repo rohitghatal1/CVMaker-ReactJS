@@ -5,11 +5,12 @@ export default function Experience() {
 
     const [newExperience, setNewExperience] = useState({
         jobTitle: '',
-        orgnaization: '',
+        organization: '',
         location: '',
         startDate: '',
         endDate: ''
     })
+    const [experience, setExperience] = useState([]);
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleCloseForm = ()=> {
@@ -22,8 +23,20 @@ export default function Experience() {
         setIsAddButtonVisible(false);
     }
 
-    const submitExperienceForm = () => {
-        
+    const submitExperienceForm = (e) => {
+       e.preventDefault();
+       
+       if(newExperience.jobTitle && newExperience.organization && newExperience.location && newExperience.startDate && newExperience.endDate){
+        const updatedExperience = [...experience, newExperience];
+
+        setExperience(updatedExperience);
+        localStorage.setItem('experienceData', JSON.stringify(updatedExperience));
+        isModalOpen(false);
+        isAddButtonVisible(true);
+        setNewExperience({
+            jobTitle: '', organization: '', location: '', startDate: '', endDate: ''
+        })
+       }
     }
     return (
         <div>
