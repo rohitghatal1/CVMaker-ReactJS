@@ -15,3 +15,24 @@
     width: 60%;
     margin: auto;
 }
+
+.projectsComponent .projectsSection p{
+    font-size: 14px;
+    color: #999;
+}
+
+.projectsComponent .projectsSection .newProjects{
+    padding: 1rem;
+}
+
+.projectsComponent .projectsSection .newProjects .addNewProjectbtn{
+    padding: 0.8rem;
+    background-color: #15bdfa;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0.4rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}

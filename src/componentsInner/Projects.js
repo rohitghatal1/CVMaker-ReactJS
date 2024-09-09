@@ -2,6 +2,9 @@ import React from 'react'
 import './projects.css'
 
 export default function Projects() {
+    const openAddProjectModal = () => {
+        
+    }
   return (
     <div>
       <div className="projectsComponent">
@@ -14,7 +17,9 @@ export default function Projects() {
             </div>
 
             <div className="newProjects">
+                <p>New Projects</p>
 
+                <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Experience</button>
             </div>
         </section>
       </div>
