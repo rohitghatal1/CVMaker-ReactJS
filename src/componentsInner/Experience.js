@@ -68,7 +68,7 @@ export default function Experience() {
                                 <div className="experienceItem" key={index}>
                                     <div className="title">
                                         <span>{exp.jobTitle}</span>
-                                        <button><i className='fas fa-trash'></i></button>
+                                        <button className='deleteExperienceBtn'><i className='fas fa-trash'></i></button>
                                     </div>
                                     <div className="jobDetails">
                                         <div className="row">

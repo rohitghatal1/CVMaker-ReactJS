@@ -37,11 +37,39 @@
     justify-content: space-between;
     border-bottom: 1px solid black;
 }
+
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .title .deleteExperienceBtn{
+    background-color: #fff;
+    color: red;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
 .experienceComponent .experienceSection .currentAddedExperience .experienceItem .title, .jobDetails{
     width: 90%;
     margin: auto;
     text-align: left;
 }
+
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .jobDetails .row{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .jobDetails .row .col{
+    width: 45%;
+    border: 1px solid #ccc;
+}
+
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .jobDetails .row .col p{
+    color: black;
+    cursor: pointer;
+}
+
 .experienceComponent .experienceSection .addNewExperiecne{
     padding: 1rem;
 }
