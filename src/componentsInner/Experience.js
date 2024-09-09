@@ -36,7 +36,7 @@ export default function Experience() {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setNewExperience = ({ ...newExperience, [name]: value })
+        setNewExperience({ ...newExperience, [name]: value })
     }
     const submitExperienceForm = (e) => {
         e.preventDefault();
@@ -46,8 +46,8 @@ export default function Experience() {
 
             setExperience(updatedExperience);
             localStorage.setItem('experienceData', JSON.stringify(updatedExperience));
-            isModalOpen(false);
-            isAddButtonVisible(true);
+            setIsModalOpen(false);
+            setIsAddButtonVisible(true);
             setNewExperience({
                 jobTitle: '', organization: '', location: '', startDate: '', endDate: ''
             })
@@ -97,10 +97,10 @@ export default function Experience() {
                                 <input type="text" name='location' value={newExperience.location}  onChange={handleInputChange}/>
 
                                 <label htmlFor="startDate">Start Date</label>
-                                <input type="date" name='sDate' value={newExperience.startDate}  onChange={handleInputChange}/>
+                                <input type="date" name='startDate' value={newExperience.startDate}  onChange={handleInputChange}/>
 
                                 <label htmlFor="endDate">End Date</label>
-                                <input type="date" name='eDate' value={newExperience.endDate}  onChange={handleInputChange}/>
+                                <input type="date" name='endDate' value={newExperience.endDate}  onChange={handleInputChange}/>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>
