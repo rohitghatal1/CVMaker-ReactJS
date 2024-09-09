@@ -26,6 +26,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
 }
 .educationComponent .educationSection .currentEducationDetails .educationItem .degree{
     width: 90%;

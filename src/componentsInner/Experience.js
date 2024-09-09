@@ -65,15 +65,20 @@ export default function Experience() {
 
                         {experience.length > 0 ? (
                             experience.map((exp, index) => (
-                                <div className="experienceItem" key = {index}>
+                                <div className="experienceItem" key={index}>
                                     <div className="title">
                                         <span>{exp.jobTitle}</span>
+                                        <button><i className='fas fa-trash'></i></button>
                                     </div>
                                     <div className="jobDetails">
-                                        <p><strong>Company:</strong>{exp.organization}</p>
-                                        <p><strong>Location:</strong>{exp.location}</p>
-                                        <p><strong>Start Date:</strong>{exp.startDate}</p>
-                                        <p><strong>End Date:</strong>{exp.endDate}</p>
+                                        <div className="row">
+                                            <div className="col"><p><strong>Company:</strong>{exp.organization}</p></div>
+                                            <div className="col"><p><strong>Location:</strong>{exp.location}</p></div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col"><p><strong>Start Date:</strong>{exp.startDate}</p></div>
+                                            <div className="col"><p><strong>End Date:</strong>{exp.endDate}</p></div>
+                                        </div>
                                     </div>
                                 </div>
                             ))
@@ -88,19 +93,19 @@ export default function Experience() {
                         {isModalOpen && <div className="addExperienceModal">
                             <form className='addExperienceForm' onSubmit={submitExperienceForm}>
                                 <label htmlFor="title">Job Title</label>
-                                <input type="text" name='jobTitle' value={newExperience.jobTitle}  onChange={handleInputChange} />
+                                <input type="text" name='jobTitle' value={newExperience.jobTitle} onChange={handleInputChange} />
 
                                 <label htmlFor="org">Organization</label>
                                 <input type="text" name='organization' value={newExperience.orgnaization} onChange={handleInputChange} />
 
                                 <label htmlFor="location">Location</label>
-                                <input type="text" name='location' value={newExperience.location}  onChange={handleInputChange}/>
+                                <input type="text" name='location' value={newExperience.location} onChange={handleInputChange} />
 
                                 <label htmlFor="startDate">Start Date</label>
-                                <input type="date" name='startDate' value={newExperience.startDate}  onChange={handleInputChange}/>
+                                <input type="date" name='startDate' value={newExperience.startDate} onChange={handleInputChange} />
 
                                 <label htmlFor="endDate">End Date</label>
-                                <input type="date" name='endDate' value={newExperience.endDate}  onChange={handleInputChange}/>
+                                <input type="date" name='endDate' value={newExperience.endDate} onChange={handleInputChange} />
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>

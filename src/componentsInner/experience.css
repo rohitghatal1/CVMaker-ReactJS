@@ -21,6 +21,27 @@
     color: #999;
 }
 
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+}
+
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.experienceComponent .experienceSection .currentAddedExperience .experienceItem .title, .jobDetails{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
 .experienceComponent .experienceSection .addNewExperiecne{
     padding: 1rem;
 }
