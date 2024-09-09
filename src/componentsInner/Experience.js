@@ -3,6 +3,7 @@ import './experience.css'
 
 export default function Experience() {
 
+    // use state for saving and settin new exp 
     const [newExperience, setNewExperience] = useState({
         jobTitle: '',
         organization: '',
@@ -24,6 +25,7 @@ export default function Experience() {
 
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const handleCloseForm = () => {
         setIsModalOpen(false);
         setIsAddButtonVisible(true);
@@ -53,6 +55,12 @@ export default function Experience() {
             })
         }
     }
+
+    const deleteExp = (expToDelete) => {
+        const updatdExperienceData = experience.filter((_, index) => index !== expToDelete);
+        setExperience(updatdExperienceData);
+        localStorage.setItem('experienceData', JSON.stringify(updatdExperienceData))
+    }
     return (
         <div>
             <div className="experienceComponent">
@@ -68,7 +76,7 @@ export default function Experience() {
                                 <div className="experienceItem" key={index}>
                                     <div className="title">
                                         <span>{exp.jobTitle}</span>
-                                        <button className='deleteExperienceBtn'><i className='fas fa-trash'></i></button>
+                                        <button className='deleteExperienceBtn' onClick={() => deleteExp(index)}><i className='fas fa-trash'></i></button>
                                     </div>
                                     <div className="jobDetails">
                                         <div className="row">

@@ -4,6 +4,7 @@ import TemplatesDisplay from '../componentsInner/TemplatesDisplay';
 import PersonalData from '../componentsInner/PersonalData';
 import Education from '../componentsInner/Education';
 import Experience from '../componentsInner/Experience';
+import Projects from '../componentsInner/Projects';
 
 export default function CVgenerator() {
     const[activeStep, setActiveStep] = useState('Templates');
@@ -53,6 +54,7 @@ export default function CVgenerator() {
                         {activeStep === 'Personal' && <PersonalData />}
                         {activeStep === 'Education' && <Education/>}
                         {activeStep === 'Experience' && <Experience/>}
+                        {activeStep === 'Projects' && <Projects/>}
                     </div>
             </div>
         </div>
