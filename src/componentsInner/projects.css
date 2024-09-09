@@ -1,0 +1,17 @@
+.projectsComponent{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+.projectsComponent h2{
+    font-size: 32px;
+}
+
+.projectsComponent .projectsSection{
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+}
