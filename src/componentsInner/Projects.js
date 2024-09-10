@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './projects.css'
 
 export default function Projects() {
-  const openAddProjectModal = () => {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
+
+
+  const openAddProjectModal = () => {
+    setIsModalOpen(true);
+    setIsAddButtonVisible(false);
   }
 
   const handleCloseForm = () =>{
-    
+    setIsModalOpen(false);
+    setIsAddButtonVisible(true);
   }
   return (
     <div>
@@ -23,7 +30,7 @@ export default function Projects() {
           <div className="newProjects">
             <p>New Projects</p>
 
-            <div className="addNewProjectModal">
+            {isModalOpen && <div className="addNewProjectModal">
               <form className='projectForm'>
                 <label htmlFor="pTitle">Project Title</label>
                 <input type="text" name="projectTitle" placeholder='Title of your project' />
@@ -36,9 +43,9 @@ export default function Projects() {
                   <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                 </div>
               </form>
-            </div>
+            </div>}
 
-            <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Experience</button>
+            {isAddButtonVisible && <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Experience</button>}
           </div>
         </section>
       </div>
