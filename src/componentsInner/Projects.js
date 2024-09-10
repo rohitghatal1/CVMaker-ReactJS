@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './projects.css'
 
 export default function Projects() {
@@ -18,16 +18,39 @@ export default function Projects() {
     setIsAddButtonVisible(false);
   }
 
-  const handleCloseForm = () =>{
+  const handleCloseForm = () => {
     setIsModalOpen(false);
     setIsAddButtonVisible(true);
   }
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setNewProjects({...newProjects, [name]:value});
+    const { name, value } = e.target;
+    setNewProjects({ ...newProjects, [name]: value });
   }
 
+  const submitExperienceForm = (e) => {
+    e.preventDefault();
+
+    if (newProjects.projectTitle && newProjects.projectDesc) {
+      const updatedProjects = [...projects, newProjects];
+
+      setNewProjects(updatedProjects);
+
+      localStorage.setItem('projectData', JSON.stringify(updatedProjects));
+      setIsModalOpen(false);
+      setIsAddButtonVisible(true);
+      setNewProjects({ projectTitle: '', projectDesc: '' });
+    }
+  }
+
+  // to retrieve all project data from local storage 
+  useEffect(() => {
+    const storedProjects = JSON.parse(localStorage.getItem('projectData'));
+    if (storedProjects) {
+      setNewProjects(storedProjects);
+    }
+  }, [])
+  
   return (
     <div>
       <div className="projectsComponent">
