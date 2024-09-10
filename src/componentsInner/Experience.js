@@ -40,6 +40,7 @@ export default function Experience() {
         const { name, value } = e.target;
         setNewExperience({ ...newExperience, [name]: value })
     }
+    
     const submitExperienceForm = (e) => {
         e.preventDefault();
 
