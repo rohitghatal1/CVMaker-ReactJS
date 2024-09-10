@@ -52,8 +52,11 @@ export default function Projects() {
   }, [])
 
   const deleteProject = (indexToDelete) => {
-
+    const updatedProjectData = projects.filter((_, index) => index !== indexToDelete);
+    setProjects(updatedProjectData);
+    localStorage.setItem('projectData', JSON.stringify(updatedProjectData));
   }
+  
   return (
     <div>
       <div className="projectsComponent">
@@ -95,7 +98,7 @@ export default function Projects() {
               </form>
             </div>}
 
-            {isAddButtonVisible && <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Experience</button>}
+            {isAddButtonVisible && <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Project</button>}
           </div>
         </section>
       </div>
