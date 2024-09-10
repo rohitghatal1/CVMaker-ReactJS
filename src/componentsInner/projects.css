@@ -21,6 +21,31 @@
     color: #999;
 }
 
+.projectsComponent .projectsSection .addedProjects .projectItem{
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.projectsComponent .projectsSection .addedProjects .projectItem .projectTitleAndDeleteBtn{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.projectsComponent .projectsSection .addedProjects .projectItem .projectTitleAndDeleteBtn .deleteProjectBtn{
+    background-color: #fff;
+    color: red;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.projectsComponent .projectsSection .addedProjects .projectItem p{
+    color: black;
+}
 .projectsComponent .projectsSection .newProjects{
     padding: 1rem;
 }

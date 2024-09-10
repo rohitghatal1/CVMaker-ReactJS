@@ -34,7 +34,7 @@ export default function Projects() {
     if (newProjects.projectTitle && newProjects.projectDesc) {
       const updatedProjects = [...projects, newProjects];
 
-      setNewProjects(updatedProjects);
+      setProjects(updatedProjects);
 
       localStorage.setItem('projectData', JSON.stringify(updatedProjects));
       setIsModalOpen(false);
@@ -47,10 +47,13 @@ export default function Projects() {
   useEffect(() => {
     const storedProjects = JSON.parse(localStorage.getItem('projectData'));
     if (storedProjects) {
-      setNewProjects(storedProjects);
+      setProjects(storedProjects);
     }
   }, [])
-  
+
+  const deleteProject = (indexToDelete) => {
+
+  }
   return (
     <div>
       <div className="projectsComponent">
@@ -60,6 +63,18 @@ export default function Projects() {
         <section className="projectsSection">
           <div className="addedProjects">
             <p>Current Projects</p>
+            {projects.length > 0 ? (
+              projects.map((project, index) => (
+                <div className="projectItem" key={index}>
+                  <div className="projectTitleAndDeleteBtn">
+                    <span>{project.projectTitle}</span>
+                    <button className='deleteProjectBtn' onClick={() => deleteProject(index)}><i className='fas fa-trash'></i></button>
+                  </div>
+                  <p>{project.projectDesc}</p>
+                </div>
+              )
+            )):
+            <p>No Projects added yet</p>}
           </div>
 
           <div className="newProjects">
