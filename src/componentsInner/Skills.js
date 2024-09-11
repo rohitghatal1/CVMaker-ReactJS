@@ -42,6 +42,13 @@ export default function Skills() {
       setSkills(sotredSkills);
     }
   }, [])
+
+  const deleteSkill = (indexToDelete) => {
+    const updatedSkillData = skills.filter((_, index) => index !== indexToDelete);
+
+    setSkills(updatedSkillData);
+    localStorage.setItem('skillData', JSON.stringify(updatedSkillData));
+  }
   return (
     <div>
       <div className="skillsComponent">
@@ -58,6 +65,7 @@ export default function Skills() {
                     <div className="skillAndDeleteBtn">
                       <p>{skill.skillName} <br/><span>{skill.skillLevel}</span></p>
                     </div>
+                    <button className='deleteSkillBtn' onClick={() => deleteSkill(index)}><i className='fas fa-trash'></i></button>
                   </div>
                 ))
               )
