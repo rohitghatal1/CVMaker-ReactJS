@@ -22,6 +22,27 @@
     color: #999;
 }
 
+.skillsComponent .skillSection .addedSkills .skillsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.skillsComponent .skillSection .addedSkills .skillItem{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+.skillsComponent .skillSection .addedSkills .skillItem p{
+    color: black;
+    font-size: 16px;
+}
+.skillsComponent .skillSection .addedSkills .skillItem span{
+    color: #999;
+    font-size: 12px;
+}
+
 .skillsComponent .skillSection .newSkills .addSkillModal{
     padding: 1rem;
 }

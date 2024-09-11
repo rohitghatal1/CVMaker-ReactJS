@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './skills.css'
 
 export default function Skills() {
@@ -22,23 +22,23 @@ export default function Skills() {
     skillLevel: ''
   })
 
-  const submitSkillForm = (e) =>{
+  const submitSkillForm = (e) => {
     e.preventDefault();
 
-    if(newSkill.skillName && newSkill.skillLevel){
+    if (newSkill.skillName && newSkill.skillLevel) {
       const updatedSkills = [...skills, newSkill];
 
       setSkills(updatedSkills);
       localStorage.setItem('skillData', JSON.stringify(updatedSkills));
       setIsModalOpen(false);
       setIsAddButtonVisible(true);
-      setNewSkill({skillName: '', skillLevel: ''})
+      setNewSkill({ skillName: '', skillLevel: '' })
     }
   }
 
   useEffect(() => {
     const sotredSkills = JSON.parse(localStorage.getItem('skillData'));
-    if(sotredSkills){
+    if (sotredSkills) {
       setSkills(sotredSkills);
     }
   }, [])
@@ -51,18 +51,20 @@ export default function Skills() {
           <div className="addedSkills">
             <p>Skills</p>
 
-            {skills.length > 0 ? (
-              skills.map((skill, index) =>(
-                <div className="skillItem" key={index}>
-                  <div className="skillAndDeleteBtn">
-                    <p>{skill.skillName} <span>({skill.skillLevel})</span></p>
+            <div className="skillsContainer">
+              {skills.length > 0 ? (
+                skills.map((skill, index) => (
+                  <div className="skillItem" key={index}>
+                    <div className="skillAndDeleteBtn">
+                      <p>{skill.skillName} <br/><span>{skill.skillLevel}</span></p>
+                    </div>
                   </div>
-                </div>
-              ))
-            )
-            :(
-              <p>No skills added yet!! </p>
-            )}
+                ))
+              )
+                : (
+                  <p>No skills added yet!! </p>
+                )}
+            </div>
           </div>
 
           <div className="newSkills">
@@ -71,10 +73,10 @@ export default function Skills() {
             {isModalOpen && <div className="addSkillModal">
               <form className='addSkillForm' onSubmit={submitSkillForm}>
                 <div className="row">
-                
-                  <input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' value={newSkill.skillName} onChange={(e) => setNewSkill({...newSkill, skillName: e.target.value})} />
 
-                  <select name="skillLevel" value={newSkill.skillLevel} onChange={(e) => setNewSkill({...newSkill, skillLevel: e.target.value })}>
+                  <input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' value={newSkill.skillName} onChange={(e) => setNewSkill({ ...newSkill, skillName: e.target.value })} />
+
+                  <select name="skillLevel" value={newSkill.skillLevel} onChange={(e) => setNewSkill({ ...newSkill, skillLevel: e.target.value })}>
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediate">Intermediate</option>
                     <option value="Experienced">Experienced</option>
