@@ -56,7 +56,7 @@ export default function Projects() {
     setProjects(updatedProjectData);
     localStorage.setItem('projectData', JSON.stringify(updatedProjectData));
   }
-  
+
   return (
     <div>
       <div className="projectsComponent">
@@ -76,8 +76,8 @@ export default function Projects() {
                   <p>{project.projectDesc}</p>
                 </div>
               )
-            )):
-            <p>No Projects added yet</p>}
+              )) :
+              <p>No Projects added yet</p>}
           </div>
 
           <div className="newProjects">
@@ -99,6 +99,11 @@ export default function Projects() {
             </div>}
 
             {isAddButtonVisible && <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Project</button>}
+          </div>
+
+          <div className="nextAndBackBtn">
+            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </section>
       </div>
