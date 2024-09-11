@@ -17,6 +17,31 @@
     margin: auto;
 }
 
+.skillsComponent .skillSection p{
+    font-size: 14px;
+    color: #999;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal{
+    padding: 1rem;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal input{
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal .row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+}
 .skillsComponent .skillSection .newSkills .addNewSkillbtn{
     padding: 0.8rem;
     background-color: #15bdfa;
