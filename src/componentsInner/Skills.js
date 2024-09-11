@@ -15,6 +15,25 @@ export default function Skills() {
     setIsModalOpen(false);
     setIsAddButtonVisible(true);
   }
+
+  const [skills, setSkils] = useState([]);
+  const [newSkill, setNewSkill] = useState({
+    skillName: '',
+    skillLevel: ''
+  })
+
+  const submitSkillForm = (e) =>{
+    e.preventDefault();
+
+    if(newSkill.skillName && newSkill.skillLevel){
+      const updatedSkills = [...skills, newSkill];
+
+      setSkills(updatedSkills);
+      localStorage.setItem('skillData', JSON.stringify(updatedSkills));
+      setIsModalOpen(false);
+      setIsAddButtonVisible(true);
+    }
+  }
   return (
     <div>
       <div className="skillsComponent">
@@ -29,12 +48,12 @@ export default function Skills() {
             <p>New Skills</p>
 
             {isModalOpen && <div className="addSkillModal">
-              <form className='addSkillForm'>
+              <form className='addSkillForm' onSubmit={submitSkillForm}>
                 <div className="row">
                 
-                  <input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' />
+                  <input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' value={newSkill.skillName} onChange={(e) => setNewSkill({...newSkill, skillName: e.target.value})} />
 
-                  <select name="skillLevel">
+                  <select name="skillLevel" value={newSkill.skillLevel} onChange={(e) => setNewSkill({...newSkill, skillLevel: e.target.value })}>
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediate">Intermediate</option>
                     <option value="Experienced">Experienced</option>
