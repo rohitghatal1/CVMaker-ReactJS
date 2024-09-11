@@ -16,7 +16,7 @@ export default function Skills() {
     setIsAddButtonVisible(true);
   }
 
-  const [skills, setSkils] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [newSkill, setNewSkill] = useState({
     skillName: '',
     skillLevel: ''
@@ -32,8 +32,16 @@ export default function Skills() {
       localStorage.setItem('skillData', JSON.stringify(updatedSkills));
       setIsModalOpen(false);
       setIsAddButtonVisible(true);
+      setNewSkill({skillName: '', skillLevel: ''})
     }
   }
+
+  useEffect(() => {
+    const sotredSkills = JSON.parse(localStorage.getItem('skillData'));
+    if(sotredSkills){
+      setSkills(sotredSkills);
+    }
+  }, [])
   return (
     <div>
       <div className="skillsComponent">
@@ -42,6 +50,19 @@ export default function Skills() {
         <section className="skillSection">
           <div className="addedSkills">
             <p>Skills</p>
+
+            {skills.length > 0 ? (
+              skills.map((skill, index) =>(
+                <div className="skillItem" key={index}>
+                  <div className="skillAndDeleteBtn">
+                    <p>{skill.skillName} <span>({skill.skillLevel})</span></p>
+                  </div>
+                </div>
+              ))
+            )
+            :(
+              <p>No skills added yet!! </p>
+            )}
           </div>
 
           <div className="newSkills">
