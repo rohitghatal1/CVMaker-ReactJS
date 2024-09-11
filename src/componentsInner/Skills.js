@@ -102,6 +102,12 @@ export default function Skills() {
 
             {isAddButtonVisible && <button className='addNewSkillbtn' onClick={openAddSkillModal}><i className='fas fa-plus'></i> Add Skill</button>}
           </div>
+
+          <div className="nextAndBackBtn">
+            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          
         </section>
       </div>
     </div>
