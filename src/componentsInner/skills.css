@@ -16,3 +16,15 @@
     width: 60%;
     margin: auto;
 }
+
+.skillsComponent .skillSection .newSkills .addNewSkillbtn{
+    padding: 0.8rem;
+    background-color: #15bdfa;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0.4rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}

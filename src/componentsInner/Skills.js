@@ -2,6 +2,10 @@ import React from 'react'
 import './skills.css'
 
 export default function Skills() {
+
+  const openAddSkillModal = () =>{
+
+  }
   return (
     <div>
       <div className="skillsComponent">
@@ -10,6 +14,12 @@ export default function Skills() {
         <section className="skillSection">
           <div className="addedSkills">
             <p>Skills</p>
+          </div>
+
+          <div className="newSkills">
+            <p>New Skills</p>
+
+            <button className='addNewSkillbtn' onClick={openAddSkillModal}><i className='fas fa-plus'></i> Add Skill</button>
           </div>
         </section>
       </div>
