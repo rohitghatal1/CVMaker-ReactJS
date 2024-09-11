@@ -42,6 +42,34 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+.skillsComponent .skillSection .newSkills .addSkillModal .submitAndCloseBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal .submitAndCloseBtns button{
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal .submitAndCloseBtns .submitBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.skillsComponent .skillSection .newSkills .addSkillModal .submitAndCloseBtns .closeBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid #aaa;
+}
+
 .skillsComponent .skillSection .newSkills .addNewSkillbtn{
     padding: 0.8rem;
     background-color: #15bdfa;
