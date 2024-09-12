@@ -46,7 +46,7 @@ export default function Achievements() {
     const deleteAchievement = (indexToDelete) => {
 
     }
-    
+
     return (
         <div>
             <div className="achievementComponent">
@@ -56,19 +56,21 @@ export default function Achievements() {
                 <section className="achievementSection">
                     <div className="addedAchievement">
                         <p>Achievements</p>
-                        {achievements.length > 0 ? (
-                            achievements.map((achievement, index) => (
-                                <div className="achievementItem" key={index}>
-                                    <div className="titleAndDeleteBtn">
-                                        <span>{achievement.title}</span>
-                                        <button className='deleteAchievementBtn' onClick={() => deleteAchievement(index)}><i className='fas fa-trash'></i></button>
+                        <div className="achievementsContainer">
+                            {achievements.length > 0 ? (
+                                achievements.map((achievement, index) => (
+                                    <div className="achievementItem" key={index}>
+                                        <div className="titleAndDeleteBtn">
+                                            <span>{achievement.title}</span>
+                                            <button className='deleteAchievementBtn' onClick={() => deleteAchievement(index)}><i className='fas fa-trash'></i></button>
+                                        </div>
+                                        <p>{achievement.desc}</p>
                                     </div>
-                                    <p>{achievement.desc}</p>
-                                </div>
-                            ))
-                        ) : (
-                            <p>No achievements added yet !!</p>
-                        )}
+                                ))
+                            ) : (
+                                <p>No achievements added yet !!</p>
+                            )}
+                        </div>
                     </div>
 
                     <div className="newAchievement">

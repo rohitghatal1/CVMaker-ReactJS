@@ -22,13 +22,26 @@
     color: #999;
 }
 
-.achievementComponent .achievementSection .addedAchievement .achievementItem .titleAndDeleteBtn{
+.achievementComponent .achievementSection .addedAchievement .achievementsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 60%;
+    margin: auto;
+}
+
+.achievementComponent .achievementSection .addedAchievement .achievementsContainer .achievementItem{
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+.achievementComponent .achievementSection .addedAchievement .achievementsContainer .achievementItem .titleAndDeleteBtn{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
 }
 
-.achievementComponent .achievementSection .addedAchievement .achievementItem .titleAndDeleteBtn .deleteAchievementBtn{
+.achievementComponent .achievementSection .addedAchievement .achievementsContainer .achievementItem .titleAndDeleteBtn .deleteAchievementBtn{
     background-color: #fff;
     color: red;
     border: none;
