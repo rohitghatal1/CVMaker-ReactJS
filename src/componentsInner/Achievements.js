@@ -1,6 +1,11 @@
 import React from 'react'
+import './achievements.css'
 
 export default function Achievements() {
+
+    const openAddAchievementModal = () => {
+        
+    }
   return (
     <div>
       <div className="achievementComponent">
@@ -14,6 +19,8 @@ export default function Achievements() {
 
             <div className="newAchievement">
                 <p>New Achievement</p>
+
+                <button className='addNewAchievementbtn' onClick={openAddAchievementModal}><i className='fas fa-plus'></i> Add Achievement</button>
             </div>
         </section>
       </div>
