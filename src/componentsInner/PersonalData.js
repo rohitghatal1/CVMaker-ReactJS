@@ -3,6 +3,48 @@ import './personal.css';
 import personPhoto from '../assets/personPhotos/rohit2.jpg';
 
 export default function PersonalData() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
+
+  const openAddPersonalModal = () => {
+    setIsModalOpen(true);
+    setIsAddButtonVisible(false);
+  }
+  
+  const handleCloseForm = () => {
+    setIsModalOpen(false);
+    setIsAddButtonVisible(true);
+  }
+
+  const [newPersonalData, setNewPersonalData] = useState({
+    fName: '',
+    lName: '',
+    speciality: '',
+    PAddress: '',
+    city: '',
+    email: '',
+    contactNo: '',
+    summary: ''
+  })
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewPersonalData({ ...newPersonalData, [name]: value });
+  }
+
+  const submitPersonalInfoForm = (e) => {
+    e.preventDefault();
+
+    if (newPersonalData.fName && newPersonalData.lName && newPersonalData.speciality && newPersonalData.PAddress && newPersonalData.city && newPersonalData.email && newPersonalData.contactNo && newPersonalData.summary) {
+      const updatedPersonalData = [...personalInfo, newPersonalData];
+
+      setPersonalInfo(updatedPersonalData);
+      localStorage.setItem('personalInfo', JSON.stringify(updatedPersonalData));
+    }
+  }
+  const [personalInfo, setPersonalInfo] = useState([]);
+
   const [socialLinks, setSocialLinks] = useState([]);
   const [newLink, setNewLink] = useState({ platform: 'Facebook', url: '' });
 
@@ -51,50 +93,56 @@ export default function PersonalData() {
           </div>
 
           <div className="infoForm">
-            <form>
+            <form onSubmit={submitPersonalInfoForm}>
               <div className="row">
                 <div className="col">
                   <label htmlFor="fname">First Name</label>
-                  <input type="text" placeholder='First Name' />
+                  <input type="text" placeholder='First Name' value={newPersonalData.fName} name='fName' onChange={handleInputChange} />
                 </div>
                 <div className="col">
                   <label htmlFor="lname">Last Name</label>
-                  <input type="text" placeholder='Last Name' />
+                  <input type="text" placeholder='Last Name' value={newPersonalData.lName} name='lName' onChange={handleInputChange} />
                 </div>
               </div>
 
               <div className="fullWidthInput">
                 <label htmlFor="designation">Specialist on</label>
-                <input type="text" placeholder='ex: Web Developer, Python, React Developer etc' />
+                <input type="text" placeholder='ex: Web Developer, Python, React Developer etc' value={newPersonalData.speciality} name='speciality' onChange={handleInputChange} />
               </div>
 
               <div className="row">
                 <div className="col">
                   <label htmlFor="address">Address</label>
-                  <input type="text" placeholder='address' />
+                  <input type="text" placeholder='address' value={newPersonalData.PAddress} name='pAddress' onChange={handleInputChange} />
                 </div>
                 <div className="col">
                   <label htmlFor="city">City</label>
-                  <input type="text" placeholder='city' />
+                  <input type="text" placeholder='city' value={newPersonalData.city} name='city' onChange={handleInputChange} />
                 </div>
               </div>
 
               <div className="row">
                 <div className="col">
                   <label htmlFor="email">Email</label>
-                  <input type="email" placeholder='email address' />
+                  <input type="email" placeholder='email address' value={newPersonalData.email} name='email' onChange={handleInputChange} />
                 </div>
                 <div className="col">
                   <label htmlFor="phone">Contact No.</label>
-                  <input type="text" placeholder='contact number' />
+                  <input type="text" placeholder='contact number' value={newPersonalData.contactNo} name='contactNo' onChange={handleInputChange} />
                 </div>
               </div>
 
               <div className="fullWidthInput">
                 <label htmlFor="summary">Summary</label>
-                <textarea rows={5}></textarea>
+                <textarea rows={5} value={newPersonalData.summary} name='summary' onChange={handleInputChange}></textarea>
+              </div>
+
+              <div className="submitAndCloseBtns">
+                <button type='submit' className='submitBtn'>Submit</button>
+                <button className='closeBtn' onClick={handleCloseForm}>Close</button>
               </div>
             </form>
+            {isAddButtonVisible && <button className='addPersonalDatabtn' onClick={openAddPersonalModal}><i className='fas fa-plus'></i> Add Info</button>}
           </div>
 
           <section className="socialLinkSection">
