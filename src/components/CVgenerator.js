@@ -6,6 +6,7 @@ import Education from '../componentsInner/Education';
 import Experience from '../componentsInner/Experience';
 import Projects from '../componentsInner/Projects';
 import Skills from '../componentsInner/Skills';
+import Achievements from '../componentsInner/Achievements';
 
 export default function CVgenerator() {
     const[activeStep, setActiveStep] = useState('Templates');
@@ -57,6 +58,7 @@ export default function CVgenerator() {
                         {activeStep === 'Experience' && <Experience/>}
                         {activeStep === 'Projects' && <Projects/>}
                         {activeStep === 'Skills' && <Skills/>}
+                        {activeStep === 'Achievement' && <Achievements/>}
                     </div>
             </div>
         </div>
