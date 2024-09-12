@@ -16,6 +16,25 @@ export default function Achievements() {
         setIsAddButtonVisible(true);
     }
 
+    const [newAchievement, setNewAchievement] = useState({
+        title: '',
+        desc: ''
+    })
+
+    const [achievements, setAchievements] = useState([]);
+    const submitAchievementForm = (e) => {
+        e.preventDefault();
+
+        if(newAchievement.title && newAchievement.desc){
+            const updatedAchievements = [...achievements, newAchievement];
+
+            setAchievements(updatedAchievements);
+            localStorage.setItem('achievementData', JSON.stringify(updatedAchievements));
+            setIsModalOpen(false);
+            setIsAddButtonVisible(true);
+            setNewAchievement({title:'', desc: ''});
+        }
+    }
     return (
         <div>
             <div className="achievementComponent">
@@ -31,12 +50,12 @@ export default function Achievements() {
                         <p>New Achievement</p>
 
                         {isModalOpen && <div className="achievementModal">
-                            <form>
+                            <form onSubmit={submitAchievementForm}>
                                 <label htmlFor="title">Title</label>
-                                <input type="text" placeholder='What did you achieve?' />
+                                <input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({...newAchievement, title: e.target.value})} />
 
                                 <label htmlFor="Description">Description</label>
-                                <textarea rows={5} placeholder='Write a short deescription about your achievement!!'></textarea>
+                                <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({...newAchievement, desc: e.target.value})}></textarea>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>
