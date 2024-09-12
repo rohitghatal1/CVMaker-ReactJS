@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './achievements.css'
 
 export default function Achievements() {
@@ -25,16 +25,28 @@ export default function Achievements() {
     const submitAchievementForm = (e) => {
         e.preventDefault();
 
-        if(newAchievement.title && newAchievement.desc){
+        if (newAchievement.title && newAchievement.desc) {
             const updatedAchievements = [...achievements, newAchievement];
 
             setAchievements(updatedAchievements);
             localStorage.setItem('achievementData', JSON.stringify(updatedAchievements));
             setIsModalOpen(false);
             setIsAddButtonVisible(true);
-            setNewAchievement({title:'', desc: ''});
+            setNewAchievement({ title: '', desc: '' });
         }
     }
+
+    useEffect(() => {
+        const storedAchievements = JSON.parse(localStorage.getItem('achievementData'))
+        if (storedAchievements) {
+            setAchievements(storedAchievements);
+        }
+    }, [])
+
+    const deleteAchievement = (indexToDelete) => {
+
+    }
+    
     return (
         <div>
             <div className="achievementComponent">
@@ -44,6 +56,19 @@ export default function Achievements() {
                 <section className="achievementSection">
                     <div className="addedAchievement">
                         <p>Achievements</p>
+                        {achievements.length > 0 ? (
+                            achievements.map((achievement, index) => (
+                                <div className="achievementItem" key={index}>
+                                    <div className="titleAndDeleteBtn">
+                                        <span>{achievement.title}</span>
+                                        <button className='deleteAchievementBtn' onClick={() => deleteAchievement(index)}><i className='fas fa-trash'></i></button>
+                                    </div>
+                                    <p>{achievement.desc}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No achievements added yet !!</p>
+                        )}
                     </div>
 
                     <div className="newAchievement">
@@ -52,10 +77,10 @@ export default function Achievements() {
                         {isModalOpen && <div className="achievementModal">
                             <form onSubmit={submitAchievementForm}>
                                 <label htmlFor="title">Title</label>
-                                <input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({...newAchievement, title: e.target.value})} />
+                                <input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({ ...newAchievement, title: e.target.value })} />
 
                                 <label htmlFor="Description">Description</label>
-                                <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({...newAchievement, desc: e.target.value})}></textarea>
+                                <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></textarea>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'>Submit</button>
