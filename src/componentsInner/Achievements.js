@@ -44,7 +44,10 @@ export default function Achievements() {
     }, [])
 
     const deleteAchievement = (indexToDelete) => {
+        const updatedAchievementData = achievements.filter((_, index) => index !== indexToDelete)
 
+        setAchievements(updatedAchievementData);
+        localStorage.setItem('achievementData', JSON.stringify(updatedAchievementData));
     }
 
     return (
@@ -92,6 +95,11 @@ export default function Achievements() {
                         </div>}
 
                         {isAddButtonVisible && <button className='addNewAchievementbtn' onClick={openAddAchievementModal}><i className='fas fa-plus'></i> Add Achievement</button>}
+                    </div>
+
+                    <div className="nextAndBackBtn">
+                        <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </section>
             </div>
