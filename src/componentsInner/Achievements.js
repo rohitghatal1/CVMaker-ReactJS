@@ -4,7 +4,7 @@ import './achievements.css'
 export default function Achievements() {
 
     const openAddAchievementModal = () => {
-        
+
     }
   return (
     <div>
@@ -19,6 +19,16 @@ export default function Achievements() {
 
             <div className="newAchievement">
                 <p>New Achievement</p>
+
+                <div className="achievementModal">
+                    <form>
+                        <label htmlFor="title">Title</label>
+                        <input type="text" placeholder='What did you achieve?' />
+
+                        <label htmlFor="Description">Description</label>
+                        <textarea rows={5} placeholder='Write a short deescription about your achievement!!'></textarea>
+                    </form>
+                </div>
 
                 <button className='addNewAchievementbtn' onClick={openAddAchievementModal}><i className='fas fa-plus'></i> Add Achievement</button>
             </div>
