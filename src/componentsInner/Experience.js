@@ -117,7 +117,7 @@ export default function Experience() {
                                 <input type="date" name='endDate' value={newExperience.endDate} onChange={handleInputChange} />
 
                                 <div className="submitAndCloseBtns">
-                                    <button type='submit' className='submitBtn'>Submit</button>
+                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
                             </form>

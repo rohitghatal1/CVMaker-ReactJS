@@ -92,7 +92,7 @@ export default function Projects() {
                 <input type="text" name='projectDesc' placeholder='tell what your project is about' value={newProjects.projectDesc} onChange={handleInputChange} />
 
                 <div className="submitAndCloseBtns">
-                  <button type='submit' className='submitBtn'>Submit</button>
+                  <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                   <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                 </div>
               </form>

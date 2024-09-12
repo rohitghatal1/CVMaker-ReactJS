@@ -4,6 +4,7 @@ import personPhoto from '../assets/personPhotos/rohit2.jpg';
 
 export default function PersonalData() {
 
+  // for storing and retreiving personal info 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
 
@@ -11,7 +12,7 @@ export default function PersonalData() {
     setIsModalOpen(true);
     setIsAddButtonVisible(false);
   }
-  
+
   const handleCloseForm = () => {
     setIsModalOpen(false);
     setIsAddButtonVisible(true);
@@ -41,10 +42,39 @@ export default function PersonalData() {
 
       setPersonalInfo(updatedPersonalData);
       localStorage.setItem('personalInfo', JSON.stringify(updatedPersonalData));
+      setIsModalOpen(false);
+      setIsAddButtonVisible(true);
+      setNewPersonalData({
+        fName: '',
+        lName: '',
+        speciality: '',
+        PAddress: '',
+        city: '',
+        email: '',
+        contactNo: '',
+        summary: ''
+      })
     }
   }
   const [personalInfo, setPersonalInfo] = useState([]);
 
+  useEffect(() => {
+    const storedPersonalData = JSON.parse(localStorage.getItem('personalInfo'))
+    if (storedPersonalData) {
+      setPersonalInfo(storedPersonalData);
+    }
+  }, [])
+
+  const deletePersonalInfo = (indexToDelete) => {
+    const updatedPersonalInfo = personalInfo.filter((_, index) => index !== indexToDelete);
+
+    setPersonalInfo(updatedPersonalInfo);
+    localStorage.setItem('personalInfo', JSON.stringify(updatedPersonalInfo));
+  }
+
+  // -------------------------------------------------------------------------------------------------------------------------
+
+  // for storing and retrieving social links 
   const [socialLinks, setSocialLinks] = useState([]);
   const [newLink, setNewLink] = useState({ platform: 'Facebook', url: '' });
 
@@ -92,7 +122,29 @@ export default function PersonalData() {
             </div>
           </div>
 
-          <div className="infoForm">
+          <div className="addedPersonalData">
+            <h4>Personal Data</h4>
+
+            {personalInfo.length > 0 ? (
+              personalInfo.map((personal, index) => (
+                <div className="personalDataItem" key={index}>
+                  <p><span>First Name:</span> {personal.fName}</p>
+                  <p><span>Last Name:</span> {personal.lName}</p>
+                  <p><span>Speciality:</span> {personal.speciality}</p>
+                  <p><span>Address:</span> {personal.PAddress}</p>
+                  <p><span>City:</span> {personal.city}</p>
+                  <p><span>Email:</span> {personal.email}</p>
+                  <p><span>Contact No.:</span> {personal.contactNo}</p>
+                  <p><span>Summary:</span> {personal.summary}</p>
+
+                  <button className='deletePersonalDataBtn' onClick={() => deletePersonalInfo(index)}><i className='fas fa-trash'></i></button>
+                </div>
+              ))
+            ) : (
+              <p>No Persona data added yet!!!</p>
+            )}
+          </div>
+          {isModalOpen && <div className="infoForm">
             <form onSubmit={submitPersonalInfoForm}>
               <div className="row">
                 <div className="col">
@@ -113,7 +165,7 @@ export default function PersonalData() {
               <div className="row">
                 <div className="col">
                   <label htmlFor="address">Address</label>
-                  <input type="text" placeholder='address' value={newPersonalData.PAddress} name='pAddress' onChange={handleInputChange} />
+                  <input type="text" placeholder='address' value={newPersonalData.PAddress} name='PAddress' onChange={handleInputChange} />
                 </div>
                 <div className="col">
                   <label htmlFor="city">City</label>
@@ -138,12 +190,12 @@ export default function PersonalData() {
               </div>
 
               <div className="submitAndCloseBtns">
-                <button type='submit' className='submitBtn'>Submit</button>
+                <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                 <button className='closeBtn' onClick={handleCloseForm}>Close</button>
               </div>
             </form>
-            {isAddButtonVisible && <button className='addPersonalDatabtn' onClick={openAddPersonalModal}><i className='fas fa-plus'></i> Add Info</button>}
-          </div>
+          </div>}
+          {isAddButtonVisible && <button className='addPersonalDatabtn' onClick={openAddPersonalModal}><i className='fas fa-plus'></i> Add Info</button>}
 
           <section className="socialLinkSection">
             <p>Social Links</p>
@@ -180,7 +232,7 @@ export default function PersonalData() {
                 />
               </div>
               <button className="addNewLink" onClick={handleAddLink}>
-                <i className='fa fa-plus'></i> Add Link
+                <i class="fa-regular fa-paper-plane"></i> Submit
               </button>
             </div>
           </section>

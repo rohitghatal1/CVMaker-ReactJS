@@ -88,7 +88,7 @@ export default function Achievements() {
                                 <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></textarea>
 
                                 <div className="submitAndCloseBtns">
-                                    <button type='submit' className='submitBtn'>Submit</button>
+                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
                             </form>

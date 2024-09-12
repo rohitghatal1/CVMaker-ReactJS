@@ -100,7 +100,7 @@ export default function Education() {
                   <input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
 
                   <div className="submitAndCloseBtns">
-                    <button type='submit' className='submitBtn'>Submit</button>
+                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                   </div>
                 </form>
