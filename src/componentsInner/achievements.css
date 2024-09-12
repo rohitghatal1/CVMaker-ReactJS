@@ -39,6 +39,34 @@
     margin-bottom: 0.4rem;
     background-color: aliceblue;
 }
+
+.achievementComponent .achievementSection .newAchievement .achievementModal .submitAndCloseBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.achievementComponent .achievementSection .newAchievement .achievementModal .submitAndCloseBtns button{
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.achievementComponent .achievementSection .newAchievement .achievementModal .submitAndCloseBtns .submitBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.achievementComponent .achievementSection .newAchievement .achievementModal .submitAndCloseBtns .closeBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid #aaa;
+}
+
 .achievementComponent .achievementSection .newAchievement .addNewAchievementbtn{
     padding: 0.8rem;
     background-color: #15bdfa;
