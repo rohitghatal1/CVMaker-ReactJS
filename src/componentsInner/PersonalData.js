@@ -86,16 +86,13 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
     }
   }, []);
 
-  // Save links to local storage whenever they change
-  useEffect(() => {
-    localStorage.setItem('socialLinks', JSON.stringify(socialLinks));
-  }, [socialLinks]);
-
   const handleAddLink = () => {
     if (newLink.url) {
       const updatedLinks = [...socialLinks, newLink];
       setSocialLinks(updatedLinks);
-      setNewLink({ platform: 'Facebook', url: '' }); // Reset the input fields
+
+      localStorage.setItem('socialLinks', JSON.stringify(updatedLinks))
+      setNewLink({ platform: 'Facebook', url: '' });
     }
   };
 

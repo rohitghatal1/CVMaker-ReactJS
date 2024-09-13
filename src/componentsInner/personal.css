@@ -211,7 +211,7 @@
     text-align: center;
     background-color: #15bdfa;
     color: #fff;
-    border: none;
+    border: 1px solid #15bdfa;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.8s ease;
