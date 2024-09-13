@@ -36,12 +36,6 @@ export default function Templates() {
             ))}
           </Swiper>
         </div>
-        {selectedTemplate && (
-          <div className="templatePreview">
-            <h2>Preview of Selected Template</h2>
-            <selectedTemplate data={{}} />
-          </div>
-        )}
         <button className="seeMoreTemplateBtn">See More...</button>
       </section>
     </div>

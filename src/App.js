@@ -23,11 +23,11 @@ function App() {
   
   return (
     <>
-      {/* <Navbar/>
+      <Navbar/>
       <HomeTab/>
       <Templates/>
-      <Footer/> */}
-      <CVgenerator/>
+      <Footer/>
+      {/* <CVgenerator/> */}
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
     </>
