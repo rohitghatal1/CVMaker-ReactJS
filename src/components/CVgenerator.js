@@ -6,10 +6,25 @@ import Education from '../componentsInner/Education';
 import Experience from '../componentsInner/Experience';
 import Projects from '../componentsInner/Projects';
 import Skills from '../componentsInner/Skills';
-import Achievements from '../componentsInner/Achievements';
+import Achievements from '../componentsInner/Achievements'
 
 export default function CVgenerator() {
-    const[activeStep, setActiveStep] = useState('Templates');
+    const steps = ['Templates', 'Personal', 'Education', 'Experience', 'Projects', 'Skills', 'Achievement'];
+    const [activeStepIndex, setActiveStepIndex] = useState(0);
+
+    const goToNextStep = () => {
+        if(activeStepIndex < steps.length - 1){
+            setActiveStepIndex(activeStepIndex + 1);
+        }
+    };
+
+    const goToPreviousStep = () => {
+        if(activeStepIndex > 0){
+            setActiveStepIndex(activeStepIndex - 1)
+        }
+    }
+
+    const currentStep = steps[activeStepIndex];
     return (
         <div>
             <div className="cvGeneratorContainer">
