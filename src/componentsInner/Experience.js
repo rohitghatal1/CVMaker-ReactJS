@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './experience.css'
 
-export default function Experience() {
+export default function Experience({goToPreviousStep, goToNextStep}) {
 
     // use state for saving and settin new exp 
     const [newExperience, setNewExperience] = useState({
@@ -128,8 +128,8 @@ export default function Experience() {
                     </div>
 
                     <div className="nextAndBackBtn">
-                        <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
-                        <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+                        <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </section>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './projects.css'
 
-export default function Projects() {
+export default function Projects({goToPreviousStep, goToNextStep}) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
@@ -102,8 +102,8 @@ export default function Projects() {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </section>
       </div>

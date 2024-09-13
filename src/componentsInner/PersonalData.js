@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './personal.css';
 import personPhoto from '../assets/personPhotos/rohit2.jpg';
 
-export default function PersonalData() {
+export default function PersonalData({goToPreviousStep, goToNextStep}) {
 
   // for storing and retreiving personal info 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -238,8 +238,8 @@ export default function PersonalData() {
           </section>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>

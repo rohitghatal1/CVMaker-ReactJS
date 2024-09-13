@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './skills.css'
 
-export default function Skills() {
+export default function Skills({goToPreviousStep, goToNextStep}) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
@@ -104,8 +104,8 @@ export default function Skills() {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
           
         </section>

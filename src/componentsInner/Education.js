@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './education.css'
 
-export default function Education() {
+export default function Education({goToPreviousStep, goToNextStep}) {
   const [education, setEducation] = useState([]);
   const [newEducation, setNewEducation] = useState({
     degree: '',
@@ -110,8 +110,8 @@ export default function Education() {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn'><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </section>
       </div>
