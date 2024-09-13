@@ -3,7 +3,7 @@ import './templatesDisplay.css'
 import templateData from '../templateSelector/templateData';
 import BasicTemplate from '../allTemplates/basicTemplate/BasicTemplate';
 
-export default function TemplatesDisplay() {
+export default function TemplatesDisplay({goToNextStep}) {
   const [selectedTemplate, setSelectedTemplate] = useState(BasicTemplate);
   const [borderColor, setBorderColor] = useState({});
 
@@ -17,7 +17,7 @@ export default function TemplatesDisplay() {
       <div className="allTemplateDisplay">
       <div className="templateContainerHeading">
         <h2>Select a Template</h2>
-        <button className='nextbtn'>Next <i class="fa-solid fa-arrow-right"></i></button>
+        <button className='nextbtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
       </div>
         <div className="allTemplateInfo">
           <h3>Here are some of the available Template for CV</h3>
