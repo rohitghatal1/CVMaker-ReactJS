@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
 
-export default function aboutUs() {
+export default function AboutUs() {
   return (
     <div>
       <div className="aboutUsConponent">

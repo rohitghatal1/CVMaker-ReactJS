@@ -3,6 +3,11 @@
     background-color: aliceblue;
 }
 
+.aboutUsConponent h2{
+    text-align: center;
+    padding: 0.5rem;
+}
+
 .aboutUsConponent .aboutUsContainer{
     background-color: white;
     padding: 0.5rem;
@@ -13,4 +18,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 70%;
+    margin: auto;
 }
