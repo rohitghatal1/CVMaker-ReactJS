@@ -2,3 +2,15 @@
     padding: 1rem;
     background-color: aliceblue;
 }
+
+.aboutUsConponent .aboutUsContainer{
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.aboutUsConponent .aboutUsContainer .owner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
