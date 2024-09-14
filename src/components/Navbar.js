@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.css'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import logo from '../CVCraft.png'
 
 export default function Navbar() {
