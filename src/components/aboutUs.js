@@ -13,6 +13,9 @@ export default function AboutUs() {
                     <h3>Rohit Ghatal</h3>
                 </div>
             </div>
+            <div className="aboutApp">
+                <p>This is a React app for creating CV in professional way</p>
+            </div>
         </div>
       </div>
     </div>

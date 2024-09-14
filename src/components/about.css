@@ -21,3 +21,13 @@
     width: 70%;
     margin: auto;
 }
+
+.aboutUsConponent .aboutUsContainer .aboutApp{
+    width: 70%;
+    margin: auto;
+}
+
+.aboutUsConponent .aboutUsContainer .aboutApp p{
+    text-align: justify;
+    font-size: 15px;
+}
