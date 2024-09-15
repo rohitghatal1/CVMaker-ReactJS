@@ -28,8 +28,8 @@ function App() {
       <HomeTab/>
       <Templates/>
       <Footer/> */}
-      <AboutUs/>
-      {/* <CVgenerator/> */}
+      {/* <AboutUs/> */}
+      <CVgenerator/>
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
     </>
