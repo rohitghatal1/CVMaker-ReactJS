@@ -1,0 +1,20 @@
+.loginSignupModal{
+    width: 30rem;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loginSignupModal .loginModal{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.loginSignupModal .loginModal h2{
+    text-align:  center;
+    padding: 0.4rem;
+}

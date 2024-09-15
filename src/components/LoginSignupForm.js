@@ -17,7 +17,7 @@ export default function LoginSignupForm() {
                     <p>Don't have an account? <span>Create here...</span></p>
                 </div>
                 <div className="signupModal">
-                    <h2></h2>
+                    <h2>User Registration</h2>
                     <form className="signupForm">
                         <label htmlFor="fname">Full Name</label>
                         <input type="text" />
