@@ -9,17 +9,17 @@
     transform: translateX(-50%);
 }
 
-.loginSignupModal .loginModal{
+.loginSignupModal .loginModal, .signupModal{
     width: 100%;
     padding: 0.5rem;
 }
 
-.loginSignupModal .loginModal h2{
+.loginSignupModal .loginModal h2, .signupModal h2{
     text-align:  center;
     padding: 0.4rem;
 }
 
-.loginSignupModal .loginModal .loginform input{
+.loginSignupModal .loginModal .loginform input .signupModal .signupForm input{
     width: 100%;
     padding: 0.4rem;
     border-radius: 0.4rem;
@@ -29,4 +29,13 @@
 .loginSignupModal .loginModal .loginform .loginBtn{
     background-color: #1128ff;
     color: #fff;
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+
+.loginSignupModal .signupModal .signupForm .submitBtn{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 0.4rem;
+    padding: 1rem;
 }
