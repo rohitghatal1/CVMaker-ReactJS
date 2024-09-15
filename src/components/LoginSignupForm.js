@@ -12,7 +12,7 @@ export default function LoginSignupForm() {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" id="" />
 
-                        <button type="submit">Login</button>
+                        <button type="submit" className='loginBtn'>Login</button>
                     </form>
                     <p>Don't have an account? <span>Create here...</span></p>
                 </div>
@@ -36,6 +36,8 @@ export default function LoginSignupForm() {
 
                         <label htmlFor="cpass">Confirm Password</label>
                         <input type="password" />
+
+                        <button type='submit' className='submitBtn'>Submit</button>
                     </form>
                     <p>Already have an account?<span>Login here</span></p>
                 </div>

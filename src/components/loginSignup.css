@@ -18,3 +18,15 @@
     text-align:  center;
     padding: 0.4rem;
 }
+
+.loginSignupModal .loginModal .loginform input{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+}
+
+.loginSignupModal .loginModal .loginform .loginBtn{
+    background-color: #1128ff;
+    color: #fff;
+}
