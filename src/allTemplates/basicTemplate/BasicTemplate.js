@@ -60,38 +60,38 @@ export default function BasicTemplate() {
                         <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>
                         <div className="skillItemContainer">
                             <div className="skillItem">
-                                <p>HTML</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '80%' }}></div></div>
+                                <h3>HTML</h3>
+                                <span>Expert</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>CSS</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '70%' }}></div></div>
+                                <h3>CSS</h3>
+                                <span>Skillful</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>JavaScript</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '60%' }}></div></div>
+                                <h3>JavaScript</h3>
+                                <span>Intermediate</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>PHP</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '75%' }}></div></div>
+                                <h3>PHP</h3>
+                                <span>Good</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>Bootstrap</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '55%' }}></div></div>
+                                <h3>Bootstrap</h3>
+                                <span>Good</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>Java</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '40%' }}></div></div>
+                                <h3>Java</h3>
+                                <span>Good</span>
                             </div>
 
                             <div className="skillItem">
-                                <p>C</p>
-                                <div className="skillbar"><div className="fill" style={{ width: '70%' }}></div></div>
+                                <h3>C</h3>
+                                <span>Good</span>
                             </div>
                         </div>
                     </div>
