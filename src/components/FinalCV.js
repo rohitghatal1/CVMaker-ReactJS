@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function FinalCV({template:Template, personalData, educationData, experienceData, projectsData, achievementData}) {
+export default function FinalCV({template:Template, personalData, educationData, experienceData, projectsData, skillsData, achievementData}) {
   return (
     <div>
       <div className="finalCVContainer">
@@ -13,7 +13,7 @@ export default function FinalCV({template:Template, personalData, educationData,
                 experienceData,
                 projectsData,
                 skillsData,
-                achievementsData
+                achievementData
             })}
         </div>
       </div>
