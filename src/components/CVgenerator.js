@@ -11,6 +11,17 @@ import FinalCV from './FinalCV';
 
 export default function CVgenerator() {
     const steps = ['Templates', 'Personal', 'Education', 'Experience', 'Projects', 'Skills', 'Achievement'];
+    // for icons 
+    const icons = [
+        "fa-regular fa-copy",        // For 'Templates'
+        "fa-regular fa-user",        // For 'Personal'
+        "fa-solid fa-graduation-cap", // For 'Education'
+        "fa-solid fa-layer-group",   // For 'Experience'
+        "fa-solid fa-rocket",        // For 'Projects'
+        "fa-solid fa-code-compare",  // For 'Skills'
+        "fa-solid fa-star"           // For 'Achievement'
+    ];
+
     const [activeStepIndex, setActiveStepIndex] = useState(0);
     const [selectedTemplate, setSelectedTemplate] = useState(null);
     const [finalCV, setFinalCV] = useState(null);
@@ -28,11 +39,11 @@ export default function CVgenerator() {
     }
 
     const generateCV = () => {
-        const personalData = JSON.parse(localStorage.getItem('personalData'));
+        const personalData = JSON.parse(localStorage.getItem('personalInfo'));
         const educationData = JSON.parse(localStorage.getItem('educationData'));
         const experienceData = JSON.parse(localStorage.getItem('experienceData'));
-        const projectsData = JSON.parse(localStorage.getItem('projectsData'));
-        const skillsData = JSON.parse(localStorage.getItem('skillsData'));
+        const projectsData = JSON.parse(localStorage.getItem('projectData'));
+        const skillsData = JSON.parse(localStorage.getItem('skillData'));
         const achievementData = JSON.parse(localStorage.getItem('achievementData'));
 
         setFinalCV({
@@ -47,6 +58,7 @@ export default function CVgenerator() {
     };
 
     const currentStep = steps[activeStepIndex];
+    const currentIcon = icons[activeStepIndex];
 
     return (
         <div>
@@ -56,7 +68,7 @@ export default function CVgenerator() {
 
                         {steps.map((step, index) => (
                             <div key={step} className={`stepItem ${currentStep === step ? 'active' : ''}`} onClick = {() => setActiveStepIndex(index)}>
-                            <i class="fa-regular fa-copy"></i>
+                            <i class={icons[index]}></i>
                             <p>{step}</p>
                             </div>
                         ))}

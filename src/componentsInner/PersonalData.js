@@ -220,6 +220,7 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
                   <option value="Twitter">Twitter</option>
                   <option value="LinkedIn">LinkedIn</option>
                   <option value="GitHub">GitHub</option>
+                  <option value="Website">Website</option>
                 </select>
                 <input
                   type="text"
