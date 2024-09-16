@@ -11,6 +11,7 @@ import Achievements from '../componentsInner/Achievements'
 export default function CVgenerator() {
     const steps = ['Templates', 'Personal', 'Education', 'Experience', 'Projects', 'Skills', 'Achievement'];
     const [activeStepIndex, setActiveStepIndex] = useState(0);
+    const [selectedTemplate, setSelectedTemplate] = useState(null);
 
     const goToNextStep = () => {
         if(activeStepIndex < steps.length - 1){
@@ -41,7 +42,7 @@ export default function CVgenerator() {
                     </div>
                 </aside>
                     <div className="stepInfo">
-                        {currentStep === 'Templates' && <TemplatesDisplay goToNextStep = {goToNextStep} />}
+                        {currentStep === 'Templates' && <TemplatesDisplay selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} goToNextStep = {goToNextStep} />}
                         {currentStep === 'Personal' && <PersonalData goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
                         {currentStep === 'Education' && <Education goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
                         {currentStep === 'Experience' && <Experience goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}

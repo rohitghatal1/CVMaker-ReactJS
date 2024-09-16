@@ -3,8 +3,7 @@ import './templatesDisplay.css'
 import templateData from '../templateSelector/templateData';
 import BasicTemplate from '../allTemplates/basicTemplate/BasicTemplate';
 
-export default function TemplatesDisplay({goToNextStep}) {
-  const [selectedTemplate, setSelectedTemplate] = useState(BasicTemplate);
+export default function TemplatesDisplay({selectedTemplate, setSelectedTemplate, goToNextStep}) {
   const [borderColor, setBorderColor] = useState({});
 
   const handleCardClick = (template) => {
