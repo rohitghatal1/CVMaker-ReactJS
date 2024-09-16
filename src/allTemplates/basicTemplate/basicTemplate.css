@@ -111,19 +111,3 @@
     flex-direction: column;
 }
 
-.right-section .skillbar {
-    background: #ccc;
-    border-radius: 4px;
-    height: 10px;
-    width: 100%;
-    position: relative;
-}
-
-.right-section .skillbar .fill {
-    border-radius: 4px;
-    background: #333;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
