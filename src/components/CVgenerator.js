@@ -39,21 +39,8 @@ export default function CVgenerator() {
     }
 
     const generateCV = () => {
-        const personalData = JSON.parse(localStorage.getItem('personalInfo'));
-        const educationData = JSON.parse(localStorage.getItem('educationData'));
-        const experienceData = JSON.parse(localStorage.getItem('experienceData'));
-        const projectsData = JSON.parse(localStorage.getItem('projectData'));
-        const skillsData = JSON.parse(localStorage.getItem('skillData'));
-        const achievementData = JSON.parse(localStorage.getItem('achievementData'));
-
         setFinalCV({
-            template: selectedTemplate,
-            personalData,
-            educationData,
-            experienceData,
-            projectsData,
-            skillsData,
-            achievementData
+            template: selectedTemplate
         })
     };
 
@@ -68,7 +55,7 @@ export default function CVgenerator() {
 
                         {steps.map((step, index) => (
                             <div key={step} className={`stepItem ${currentStep === step ? 'active' : ''}`} onClick = {() => setActiveStepIndex(index)}>
-                            <i class={icons[index]}></i>
+                            <i className={icons[index]}></i>
                             <p>{step}</p>
                             </div>
                         ))}
@@ -83,15 +70,7 @@ export default function CVgenerator() {
                         {currentStep === 'Skills' && <Skills goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
                         {currentStep === 'Achievement' && <Achievements goToPreviousStep = {goToPreviousStep} generateCV = {generateCV} />}
                         {finalCV &&(
-                            <FinalCV
-                                template = {finalCV.template}
-                                personalData = {finalCV.personalData}
-                                educationData = {finalCV.educationData}
-                                experienceData = {finalCV.experienceData}
-                                projectsData = {finalCV.projectsData}
-                                skillsData = {finalCV.skillsData}
-                                achievementData = {finalCV.achievementData} 
-                            />
+                            <FinalCV template = {finalCV.template}/>
                         )}
                     </div>
             </div>

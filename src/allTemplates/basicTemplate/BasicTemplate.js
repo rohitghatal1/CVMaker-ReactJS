@@ -48,11 +48,17 @@ export default function BasicTemplate() {
                     }
                     {socialLinks && (
                         socialLinks.map((social, index) => (
-                            <div className="socialLinkItems">
-                                <span><i class="fab fa-facebook"></i> {social.url}</span>
+                            <div className="socialLinkItems" key={index}>
+                                {social.platform === 'Facebook' && <span><i className="fab fa-facebook"></i> {social.url}</span>}
+                                {social.platform === 'Instagram' && <span><i className="fab fa-instagram"></i> {social.url}</span>}
+                                {social.platform === 'Twitter' && <span><i className="fab fa-twitter"></i> {social.url}</span>}
+                                {social.platform === 'LinkedIn' && <span><i className="fab fa-linkedin"></i> {social.url}</span>}
+                                {social.platform === 'GitHub' && <span><i className="fab fa-github"></i> {social.url}</span>}
+                                {social.platform === 'Website' && <span><i className="fas fa-globe"></i> {social.url}</span>}
                             </div>
                         ))
                     )}
+
 
                     <div class="section awards">
                         <h3><i class="fa-solid fa-award"></i> AWARDS</h3>
