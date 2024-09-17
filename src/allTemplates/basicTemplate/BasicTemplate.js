@@ -2,26 +2,21 @@ import React, { useEffect, useState } from 'react'
 import './basicTemplate.css'
 import peronPhoto from '../../assets/personPhotos/rohit2.jpg'
 
-export default function BasicTemplate() {
+export default function BasicTemplate({ storedPersonalData, storedSocialData, storedEducationData, storedExperienceData, storedProjectsData, storedSkillsData, storedAchievementData }) {
 
     const [personalData, setPersonalData] = useState(null);
     const [socialLinks, setSocialLinks] = useState(null);
 
     // for feteching personalData from local storage 
-    useEffect(() => {
-        const storedPersonalData = JSON.parse(localStorage.getItem('personalInfo'));
-        if (storedPersonalData) {
-            setPersonalData(storedPersonalData);
-        }
-    }, [])
+
+    if (storedPersonalData) {
+        setPersonalData(storedPersonalData);
+    }
 
     // for fetching social links 
-    useEffect(() => {
-        const storedSocialLinks = JSON.parse(localStorage.getItem('socialLinks'));
-        if (storedSocialLinks) {
-            setSocialLinks(storedSocialLinks);
-        }
-    }, [])
+    if (storedSocialData) {
+        setSocialLinks(storedSocialData);
+    }
     return (
         <div>
             <div class="container">

@@ -39,8 +39,23 @@ export default function CVgenerator() {
     }
 
     const generateCV = () => {
+        const storedPersonalData = JSON.parse(localStorage.getItem('personalInfo'));
+        const storedSocialLinksData = JSON.parse(localStorage.getItem('socialLinks'))
+        const storedEducationData = JSON.parse(localStorage.getItem('educationData'));
+        const storedExperienceData = JSON.parse(localStorage.getItem('experienceData'));
+        const storedProjectsData = JSON.parse(localStorage.getItem('projectData'));
+        const storedSkillsData = JSON.parse(localStorage.getItem('skillData'));
+        const storedAchievementData = JSON.parse(localStorage.getItem('achievementData'));
+
         setFinalCV({
-            template: selectedTemplate
+            template: selectedTemplate,
+            storedPersonalData,
+            storedSocialLinksData,
+            storedEducationData,
+            storedExperienceData,
+            storedProjectsData,
+            storedSkillsData,
+            storedAchievementData
         })
     };
 
@@ -55,7 +70,7 @@ export default function CVgenerator() {
 
                         {steps.map((step, index) => (
                             <div key={step} className={`stepItem ${currentStep === step ? 'active' : ''}`} onClick = {() => setActiveStepIndex(index)}>
-                            <i className={icons[index]}></i>
+                            <i class={icons[index]}></i>
                             <p>{step}</p>
                             </div>
                         ))}
@@ -70,7 +85,16 @@ export default function CVgenerator() {
                         {currentStep === 'Skills' && <Skills goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
                         {currentStep === 'Achievement' && <Achievements goToPreviousStep = {goToPreviousStep} generateCV = {generateCV} />}
                         {finalCV &&(
-                            <FinalCV template = {finalCV.template}/>
+                            <FinalCV
+                                template = {finalCV.template}
+                                storedPersonalData = {finalCV.storedPersonalData}
+                                storedSocialData = {finalCV.storedSocialLinksData}
+                                storedEducationData = {finalCV.storedEducationData}
+                                storedExperienceData = {finalCV.storedExperienceData}
+                                storedProjectsData = {finalCV.storedProjectsData}
+                                storedSkillsData = {finalCV.storedSkillsData}
+                                storedAchievementData = {finalCV.storedAchievementData} 
+                            />
                         )}
                     </div>
             </div>
