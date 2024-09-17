@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './basicTemplate.css'
 import peronPhoto from '../../assets/personPhotos/rohit2.jpg'
 
 export default function BasicTemplate() {
+
+    const [personalData, setPersonalData] = useState(null);
+    const [socialLinks, setSocialLinks] = useState(null);
+
+    // for feteching personalData from local storage 
+    useEffect(() => {
+        const storedPersonalData = JSON.parse(localStorage.getItem('personalInfo'));
+        if (storedPersonalData) {
+            setPersonalData(storedPersonalData);
+        }
+    }, [])
+
+    // for fetching social links 
+    useEffect(() => {
+        const storedSocialLinks = JSON.parse(localStorage.getItem('socialLinks'));
+        if (storedSocialLinks) {
+            setSocialLinks(storedSocialLinks);
+        }
+    }, [])
     return (
         <div>
             <div class="container">
@@ -10,18 +29,30 @@ export default function BasicTemplate() {
                     <div class="profile-picture">
                         <img src={peronPhoto} alt="Profile Picture" />
                     </div>
-                    <h1>Rohit Ghatal</h1>
-                    <h2>Web Developer</h2>
+                    {personalData && (
+                        personalData.map((personal, index) => (
+                            <div className="personalInformation" key={index}>
+                                <h1>{personal.fName} {personal.lName}</h1>
+                                <h2>{personal.speciality}</h2>
 
-                    <div class="section summary">
-                        <h3><i class="fa-solid fa-address-book"></i> Contact</h3>
-                        <ul>
-                            <li><i class="fas fa-phone"></i> 9806468522</li>
-                            <li><i class="fas fa-envelope"></i> rohitghatal@gmail.com</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Thasikhel, Lalitpur</li>
-                            <li><i class="fab fa-facebook"></i> Facebook.com/rohitghatal</li>
-                        </ul>
-                    </div>
+                                <div class="section summary">
+                                    <h3><i class="fa-solid fa-address-book"></i> Contact</h3>
+                                    <ul>
+                                        <li><i class="fas fa-phone"></i> {personal.contactNo}</li>
+                                        <li><i class="fas fa-envelope"></i> {personal.email}</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> {personal.PAddress}, {personal.city}</li>
+                                    </ul>
+                                </div>
+                            </div>)
+                        ))
+                    }
+                    {socialLinks && (
+                        socialLinks.map((social, index) => (
+                            <div className="socialLinkItems">
+                                <span><i class="fab fa-facebook"></i> {social.url}</span>
+                            </div>
+                        ))
+                    )}
 
                     <div class="section awards">
                         <h3><i class="fa-solid fa-award"></i> AWARDS</h3>
