@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './cvgenerator.css'
 import TemplatesDisplay from '../componentsInner/TemplatesDisplay';
 import PersonalData from '../componentsInner/PersonalData';
@@ -10,6 +10,11 @@ import Achievements from '../componentsInner/Achievements'
 import FinalCV from './FinalCV';
 
 export default function CVgenerator() {
+
+    const [activeStepIndex, setActiveStepIndex] = useState(0);
+    const [selectedTemplate, setSelectedTemplate] = useState(null);
+    const [finalCV, setFinalCV] = useState(null);
+
     const steps = ['Templates', 'Personal', 'Education', 'Experience', 'Projects', 'Skills', 'Achievement'];
     // for icons 
     const icons = [
@@ -22,40 +27,34 @@ export default function CVgenerator() {
         "fa-solid fa-star"           // For 'Achievement'
     ];
 
-    const [activeStepIndex, setActiveStepIndex] = useState(0);
-    const [selectedTemplate, setSelectedTemplate] = useState(null);
-    const [finalCV, setFinalCV] = useState(null);
-
     const goToNextStep = () => {
-        if(activeStepIndex < steps.length - 1){
+        if (activeStepIndex < steps.length - 1) {
             setActiveStepIndex(activeStepIndex + 1);
         }
     };
 
     const goToPreviousStep = () => {
-        if(activeStepIndex > 0){
+        if (activeStepIndex > 0) {
             setActiveStepIndex(activeStepIndex - 1)
         }
     }
 
     const generateCV = () => {
-        const storedPersonalData = JSON.parse(localStorage.getItem('personalInfo'));
-        const storedSocialLinksData = JSON.parse(localStorage.getItem('socialLinks'))
-        const storedEducationData = JSON.parse(localStorage.getItem('educationData'));
-        const storedExperienceData = JSON.parse(localStorage.getItem('experienceData'));
-        const storedProjectsData = JSON.parse(localStorage.getItem('projectData'));
-        const storedSkillsData = JSON.parse(localStorage.getItem('skillData'));
-        const storedAchievementData = JSON.parse(localStorage.getItem('achievementData'));
+        const personalData = JSON.parse(localStorage.getItem('personalInfo'));
+        const educationData = JSON.parse(localStorage.getItem('educationData'));
+        const experienceData = JSON.parse(localStorage.getItem('experienceData'));
+        const projectsData = JSON.parse(localStorage.getItem('projectData'));
+        const skillsData = JSON.parse(localStorage.getItem('skillData'));
+        const achievementData = JSON.parse(localStorage.getItem('achievementData'));
 
         setFinalCV({
             template: selectedTemplate,
-            storedPersonalData,
-            storedSocialLinksData,
-            storedEducationData,
-            storedExperienceData,
-            storedProjectsData,
-            storedSkillsData,
-            storedAchievementData
+            personalData,
+            educationData,
+            experienceData,
+            projectsData,
+            skillsData,
+            achievementData
         })
     };
 
@@ -69,34 +68,23 @@ export default function CVgenerator() {
                     <div className="stepItemsContainer">
 
                         {steps.map((step, index) => (
-                            <div key={step} className={`stepItem ${currentStep === step ? 'active' : ''}`} onClick = {() => setActiveStepIndex(index)}>
-                            <i class={icons[index]}></i>
-                            <p>{step}</p>
+                            <div key={step} className={`stepItem ${currentStep === step ? 'active' : ''}`} onClick={() => setActiveStepIndex(index)}>
+                                <i class={icons[index]}></i>
+                                <p>{step}</p>
                             </div>
                         ))}
                     </div>
                 </aside>
-                    <div className="stepInfo">
-                        {currentStep === 'Templates' && <TemplatesDisplay selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Personal' && <PersonalData goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Education' && <Education goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Experience' && <Experience goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Projects' && <Projects goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Skills' && <Skills goToPreviousStep = {goToPreviousStep} goToNextStep = {goToNextStep} />}
-                        {currentStep === 'Achievement' && <Achievements goToPreviousStep = {goToPreviousStep} generateCV = {generateCV} />}
-                        {finalCV &&(
-                            <FinalCV
-                                template = {finalCV.template}
-                                storedPersonalData = {finalCV.storedPersonalData}
-                                storedSocialData = {finalCV.storedSocialLinksData}
-                                storedEducationData = {finalCV.storedEducationData}
-                                storedExperienceData = {finalCV.storedExperienceData}
-                                storedProjectsData = {finalCV.storedProjectsData}
-                                storedSkillsData = {finalCV.storedSkillsData}
-                                storedAchievementData = {finalCV.storedAchievementData} 
-                            />
-                        )}
-                    </div>
+                <div className="stepInfo">
+                    {currentStep === 'Templates' && <TemplatesDisplay selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Personal' && <PersonalData goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Education' && <Education goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Experience' && <Experience goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Projects' && <Projects goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Skills' && <Skills goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
+                    {currentStep === 'Achievement' && <Achievements goToPreviousStep={goToPreviousStep} generateCV={generateCV} />}
+                    {finalCV && (<FinalCV template={finalCV.template} />)}
+                </div>
             </div>
         </div>
     )
