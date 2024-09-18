@@ -40,21 +40,8 @@ export default function CVgenerator() {
     }
 
     const generateCV = () => {
-        const personalData = JSON.parse(localStorage.getItem('personalInfo'));
-        const educationData = JSON.parse(localStorage.getItem('educationData'));
-        const experienceData = JSON.parse(localStorage.getItem('experienceData'));
-        const projectsData = JSON.parse(localStorage.getItem('projectData'));
-        const skillsData = JSON.parse(localStorage.getItem('skillData'));
-        const achievementData = JSON.parse(localStorage.getItem('achievementData'));
-
         setFinalCV({
             template: selectedTemplate,
-            personalData,
-            educationData,
-            experienceData,
-            projectsData,
-            skillsData,
-            achievementData
         })
     };
 

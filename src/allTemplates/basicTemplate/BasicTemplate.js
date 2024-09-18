@@ -1,6 +1,7 @@
 import React from 'react';
 import './basicTemplate.css';
 import peronPhoto from '../../assets/personPhotos/rohit2.jpg';
+import { json } from 'react-router-dom';
 
 export default function BasicTemplate() {
   // Fetch data from localStorage directly
@@ -18,6 +19,9 @@ export default function BasicTemplate() {
 
   const storedEducationData = localStorage.getItem('educationData');
   const educationData = storedAchievementData ? JSON.parse(storedEducationData) : [];
+
+  const storedExperienceData = localStorage.getItem('experienceData');
+  const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
 
   return (
     <div>
