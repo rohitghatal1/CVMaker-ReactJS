@@ -1,35 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './basicTemplate.css';
 import peronPhoto from '../../assets/personPhotos/rohit2.jpg';
 
 export default function BasicTemplate() {
-  // Initialize personalData and socialLinks with empty arrays to avoid undefined errors
-  const [personalData, setPersonalData] = useState([]);
-  const [socialLinks, setSocialLinks] = useState([]);
+  // Fetch data from localStorage directly
+  const storedPersonalData = localStorage.getItem('personalInfo');
+  const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
 
-  // for fetching personalData from local storage
-  useEffect(() => {
-    const storedPersonalData = localStorage.getItem('personalInfo');
-    if (storedPersonalData) {
-      try {
-        setPersonalData(JSON.parse(storedPersonalData));
-      } catch (e) {
-        console.error('Error parsing personalInfo:', e);
-      }
-    }
-  }, []);
-
-  // for fetching social links
-  useEffect(() => {
-    const storedSocialLinks = localStorage.getItem('socialLinks');
-    if (storedSocialLinks) {
-      try {
-        setSocialLinks(JSON.parse(storedSocialLinks));
-      } catch (e) {
-        console.error('Error parsing socialLinks:', e);
-      }
-    }
-  }, []);
+  const storedSocialLinks = localStorage.getItem('socialLinks');
+  const socialLinks = storedSocialLinks ? JSON.parse(storedSocialLinks) : [];
 
   return (
     <div>
