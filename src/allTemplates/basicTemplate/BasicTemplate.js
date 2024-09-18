@@ -13,6 +13,12 @@ export default function BasicTemplate() {
   const storedAwardsData = localStorage.getItem('awardsData');
   const awardData = storedAwardsData ? JSON.parse(storedAwardsData) : [];
 
+  const storedAchievementData = localStorage.getItem('achievementData');
+  const achievementData = storedAchievementData ? JSON.parse(storedAchievementData) : [];
+
+  const storedEducationData = localStorage.getItem('educationData');
+  const educationData = storedAchievementData ? JSON.parse(storedEducationData) : [];
+
   return (
     <div>
       <div className="container">
@@ -60,12 +66,12 @@ export default function BasicTemplate() {
             <p><strong>UI Design 2018</strong><br />Sunsex Global / 2018 / Nairobi<br />Overall responsibilities included managing a portfolio of customers</p>
           </div>}
 
-          <div className="section achievements">
+          {achievementData && <div className="section achievements">
             <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
             <p><strong>Designed Nepal Wallet App</strong><br />Partnered with user interface designers, Web developers and UX</p>
             <p><strong>User Research Web Presence</strong><br />Completed user research to identify opportunities for improving XYZ's</p>
             <p><strong>Success in Cross Platform Digital Money Connection</strong><br />Partnered with user interface designers, Web developers and UX</p>
-          </div>
+          </div>}
         </div>
 
         <div className="right-section">
