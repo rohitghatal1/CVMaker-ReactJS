@@ -33,6 +33,15 @@
     padding: 1rem;
 }
 
+
+.loginSignupModal .signupModal .signInOptions{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.loginSignupModal .signupModal .signInOptions p{
+    text-align: center;
+}
 .loginSignupModal .signupModal .signupForm .submitBtn{
     background-color: aliceblue;
     color: black;
