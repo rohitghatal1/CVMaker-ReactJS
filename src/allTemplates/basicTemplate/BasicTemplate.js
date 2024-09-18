@@ -10,6 +10,9 @@ export default function BasicTemplate() {
   const storedSocialLinks = localStorage.getItem('socialLinks');
   const socialLinks = storedSocialLinks ? JSON.parse(storedSocialLinks) : [];
 
+  const storedAwardsData = localStorage.getItem('awardsData');
+  const awardData = storedAwardsData ? JSON.parse(storedAwardsData) : [];
+
   return (
     <div>
       <div className="container">
@@ -51,11 +54,11 @@ export default function BasicTemplate() {
             ))
           )}
 
-          <div className="section awards">
+          {awardData && <div className="section awards">
             <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
             <p><strong>Best booking App</strong><br />SR hotel / 2023 / Lalitpur<br />Improve information architecture of ABC's Web site by assisting with</p>
             <p><strong>UI Design 2018</strong><br />Sunsex Global / 2018 / Nairobi<br />Overall responsibilities included managing a portfolio of customers</p>
-          </div>
+          </div>}
 
           <div className="section achievements">
             <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
