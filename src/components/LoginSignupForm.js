@@ -40,6 +40,13 @@ export default function LoginSignupForm() {
                         <button type='submit' className='submitBtn'>Submit</button>
                     </form>
                     <p>Already have an account?<span>Login here</span></p>
+
+                    <div className="signInOptions">
+                        <p>Sign in with</p>
+                        <div className="signinItems">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
