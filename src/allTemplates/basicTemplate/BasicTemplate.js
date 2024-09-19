@@ -1,7 +1,6 @@
 import React from 'react';
 import './basicTemplate.css';
 import peronPhoto from '../../assets/personPhotos/rohit2.jpg';
-import { json } from 'react-router-dom';
 
 export default function BasicTemplate() {
   // Fetch data from localStorage directly
@@ -95,18 +94,23 @@ export default function BasicTemplate() {
             ))
           )}
 
-          <div className="section education">
-            <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
-            <p><strong>Master in Interface Design</strong><br />Pulchok Engineering College / Pulchowk / Mar, 2018 - Apr 2021<br />Overall responsibilities included managing a portfolio of customers with total value of $35 million in revenue...</p>
-            <p><strong>Bachelor in Computer Application</strong><br />CSE College / Dhulikhel / Mar, 2015 - Apr 2018<br />Completed user research to identify opportunities for improving XYZ's and ABC's Web presence...</p>
-          </div>
+          {educationData.length > 0 && (
+            educationData.map((education, index) => (
+              <div className="section education">
+                <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
+                <p><strong>{education.degree}</strong><br />{education.college}<br /> {education.startDate} to {education.passDate}</p>
+              </div>
+            ))
+          )}
 
-          <div className="section work-experience">
-            <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
-            <p><strong>Product Manager</strong><br />Brain Workshop / Pulchowk / Mar, 2018 - Apr 2021<br />Overall responsibilities included managing a portfolio of customers with total value of $35 million in revenue...</p>
-            <p><strong>UI Designer</strong><br />Karkhana Inc / Dhulikhel / Mar, 2015 - Apr 2018<br />Completed user research to identify opportunities for improving XYZ's and ABC's Web presence...</p>
-            <p><strong>Graphics Designer</strong><br />Thompson Advertising / Jawalakhel / Mar, 2014 - Apr 2015<br />Completed user research to identify opportunities for improving XYZ's and ABC's Web presence...</p>
-          </div>
+          {experienceData.length > 0 && (
+            experienceData.map((experience, index) => (
+              <div className="section work-experience">
+                <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
+                <p><strong>{experience.jobTitle}</strong><br />{experience.organization}, {experience.location} <br /> {experience.startDate} to {experience.endDate}<br /></p>
+              </div>
+            ))
+          )}
 
           <div className="section skills">
             <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>
