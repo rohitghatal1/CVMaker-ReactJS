@@ -64,18 +64,25 @@ export default function BasicTemplate() {
             ))
           )}
 
-          {awardData && <div className="section awards">
-            <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
-            <p><strong>Best booking App</strong><br />SR hotel / 2023 / Lalitpur<br />Improve information architecture of ABC's Web site by assisting with</p>
-            <p><strong>UI Design 2018</strong><br />Sunsex Global / 2018 / Nairobi<br />Overall responsibilities included managing a portfolio of customers</p>
-          </div>}
+          {awardData.length > 0 && (
+            awardData.map((award, index) => (
+              <div className="section awards">
+                <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
+                <p><strong>Best booking App</strong><br />SR hotel / 2023 / Lalitpur<br />Improve information architecture of ABC's Web site by assisting with</p>
+                <p><strong>UI Design 2018</strong><br />Sunsex Global / 2018 / Nairobi<br />Overall responsibilities included managing a portfolio of customers</p>
+              </div>
+            ))
+          )}
 
-          {achievementData && <div className="section achievements">
-            <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
-            <p><strong>Designed Nepal Wallet App</strong><br />Partnered with user interface designers, Web developers and UX</p>
-            <p><strong>User Research Web Presence</strong><br />Completed user research to identify opportunities for improving XYZ's</p>
-            <p><strong>Success in Cross Platform Digital Money Connection</strong><br />Partnered with user interface designers, Web developers and UX</p>
-          </div>}
+          {achievementData.length > 0 && (
+            achievementData.map((achivement, index) => (
+              <div className="section achievements">
+                <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
+                <p><strong>{achivement.title}</strong><br /></p>
+                <p>{achivement.desc}</p>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="right-section">
