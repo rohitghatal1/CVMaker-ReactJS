@@ -22,6 +22,9 @@ export default function BasicTemplate() {
   const storedExperienceData = localStorage.getItem('experienceData');
   const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
 
+  const storedSkillsData = localStorage.getItem('skillData');
+  const skillData = storedSkillsData ? JSON.parse(storedSkillsData) : [];
+
   return (
     <div>
       <div className="container">
@@ -112,45 +115,19 @@ export default function BasicTemplate() {
             ))
           )}
 
-          <div className="section skills">
-            <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>
-            <div className="skillItemContainer">
-              <div className="skillItem">
-                <h3>HTML</h3>
-                <span>Expert</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>CSS</h3>
-                <span>Skillful</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>JavaScript</h3>
-                <span>Intermediate</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>PHP</h3>
-                <span>Good</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>Bootstrap</h3>
-                <span>Good</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>Java</h3>
-                <span>Good</span>
-              </div>
-
-              <div className="skillItem">
-                <h3>C</h3>
-                <span>Good</span>
+          {skillData.length > 0 && (
+            <div className="section skills">
+              <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>
+              <div className="skillItemContainer">
+                {skillData.map((skill, index) => (
+                  <div className="skillItem" key={index}>
+                    <h3>{skill.skillName}</h3>
+                    <span>{skill.skillLevel}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
