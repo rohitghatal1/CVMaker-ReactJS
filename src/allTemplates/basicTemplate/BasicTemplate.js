@@ -86,10 +86,14 @@ export default function BasicTemplate() {
         </div>
 
         <div className="right-section">
-          <div className="section summary">
-            <h3><i className="fa-solid fa-circle-info"></i> SUMMARY</h3>
-            <p>Consistently ranked in the top ten country managers for UNDP as measured by overall revenues generated and year over year increase in revenues...</p>
-          </div>
+          {personalData.length > 0 && (
+            personalData.map((personal, index) => (
+              <div className="section summary">
+                <h3><i className="fa-solid fa-circle-info"></i> SUMMARY</h3>
+                <p>{personal.summary}</p>
+              </div>
+            ))
+          )}
 
           <div className="section education">
             <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
