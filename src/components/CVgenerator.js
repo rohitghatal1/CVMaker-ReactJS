@@ -39,11 +39,15 @@ export default function CVgenerator() {
         }
     }
 
+    // const generateCV = () => {
+    //     setFinalCV({
+    //         template: selectedTemplate
+    //     })
+    // };
     const generateCV = () => {
-        setFinalCV({
-            template: selectedTemplate,
-        })
+        setFinalCV(selectedTemplate);
     };
+    
 
     const currentStep = steps[activeStepIndex];
     const currentIcon = icons[activeStepIndex];
@@ -70,7 +74,7 @@ export default function CVgenerator() {
                     {currentStep === 'Projects' && <Projects goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
                     {currentStep === 'Skills' && <Skills goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
                     {currentStep === 'Achievement' && <Achievements goToPreviousStep={goToPreviousStep} generateCV={generateCV} />}
-                    {finalCV && (<FinalCV template={finalCV.template} />)}
+                    {finalCV && (<FinalCV template={finalCV} />)}
                 </div>
             </div>
         </div>
