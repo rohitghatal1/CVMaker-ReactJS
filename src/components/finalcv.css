@@ -3,6 +3,30 @@
     margin: auto;
 }
 
-.finalCVSection .cvHeading{
+
+.finalCVSection  .headingAndDownloadBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.finalCVSection .headingAndDownloadBtn .cvHeading{
     text-align: center;
+}
+.finalCVSection .headingAndDownloadBtn .downloadCVBtn{
+    padding: 10px 20px;
+    background-color: #15bdfa;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #15bdfa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.8s;
+}
+
+.finalCVSection .headingAndDownloadBtn .downloadCVBtn:hover{
+    background-color: #fff;
+    color: #15bdfa;
+    border: 1px solid #15bdfa;
 }
