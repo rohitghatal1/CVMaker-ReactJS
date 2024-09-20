@@ -1,15 +1,18 @@
 import React from 'react'
 
-export default function FinalCV(template) {
+export default function FinalCV({ template }) {
   return (
     <div>
       <div className="finalCVContainer">
-        <h2>Here is you final CV</h2>
+        <h2>Here is your final CV</h2>
 
         <div className="finalCVSection">
-            {React.createElement(template)}
+          {template 
+
+            ? React.cloneElement(template) // Render the selected template component directly
+            : <p>No template selected.</p>}
         </div>
       </div>
     </div>
-  )
+  );
 }
