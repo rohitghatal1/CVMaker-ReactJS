@@ -93,7 +93,7 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
                 </div>
 
                 <div className="submitAndCloseBtns">
-                  <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
+                  <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
                   <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                 </div>
 
@@ -104,8 +104,8 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <button className='prevBtn' onClick={goToPreviousStep}><i className="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i className="fa-solid fa-arrow-right"></i></button>
           </div>
           
         </section>

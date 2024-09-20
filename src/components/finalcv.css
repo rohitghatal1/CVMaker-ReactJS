@@ -1,0 +1,8 @@
+.finalCVContainer{
+    width: 80%;
+    margin: auto;
+}
+
+.finalCVContainer .cvHeading{
+    text-align: center;
+}

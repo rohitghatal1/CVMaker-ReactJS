@@ -1,10 +1,11 @@
 import React from 'react'
+import './finalcv.css'
 
 export default function FinalCV({ template }) {
   return (
     <div>
       <div className="finalCVContainer">
-        <h2>Here is your final CV</h2>
+        <h2 className='cvHeading'>Here is your final CV</h2>
 
         <div className="finalCVSection">
           {template 

@@ -88,7 +88,7 @@ export default function Achievements({goToPreviousStep, generateCV}) {
                                 <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></textarea>
 
                                 <div className="submitAndCloseBtns">
-                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
+                                    <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
                             </form>
@@ -98,8 +98,8 @@ export default function Achievements({goToPreviousStep, generateCV}) {
                     </div>
 
                     <div className="nextAndBackBtn">
-                        <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
-                        <button className='nextBtn' onClick={generateCV}>Generate <i class="fa-solid fa-arrow-right"></i></button>
+                        <button className='prevBtn' onClick={goToPreviousStep}><i className="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button className='nextBtn' onClick={generateCV}>Generate <i className="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </section>
             </div>

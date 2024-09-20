@@ -16,7 +16,7 @@ export default function TemplatesDisplay({selectedTemplate, setSelectedTemplate,
       <div className="allTemplateDisplay">
       <div className="templateContainerHeading">
         <h2>Select a Template</h2>
-        <button className='nextbtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
+        <button className='nextbtn' onClick={goToNextStep}>Next <i className="fa-solid fa-arrow-right"></i></button>
       </div>
         <div className="allTemplateInfo">
           <h3>Here are some of the available Template for CV</h3>
