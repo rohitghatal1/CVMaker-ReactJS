@@ -39,11 +39,6 @@ export default function CVgenerator() {
         }
     }
 
-    // const generateCV = () => {
-    //     setFinalCV({
-    //         template: selectedTemplate
-    //     })
-    // };
     const generateCV = () => {
         setFinalCV(selectedTemplate);
     };

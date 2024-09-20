@@ -99,6 +99,8 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
   const handleDeleteLink = (index) => {
     const updatedLinks = socialLinks.filter((_, i) => i !== index);
     setSocialLinks(updatedLinks);
+
+    localStorage.setItem('socialLinks', JSON.stringify(updatedLinks));
   };
 
   return (
