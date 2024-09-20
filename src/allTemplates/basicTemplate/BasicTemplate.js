@@ -17,7 +17,7 @@ export default function BasicTemplate() {
   const achievementData = storedAchievementData ? JSON.parse(storedAchievementData) : [];
 
   const storedEducationData = localStorage.getItem('educationData');
-  const educationData = storedAchievementData ? JSON.parse(storedEducationData) : [];
+  const educationData = storedEducationData ? JSON.parse(storedEducationData) : [];
 
   const storedExperienceData = localStorage.getItem('experienceData');
   const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
@@ -33,13 +33,12 @@ export default function BasicTemplate() {
             <img src={peronPhoto} alt="Profile Picture" />
           </div>
 
-          {/* Ensure data is mapped only if it exists */}
+          {/* Personal Information */}
           {personalData.length > 0 && (
             personalData.map((personal, index) => (
               <div className="personalInformation" key={index}>
                 <h1>{personal.fName} {personal.lName}</h1>
                 <h2>{personal.speciality}</h2>
-
                 <div className="section summary">
                   <h3><i className="fa-solid fa-address-book"></i> Contact</h3>
                   <ul>
@@ -52,69 +51,87 @@ export default function BasicTemplate() {
             ))
           )}
 
-          {/* Ensure socialLinks are mapped only if they exist */}
+          {/* Social Links */}
           {socialLinks.length > 0 && (
-            socialLinks.map((social, index) => (
-              <div className="socialLinkItems" key={index}>
-                {social.platform === 'Facebook' && <span><i className="fab fa-facebook"></i> {social.url}</span>}
-                {social.platform === 'Instagram' && <span><i className="fab fa-instagram"></i> {social.url}</span>}
-                {social.platform === 'Twitter' && <span><i className="fab fa-twitter"></i> {social.url}</span>}
-                {social.platform === 'LinkedIn' && <span><i className="fab fa-linkedin"></i> {social.url}</span>}
-                {social.platform === 'GitHub' && <span><i className="fab fa-github"></i> {social.url}</span>}
-                {social.platform === 'Website' && <span><i className="fas fa-globe"></i> {social.url}</span>}
-              </div>
-            ))
+            <div className="socialLinkItems">
+              {socialLinks.map((social, index) => (
+                <span key={index}>
+                  {social.platform === 'Facebook' && <i className="fab fa-facebook"></i>}
+                  {social.platform === 'Instagram' && <i className="fab fa-instagram"></i>}
+                  {social.platform === 'Twitter' && <i className="fab fa-twitter"></i>}
+                  {social.platform === 'LinkedIn' && <i className="fab fa-linkedin"></i>}
+                  {social.platform === 'GitHub' && <i className="fab fa-github"></i>}
+                  {social.platform === 'Website' && <i className="fas fa-globe"></i>}
+                  {social.url}
+                </span>
+              ))}
+            </div>
           )}
 
+          {/* Awards */}
           {awardData.length > 0 && (
-            awardData.map((award, index) => (
-              <div className="section awards">
-                <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
-                <p><strong>Best booking App</strong><br />SR hotel / 2023 / Lalitpur<br />Improve information architecture of ABC's Web site by assisting with</p>
-                <p><strong>UI Design 2018</strong><br />Sunsex Global / 2018 / Nairobi<br />Overall responsibilities included managing a portfolio of customers</p>
-              </div>
-            ))
+            <div className="section awards">
+              <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
+              {awardData.map((award, index) => (
+                <p key={index}><strong>{award.title}</strong><br />{award.details}</p>
+              ))}
+            </div>
           )}
 
+          {/* Achievements */}
           {achievementData.length > 0 && (
-            achievementData.map((achivement, index) => (
-              <div className="section achievements">
-                <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
-                <p><strong>{achivement.title}</strong><br /></p>
-                <p>{achivement.desc}</p>
-              </div>
-            ))
+            <div className="section achievements">
+              <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
+              {achievementData.map((achivement, index) => (
+                <div key={index}>
+                  <strong>{achivement.title}</strong><br />
+                  <p>{achivement.desc}</p>
+                </div>
+              ))}
+            </div>
           )}
         </div>
 
         <div className="right-section">
+          {/* Summary */}
           {personalData.length > 0 && (
             personalData.map((personal, index) => (
-              <div className="section summary">
+              <div className="section summary" key={index}>
                 <h3><i className="fa-solid fa-circle-info"></i> SUMMARY</h3>
                 <p>{personal.summary}</p>
               </div>
             ))
           )}
 
+          {/* Education */}
           {educationData.length > 0 && (
-            educationData.map((education, index) => (
-              <div className="section education">
-                <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
-                <p><strong>{education.degree}</strong><br />{education.college}<br /> {education.startDate} to {education.passDate}</p>
-              </div>
-            ))
+            <div className="section education">
+              <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
+              {educationData.map((education, index) => (
+                <p key={index}>
+                  <strong>{education.degree}</strong><br />
+                  {education.college}<br />
+                  {education.startDate} to {education.passDate}
+                </p>
+              ))}
+            </div>
           )}
 
+          {/* Work Experience */}
           {experienceData.length > 0 && (
-            experienceData.map((experience, index) => (
-              <div className="section work-experience">
-                <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
-                <p><strong>{experience.jobTitle}</strong><br />{experience.organization}, {experience.location} <br /> {experience.startDate} to {experience.endDate}<br /></p>
-              </div>
-            ))
+            <div className="section work-experience">
+              <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
+              {experienceData.map((experience, index) => (
+                <p key={index}>
+                  <strong>{experience.jobTitle}</strong><br />
+                  {experience.organization}, {experience.location} <br />
+                  {experience.startDate} to {experience.endDate}
+                </p>
+              ))}
+            </div>
           )}
 
+          {/* Skills */}
           {skillData.length > 0 && (
             <div className="section skills">
               <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>

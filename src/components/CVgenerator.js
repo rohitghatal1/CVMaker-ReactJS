@@ -24,7 +24,6 @@ export default function CVgenerator() {
         'Achievement'
     ];
 
-    // Icon mapping based on step names
     const icons = {
         'Templates': "fa-regular fa-copy",
         'Personal': "fa-regular fa-user",
@@ -51,6 +50,32 @@ export default function CVgenerator() {
 
     const generateCV = () => {
         setFinalCV(selectedTemplate);
+        setActiveStep('FinalCV'); // Set active step to FinalCV after generation
+    };
+
+    const renderStepContent = () => {
+        switch (activeStep) {
+            case 'Templates':
+                return (
+                    <TemplatesDisplay selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} goToNextStep={goToNextStep} />
+                );
+            case 'Personal':
+                return <PersonalData goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Education':
+                return <Education goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Experience':
+                return <Experience goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Projects':
+                return <Projects goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Skills':
+                return <Skills goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Achievement':
+                return <Achievements goToPreviousStep={goToPreviousStep} generateCV={generateCV} />;
+            case 'FinalCV':
+                return <FinalCV template={finalCV} />;
+            default:
+                return null;
+        }
     };
 
     return (
@@ -59,7 +84,11 @@ export default function CVgenerator() {
                 <aside className='stepsIdicator'>
                     <div className="stepItemsContainer">
                         {steps.map((step) => (
-                            <div key={step} className={`stepItem ${activeStep === step ? 'active' : ''}`} onClick={() => setActiveStep(step)}>
+                            <div 
+                                key={step} 
+                                className={`stepItem ${activeStep === step ? 'active' : ''}`} 
+                                onClick={() => setActiveStep(step)}
+                            >
                                 <i className={icons[step]}></i>
                                 <p>{step}</p>
                             </div>
@@ -67,21 +96,7 @@ export default function CVgenerator() {
                     </div>
                 </aside>
                 <div className="stepInfo">
-                    {finalCV ? (
-                        <FinalCV template={finalCV} />
-                    ) : (
-                        <>
-                            {activeStep === 'Templates' && (
-                                <TemplatesDisplay selectedTemplate={selectedTemplate} setSelectedTemplate={setSelectedTemplate} goToNextStep={goToNextStep} />
-                            )}
-                            {activeStep === 'Personal' && <PersonalData goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
-                            {activeStep === 'Education' && <Education goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
-                            {activeStep === 'Experience' && <Experience goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
-                            {activeStep === 'Projects' && <Projects goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
-                            {activeStep === 'Skills' && <Skills goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />}
-                            {activeStep === 'Achievement' && <Achievements goToPreviousStep={goToPreviousStep} generateCV={generateCV} />}
-                        </>
-                    )}
+                    {renderStepContent()}
                 </div>
             </div>
         </div>
