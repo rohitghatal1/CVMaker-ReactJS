@@ -8,11 +8,11 @@ export default function FinalCV({ template }) {
   const downloadCV = () => {
     const element = cvRef.current;
     const options = {
-      margin: 1,
-      filename: 'cv.pdf',
+      margin: 0.2,
+      filename: 'CV.pdf',
       imag: {type: 'jpeg', quality: 0.98},
-      html2canvas: {scale: 2},
-      jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'}
+      html2canvas: {scale: 1.3},
+      jsPDF: {unit: 'in', format: 'a4', orientation: 'portrait'}
     };
     html2pdf().from(element).set(options).save();
   };
