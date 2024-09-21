@@ -2,7 +2,35 @@ import React from 'react';
 import personPhoto from '../../assets/personPhotos/rohit2.jpg';
 import './creativeTemplate.css';
 
+// Skill level mappings
+const skillLevels = {
+  beginner: [0, 20],
+  intermediate: [20, 40],
+  skillful: [40, 60],
+  experienced: [60, 80],
+  expert: [80, 100]
+};
+
 export default function CreativeTemplate() {
+    // Fetch data from localStorage
+    const storedPersonalData = localStorage.getItem('personalInfo');
+    const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
+
+    const storedSocialLinks = localStorage.getItem('socialLinks');
+    const socialLinks = storedSocialLinks ? JSON.parse(storedSocialLinks) : [];
+
+    const storedSkillsData = localStorage.getItem('skillData');
+    const skillData = storedSkillsData ? JSON.parse(storedSkillsData) : [];
+
+    const storedProjectsData = localStorage.getItem('projectsData');
+    const projectsData = storedProjectsData ? JSON.parse(storedProjectsData) : [];
+
+    const storedExperienceData = localStorage.getItem('experienceData');
+    const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
+
+    const storedAchievementData = localStorage.getItem('achievementData');
+    const achievementData = storedAchievementData ? JSON.parse(storedAchievementData) : [];
+
     return (
         <div>
             <div className="CVContainer">
@@ -11,67 +39,52 @@ export default function CreativeTemplate() {
                         <img src={personPhoto} alt="Person" />
                     </div>
                     <div className="infoAndSkills">
-                        <div className="personInfo">
-                            <h2>Rohit Ghatal</h2>
-                            <p>Web Developer</p>
-                        </div>
+                        {personalData.length > 0 && personalData.map((personal, index) => (
+                            <div key={index} className="personInfo">
+                                <h2>{personal.fName} {personal.lName}</h2>
+                                <p>{personal.speciality}</p>
+                            </div>
+                        ))}
                         <hr />
                         <div className="contactAndSkills">
                             <div className="skills">
                                 <h2><i className="fa-solid fa-code-compare"></i> Skills</h2>
                                 <div className="skillItemContainer">
-                                    <div className="skillItem">
-                                        <p>HTML</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '80%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>CSS</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '70%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>Javascript</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '60%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>PHP</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '75%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>Bootstrap</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '55%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>Java</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '40%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>C</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '70%' }}></div></div>
-                                    </div>
-
-                                    <div className="skillItem">
-                                        <p>React</p>
-                                        <div className="skillbar"><div className="fill" style={{ width: '40%' }}></div></div>
-                                    </div>
+                                    {skillData.length > 0 && skillData.map((skill, index) => {
+                                        const skillRange = skillLevels[skill.skillLevel] || [0, 0]; // Default to [0, 0] if not found
+                                        return (
+                                            <div className="skillItem" key={index}>
+                                                <p>{skill.skillName}</p>
+                                                <div className="skillbar">
+                                                    <div className="fill" style={{ width: `${skillRange[1]}%` }}></div>
+                                                </div>
+                                                <span>{skill.skillLevel} ({skillRange[0]}% - {skillRange[1]}%)</span>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             <div className="contactContainer">
                                 <h2><i className="fa-solid fa-child-reaching"></i> Contact Me</h2>
                                 <div className="contactItems">
-                                    <span><i className="fa-solid fa-phone"></i> 9875468459</span>
-                                    <span><i className="fa-regular fa-envelope"></i> rohitghatal@gmail.com</span>
-                                    <span><i className="fa-solid fa-location-dot"></i> Thasikhel, Lalitpur</span>
-                                    <span><i className="fab fa-facebook"></i> facebook.com/rohit.rohit.ghatal</span>
-                                    <span><i className="fab fa-instagram"></i> instagram.com/_rohit.ghatal_/</span>
-                                    <span><i className="fa-brands fa-linkedin-in"></i> linkedin.com/in/rohit-ghatal-7823111b4/</span>
-                                    <span><i className="fa-brands fa-github"></i> github.com/rohitghatal1</span>
-                                    <span><i className="fa-solid fa-link"></i> rohitghatal.com.np/</span>
+                                    {personalData.length > 0 && personalData.map((personal, index) => (
+                                        <div key={index}>
+                                            <span><i className="fa-solid fa-phone"></i> {personal.contactNo}</span>
+                                            <span><i className="fa-regular fa-envelope"></i> {personal.email}</span>
+                                            <span><i className="fa-solid fa-location-dot"></i> {personal.PAddress}, {personal.city}</span>
+                                        </div>
+                                    ))}
+                                    {socialLinks.length > 0 && socialLinks.map((social, index) => (
+                                        <span key={index}>
+                                            {social.platform === 'Facebook' && <i className="fab fa-facebook"></i>}
+                                            {social.platform === 'Instagram' && <i className="fab fa-instagram"></i>}
+                                            {social.platform === 'Twitter' && <i className="fab fa-twitter"></i>}
+                                            {social.platform === 'LinkedIn' && <i className="fab fa-linkedin"></i>}
+                                            {social.platform === 'GitHub' && <i className="fab fa-github"></i>}
+                                            {social.platform === 'Website' && <i className="fas fa-globe"></i>}
+                                            {social.url}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -80,44 +93,19 @@ export default function CreativeTemplate() {
                 </section>
 
                 <section className="summarySection">
-                    <div className="summaryContainer sectionContainer">
-                        <div className="summaryContent">
-                            <div className="icon">
-                                <i className='fas fa-user'></i>
-                                <h2>Summary</h2>
-                            </div>
-                            <div className="summaryDetails">
-                                <p>
-                                    A passionate Front-End & Back-End developer with a knack for designing user interfaces.
-                                    With over 2 years of experience in web development.
-                                </p>
-                                <p>
-                                    Beyond my professional life, I'm an avid tech enthusiast, which keeps me inspired and
-                                    constantly seeking new ways to infuse creativity into my work. Whether it's through
-                                    developing my own websites or exploring the latest trends in web development, I believe in
-                                    continuous learning and growth.
-                                </p>
+                    {personalData.length > 0 && personalData.map((personal, index) => (
+                        <div className="summaryContainer sectionContainer" key={index}>
+                            <div className="summaryContent">
+                                <div className="icon">
+                                    <i className='fas fa-user'></i>
+                                    <h2>Summary</h2>
+                                </div>
+                                <div className="summaryDetails">
+                                    <p>{personal.summary}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section className="education-section">
-                    <div className="educationContainer sectionContainer">
-                        <div className="content">
-                            <div className="icon">
-                                <i className="fas fa-graduation-cap"></i>
-                                <h2>ACADEMY</h2>
-                            </div>
-                            <div className="text">
-                                <h3>Vedas College , Lalitpur</h3>
-                                <h2>BACHELORS IN COMPUTER APPLICATION</h2>
-                                <p className='courseTime'>March, 2021 - Present</p>
-                                <p>Bachelor of Computer Applications (BCA) graduate with a strong foundation in software development, web technologies,
-                                    and database management. Proficient in programming languages such as Java, C#, .NET, PHP, HTML, CSS, Mobile Programming.</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </section>
 
                 <section className="projects-section">
@@ -127,40 +115,16 @@ export default function CreativeTemplate() {
                             <h2>Projects</h2>
                         </div>
                     </div>
-
-                    <div className="project-item">
-                        <div className="line"></div>
-                        <div className="project-content">
-                            <h3>E-Commerce Website</h3>
-                            <p>This website is basically an E-Commerce Site for buying Laptops, Mobiles & Smart Watches named as "GadgetHub"</p>
-                            <a href="https://rohighta1.github.io/E-CommerceCite-GadjetHub-/" target="_blank" rel="noopener noreferrer">https://rohighta1.github.io/E-CommerceCite-GadjetHub-/</a>
+                    {projectsData.length > 0 && projectsData.map((project, index) => (
+                        <div className="project-item" key={index}>
+                            <div className="line"></div>
+                            <div className="project-content">
+                                <h3>{project.title}</h3>
+                                <p>{project.details}</p>
+                                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer">{project.url}</a>}
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="project-item">
-                        <div className="line"></div>
-                        <div className="project-content">
-                            <h3>Online Hotel Booking</h3>
-                            <p>This website helps users to easily book/cancel rooms of a hotel with accurate room availability information.</p>
-                        </div>
-                    </div>
-
-                    <div className="project-item">
-                        <div className="line"></div>
-                        <div className="project-content">
-                            <h3>Facebook Clone</h3>
-                            <p>This is just an interface design of the "FACEBOOK" without backend and chatting function.</p>
-                            <a href="https://rohighta1.github.io/facebookClone/" target="_blank" rel="noopener noreferrer">https://rohighta1.github.io/facebookClone/</a>
-                        </div>
-                    </div>
-
-                    <div className="project-item">
-                        <div className="line"></div>
-                        <div className="project-content">
-                            <h3>News App Using ReactJs</h3>
-                            <p>This project is a news showing app named "NewsPortal" created using ReactJs.</p>
-                        </div>
-                    </div>
+                    ))}
                 </section>
 
                 <section className="workExperience-section">
@@ -170,24 +134,17 @@ export default function CreativeTemplate() {
                             <h2>Work Experience</h2>
                         </div>
                     </div>
-
-                    <div className="work-item">
-                        <div className="line"></div>
-                        <div className="work-content">
-                            <h3>Front-End Developer at Tech Solutions</h3>
-                            <p><strong>January 2022 - Present</strong></p>
-                            <p>Worked on creating user-friendly web pages and applications, implementing responsive designs, and optimizing website performance.</p>
+                    {experienceData.length > 0 && experienceData.map((experience, index) => (
+                        <div className="work-item" key={index}>
+                            <div className="line"></div>
+                            <div className="work-content">
+                                <h3>{experience.jobTitle}</h3>
+                                <p><strong>{experience.startDate} - {experience.endDate}</strong></p>
+                                <p>{experience.organization}, {experience.location}</p>
+                                <p>{experience.desc}</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="work-item">
-                        <div className="line"></div>
-                        <div className="work-content">
-                            <h3>Intern at Web Innovators</h3>
-                            <p><strong>June 2021 - December 2021</strong></p>
-                            <p>Assisted in developing and maintaining web applications, working closely with senior developers, and gaining hands-on experience in various web technologies.</p>
-                        </div>
-                    </div>
+                    ))}
                 </section>
 
                 <section className="achievements-section">
@@ -197,22 +154,15 @@ export default function CreativeTemplate() {
                             <h2>Achievements</h2>
                         </div>
                     </div>
-
-                    <div className="achievement-item">
-                        <div className="line"></div>
-                        <div className="achievement-content">
-                            <h3>Winner of Web Development Hackathon</h3>
-                            <p>Won first place in a national-level web development hackathon organized by XYZ Tech.</p>
+                    {achievementData.length > 0 && achievementData.map((achievement, index) => (
+                        <div className="achievement-item" key={index}>
+                            <div className="line"></div>
+                            <div className="achievement-content">
+                                <h3>{achievement.title}</h3>
+                                <p>{achievement.desc}</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="achievement-item">
-                        <div className="line"></div>
-                        <div className="achievement-content">
-                            <h3>Top Performer in Coding Challenge</h3>
-                            <p>Achieved top rank in a global coding challenge hosted by ABC Coding Platform.</p>
-                        </div>
-                    </div>
+                    ))}
                 </section>
             </div>
         </div>

@@ -34,10 +34,6 @@
     border: 2px solid #f1f1f1;
 }
 
-.cvGeneratorContainer .stepsIdicator::-webkit-scrollbar-thumb:hover {
-    background-color: #006400;
-}
-
 .cvGeneratorContainer .stepInfo {
     width: 88%;
     margin: auto;
