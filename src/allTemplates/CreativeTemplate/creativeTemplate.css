@@ -1,5 +1,5 @@
 .CVContainer {
-    width: 8.27in; /* A4 paper width */
+    width: 8.25in; /* A4 paper width */
     margin: 0 auto;
     padding: 0.5in; /* Adjust the padding for better fit */
     box-sizing: border-box;
@@ -89,13 +89,17 @@
     border-radius: 5px;
 }
 
-.icon i {
+.iconAndHeading{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.iconAndHeading i {
     font-size: 1rem;
 }
 
-.icon h2 {
+.iconAndHeading h2 {
     font-size: 1.3rem;
-    margin-top: 0.5rem;
 }
 
 .line {

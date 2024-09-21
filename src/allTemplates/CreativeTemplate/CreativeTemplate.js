@@ -88,7 +88,7 @@ export default function CreativeTemplate() {
                     {personalData.length > 0 && personalData.map((personal, index) => (
                         <div className="summaryContainer sectionContainer" key={index}>
                             <div className="summaryContent">
-                                <div className="icon">
+                                <div className="iconAndHeading">
                                     <i className='fas fa-user'></i>
                                     <h2>Summary</h2>
                                 </div>
@@ -103,7 +103,7 @@ export default function CreativeTemplate() {
                 {projectsData.length > 0 && (
                     <section className="projects-section">
                         <div className="section-header">
-                            <div className="icon">
+                            <div className="iconAndHeading">
                                 <i className="fas fa-rocket"></i>
                                 <h2>Projects</h2>
                             </div>
@@ -122,7 +122,7 @@ export default function CreativeTemplate() {
 
                 <section className="workExperience-section">
                     <div className="section-header">
-                        <div className="icon">
+                        <div className="iconAndHeading">
                             <i className="fas fa-briefcase"></i>
                             <h2>Work Experience</h2>
                         </div>
@@ -142,7 +142,7 @@ export default function CreativeTemplate() {
 
                 <section className="achievements-section">
                     <div className="section-header">
-                        <div className="icon">
+                        <div className="iconAndHeading">
                             <i className="fas fa-trophy"></i>
                             <h2>Achievements</h2>
                         </div>

@@ -28,7 +28,7 @@ export default function FinalCV({ template }) {
         <div className="finalCVContainer" ref={cvRef}>
           {template 
 
-            ? React.cloneElement(template) // Render the selected template component directly
+            ? React.cloneElement(template) 
             : <p>No template selected.</p>}
         </div>
       </div>
