@@ -20,7 +20,7 @@ export default function CVgenerator() {
         'Education', 
         'Experience', 
         'Projects', 
-        'Skills', 
+        'Skills',
         'Achievement'
     ];
 
