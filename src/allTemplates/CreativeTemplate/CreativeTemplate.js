@@ -13,7 +13,7 @@ export default function CreativeTemplate() {
     const storedSkillsData = localStorage.getItem('skillData');
     const skillData = storedSkillsData ? JSON.parse(storedSkillsData) : [];
 
-    const storedProjectsData = localStorage.getItem('projectsData');
+    const storedProjectsData = localStorage.getItem('projectData');
     const projectsData = storedProjectsData ? JSON.parse(storedProjectsData) : [];
 
     const storedExperienceData = localStorage.getItem('experienceData');
@@ -42,11 +42,15 @@ export default function CreativeTemplate() {
                                 <div className="skills">
                                     <h2><i className="fa-solid fa-code-compare"></i> Skills</h2>
                                     <div className="skillItemContainer">
-                                        {skillData.map((skill, index) => (
-                                            <div className="skillItem" key={index}>
-                                                <span className='skillTitle'>{skill.skillName}</span>
-                                            </div>
-                                        ))}
+                                        <ul>
+                                            {skillData.map((skill, index) => (
+                                                <li>
+                                                    <div className="skillItem" key={index}>
+                                                        <span className='skillTitle'>{skill.skillName}</span>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
                             )}
@@ -60,17 +64,19 @@ export default function CreativeTemplate() {
                                             <p><i className="fa-solid fa-location-dot"></i> {personal.PAddress}, {personal.city}</p>
                                         </div>
                                     ))}
-                                    {socialLinks.length > 0 && socialLinks.map((social, index) => (
-                                        <span key={index}>
-                                            {social.platform === 'Facebook' && <i className="fab fa-facebook"></i>}
-                                            {social.platform === 'Instagram' && <i className="fab fa-instagram"></i>}
-                                            {social.platform === 'Twitter' && <i className="fab fa-twitter"></i>}
-                                            {social.platform === 'LinkedIn' && <i className="fab fa-linkedin"></i>}
-                                            {social.platform === 'GitHub' && <i className="fab fa-github"></i>}
-                                            {social.platform === 'Website' && <i className="fas fa-globe"></i>}
-                                            {social.url}
-                                        </span>
-                                    ))}
+                                    <div className="socialLinks">
+                                        {socialLinks.length > 0 && socialLinks.map((social, index) => (
+                                            <p key={index}>
+                                                {social.platform === 'Facebook' && <i className="fab fa-facebook"></i>}
+                                                {social.platform === 'Instagram' && <i className="fab fa-instagram"></i>}
+                                                {social.platform === 'Twitter' && <i className="fab fa-twitter"></i>}
+                                                {social.platform === 'LinkedIn' && <i className="fab fa-linkedin"></i>}
+                                                {social.platform === 'GitHub' && <i className="fab fa-github"></i>}
+                                                {social.platform === 'Website' && <i className="fas fa-globe"></i>}
+                                                {social.url}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -94,24 +100,25 @@ export default function CreativeTemplate() {
                     ))}
                 </section>
 
-                <section className="projects-section">
-                    <div className="section-header">
-                        <div className="icon">
-                            <i className="fas fa-rocket"></i>
-                            <h2>Projects</h2>
-                        </div>
-                    </div>
-                    {projectsData.length > 0 && projectsData.map((project, index) => (
-                        <div className="project-item" key={index}>
-                            <div className="line"></div>
-                            <div className="project-content">
-                                <h3>{project.title}</h3>
-                                <p>{project.details}</p>
-                                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer">{project.url}</a>}
+                {projectsData.length > 0 && (
+                    <section className="projects-section">
+                        <div className="section-header">
+                            <div className="icon">
+                                <i className="fas fa-rocket"></i>
+                                <h2>Projects</h2>
                             </div>
                         </div>
-                    ))}
-                </section>
+                        {projectsData.map((project, index) => (
+                            <div className="project-item" key={index}>
+                                <div className="line"></div>
+                                <div className="project-content">
+                                    <h3>{project.projectTitle}</h3>
+                                    <p>{project.projectDesc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </section>
+                )}
 
                 <section className="workExperience-section">
                     <div className="section-header">
