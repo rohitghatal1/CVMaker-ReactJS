@@ -1,42 +1,43 @@
-.cvGeneratorContainer{
+.cvGeneratorContainer {
     background-color: aliceblue;
     padding: 1rem;
     display: flex;
     gap: 1rem;
     position: relative;
+    height: 100vh; /* Ensure the container spans the full height of the viewport */
 }
 
-.cvGeneratorContainer .stepsIdicator{
+.cvGeneratorContainer .stepsIdicator {
     position: fixed;
-    width: 8rem;
+    width: 9rem;
     left: 0;
     top: 0;
     padding: 1rem;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: auto; 
 }
 
-.cvGeneratorContainer .stepsIdicator{
-    width: 10%;
-}
-
-.cvGeneratorContainer .stepInfo{
+.cvGeneratorContainer .stepInfo {
     width: 88%;
     margin: auto;
 }
-.cvGeneratorContainer .stepsIdicator .stepItemsContainer{
+
+.cvGeneratorContainer .stepsIdicator .stepItemsContainer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     padding-right: 1rem;
     border-right: 1px solid #ddd;
+    padding-bottom: 2rem;
 }
+
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem{
     background: linear-gradient(135deg, #6b8e23, #228b22);
     color: white;
     border-radius: 0.4rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -53,8 +54,9 @@
 }
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer .stepItem.active{
-    background: linear-gradient(135deg, #228b22, #006400);
-    color: #f5f5f5;
+    color:#228b22;
+    background: #f5f5f5;
+    border: 1px solid#228b22;
     transform: scale(1.1);
 }
 

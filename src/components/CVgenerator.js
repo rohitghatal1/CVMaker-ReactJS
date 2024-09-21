@@ -8,6 +8,7 @@ import Projects from '../componentsInner/Projects';
 import Skills from '../componentsInner/Skills';
 import Achievements from '../componentsInner/Achievements';
 import FinalCV from './FinalCV';
+import Awards from '../componentsInner/Awards';
 
 export default function CVgenerator() {
     const [activeStep, setActiveStep] = useState('Templates');
@@ -21,6 +22,7 @@ export default function CVgenerator() {
         'Experience', 
         'Projects', 
         'Skills',
+        'Awards',
         'Achievement'
     ];
 
@@ -31,6 +33,7 @@ export default function CVgenerator() {
         'Experience': "fa-solid fa-layer-group",
         'Projects': "fa-solid fa-rocket",
         'Skills': "fa-solid fa-code-compare",
+        'Awards': "fa-solid fa-award",
         'Achievement': "fa-solid fa-star"
     };
 
@@ -69,6 +72,8 @@ export default function CVgenerator() {
                 return <Projects goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
             case 'Skills':
                 return <Skills goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep} />;
+            case 'Awards':
+                return <Awards goToPreviousStep={goToPreviousStep} goToNextStep={goToNextStep}/>
             case 'Achievement':
                 return <Achievements goToPreviousStep={goToPreviousStep} generateCV={generateCV} />;
             case 'FinalCV':
