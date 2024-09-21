@@ -2,15 +2,6 @@ import React from 'react';
 import personPhoto from '../../assets/personPhotos/rohit2.jpg';
 import './creativeTemplate.css';
 
-// Skill level mappings
-const skillLevels = {
-  beginner: [0, 20],
-  intermediate: [20, 40],
-  skillful: [40, 60],
-  experienced: [60, 80],
-  expert: [80, 100]
-};
-
 export default function CreativeTemplate() {
     // Fetch data from localStorage
     const storedPersonalData = localStorage.getItem('personalInfo');
@@ -47,31 +38,26 @@ export default function CreativeTemplate() {
                         ))}
                         <hr />
                         <div className="contactAndSkills">
-                            <div className="skills">
-                                <h2><i className="fa-solid fa-code-compare"></i> Skills</h2>
-                                <div className="skillItemContainer">
-                                    {skillData.length > 0 && skillData.map((skill, index) => {
-                                        const skillRange = skillLevels[skill.skillLevel] || [0, 0]; // Default to [0, 0] if not found
-                                        return (
+                            {skillData.length > 0 && (
+                                <div className="skills">
+                                    <h2><i className="fa-solid fa-code-compare"></i> Skills</h2>
+                                    <div className="skillItemContainer">
+                                        {skillData.map((skill, index) => (
                                             <div className="skillItem" key={index}>
-                                                <p>{skill.skillName}</p>
-                                                <div className="skillbar">
-                                                    <div className="fill" style={{ width: `${skillRange[1]}%` }}></div>
-                                                </div>
-                                                <span>{skill.skillLevel} ({skillRange[0]}% - {skillRange[1]}%)</span>
+                                                <span className='skillTitle'>{skill.skillName}</span>
                                             </div>
-                                        );
-                                    })}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                             <div className="contactContainer">
                                 <h2><i className="fa-solid fa-child-reaching"></i> Contact Me</h2>
                                 <div className="contactItems">
                                     {personalData.length > 0 && personalData.map((personal, index) => (
                                         <div key={index}>
-                                            <span><i className="fa-solid fa-phone"></i> {personal.contactNo}</span>
-                                            <span><i className="fa-regular fa-envelope"></i> {personal.email}</span>
-                                            <span><i className="fa-solid fa-location-dot"></i> {personal.PAddress}, {personal.city}</span>
+                                            <p><i className="fa-solid fa-phone"></i> {personal.contactNo}</p>
+                                            <p><i className="fa-regular fa-envelope"></i> {personal.email}</p>
+                                            <p><i className="fa-solid fa-location-dot"></i> {personal.PAddress}, {personal.city}</p>
                                         </div>
                                     ))}
                                     {socialLinks.length > 0 && socialLinks.map((social, index) => (

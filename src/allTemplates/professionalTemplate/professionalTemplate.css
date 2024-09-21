@@ -50,35 +50,35 @@ body {
     color: #2c3e50;
 }
 
-.summary {
+.main-content .summary {
     margin: 20px 0;
     font-size: 18px;
     line-height: 1.6;
 }
 
-.education, .skills {
+.main-content .education, .skills {
     margin-top: 40px;
 }
 
-.skills{
+.main-content .skills{
     padding-bottom: 2rem;
 }
 
-.education-item {
+.main-content .education-item {
     margin-bottom: 20px;
 }
 
-.education-item h3 {
+.main-content .education-item h3 {
     margin: 0;
     font-size: 24px;
     color: #2c3e50;
 }
 
-.skills .skill-item {
+.main-content .skills .skill-item {
     margin: 10px 0;
 }
 
-.skill-bar {
+.main-content .skill-bar {
     width: 100%;
     height: 10px;
     background-color: #bdc3c7;
@@ -86,7 +86,7 @@ body {
     overflow: hidden;
 }
 
-.skill-bar .fill {
+.main-content .skill-bar .fill {
     height: 100%;
     background-color: #3498db;
     border-radius: 5px;
