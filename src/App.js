@@ -29,9 +29,9 @@ function App() {
       <Templates/>
       <Footer/> */}
       {/* <AboutUs/> */}
-      {/* <CVgenerator/> */}
+      <CVgenerator/>
       {/* <CreativeTemplate/> */}
-      <BasicTemplate/>
+      {/* <BasicTemplate/> */}
     </>
   );
 }

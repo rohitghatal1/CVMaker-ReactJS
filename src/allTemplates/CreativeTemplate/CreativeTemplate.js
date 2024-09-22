@@ -1,9 +1,14 @@
 import React from 'react';
 import personPhoto from '../../assets/personPhotos/rohit2.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './creativeTemplate.css';
 
 export default function CreativeTemplate() {
     // Fetch data from localStorage
+    const storedUserPhoto = localStorage.getItem('userPhoto');
+    const userPhoto = storedUserPhoto ? storedUserPhoto : null;
+
     const storedPersonalData = localStorage.getItem('personalInfo');
     const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
 
@@ -27,7 +32,11 @@ export default function CreativeTemplate() {
             <div className="CVContainer">
                 <section className="infoAndSkillsSection">
                     <div className="photo">
-                        <img src={personPhoto} alt="Person" />
+                        {userPhoto ? (
+                            <img src={userPhoto} alt="Profile" />
+                        ) : (
+                            <FontAwesomeIcon icon={faUser} size="6x" />
+                        )}
                     </div>
                     <div className="infoAndSkills">
                         {personalData.length > 0 && personalData.map((personal, index) => (

@@ -6,7 +6,7 @@ import './basicTemplate.css';
 export default function BasicTemplate() {
   // Fetch data from localStorage
   const storedUserPhoto = localStorage.getItem('userPhoto');
-  const userPhoto = storedUserPhoto ? storedUserPhoto : null; // Check if user photo exists
+  const userPhoto = storedUserPhoto ? storedUserPhoto : null;
 
   const storedPersonalData = localStorage.getItem('personalInfo');
   const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
