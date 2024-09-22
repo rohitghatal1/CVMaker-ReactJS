@@ -63,7 +63,7 @@ export default function BasicTemplate() {
           {socialLinks.length > 0 && (
             <div className="socialLinkItems">
               {socialLinks.map((social, index) => (
-                <span key={index}>
+                <p key={index}>
                   {social.platform === 'Facebook' && <i className="fab fa-facebook"></i>}
                   {social.platform === 'Instagram' && <i className="fab fa-instagram"></i>}
                   {social.platform === 'Twitter' && <i className="fab fa-twitter"></i>}
@@ -71,7 +71,7 @@ export default function BasicTemplate() {
                   {social.platform === 'GitHub' && <i className="fab fa-github"></i>}
                   {social.platform === 'Website' && <i className="fas fa-globe"></i>}
                   {social.url}
-                </span>
+                </p>
               ))}
             </div>
           )}
@@ -81,7 +81,7 @@ export default function BasicTemplate() {
             <div className="section awards">
               <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
               {awardData.map((award, index) => (
-                <p key={index}><strong>{award.title}</strong><br />{award.details}</p>
+                <p className='awardDetail' key={index}><strong>{award.title}</strong><br />{award.details}</p>
               ))}
             </div>
           )}
@@ -93,7 +93,7 @@ export default function BasicTemplate() {
               {achievementData.map((achievement, index) => (
                 <div key={index}>
                   <strong>{achievement.title}</strong><br />
-                  <p>{achievement.desc}</p>
+                  <p className='achievementDesc'>{achievement.desc}</p>
                 </div>
               ))}
             </div>

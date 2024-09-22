@@ -49,14 +49,23 @@
 
              
 .left-section .socialLinkItems{
+    margin-top: -5px;
+}
+
+.left-section .socialLinkItems p{
+    color: #666666;
     font-size: 14px;
-    color: #333333;
-    margin-bottom: 5px;
+}
+
+.left-section .socialLinkItems p > i{
+    margin-right: 5px;
+    font-size: 16px;
 }
 .section h3 {
     font-size: 20px;
     margin-bottom: 5px;
     position: relative;
+    border-bottom: 1px solid #333333;
 }
 
 .section ul {
@@ -94,6 +103,10 @@
     margin-bottom: 5px;
 }
 
+.left-section .achievements .achievementDesc{
+    margin-top: -12px;
+    margin-bottom: 10px;
+}
 .education p, .work-experience p {
     margin-bottom: 5px;
 }
@@ -112,6 +125,7 @@
 .right-section .skillSection h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
+    border-bottom: none;
 }
 
 .right-section .skillSection .skillItemContainer {
