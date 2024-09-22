@@ -6,6 +6,10 @@ export default function Awards() {
   const openAddAwardModal = () => {
 
   }
+
+  const handleCloseForm = () => {
+    
+  }
   return (
     <div>
       <div className="awardsComponent">
@@ -33,8 +37,13 @@ export default function Awards() {
                 <input type="text" />
 
                 <label htmlFor="desc">Description</label>
-                <input type="text" />
-                
+                <textarea rows={5} name="" id=""></textarea>
+
+                <div className="submitAndCloseBtns">
+                  <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
+                  <button className='closeBtn' onClick={handleCloseForm}>Close</button>
+                </div>
+
               </form>
             </div>
             <button className='addNewAwardbtn' onClick={openAddAwardModal}><i className='fas fa-plus'></i> Add Award</button>
