@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './awards.css'
 import { faL } from '@fortawesome/free-solid-svg-icons';
 
-export default function Awards() {
+export default function Awards({goToPreviousStep, goToNextStep}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
 
@@ -59,7 +59,7 @@ export default function Awards() {
   }, [])
 
   const deleteAward = (indexToDelete) => {
-    const updatedAwardData = award.filter((_,index) => index !== indexToDelete);
+    const updatedAwardData = award.filter((_, index) => index !== indexToDelete);
 
     setAward(updatedAwardData);
     localStorage.setItem('awardData', JSON.stringify(updatedAwardData));
@@ -78,8 +78,8 @@ export default function Awards() {
               award.map((Award, index) => (
                 <div className="awardItem" key={index}>
                   <div className="title">
-                    <h4>{Award.awardTitle}</h4>
-                    <button className='deleteEducationBtn' onClick={() => deleteAward(index)}><i className='fas fa-trash'></i></button>
+                    <span>{Award.awardTitle}</span>
+                    <button className='deleteAwardBtn' onClick={() => deleteAward(index)}><i className='fas fa-trash'></i></button>
                   </div>
                   <div className="awardDetails">
                     <p>{Award.organization}</p>
@@ -122,6 +122,10 @@ export default function Awards() {
             </div>}
 
             {isAddButtonVisible && <button className='addNewAwardbtn' onClick={openAddAwardModal}><i className='fas fa-plus'></i> Add Award</button>}
+          </div>
+          <div className="nextAndBackBtn">
+            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </section>
       </div>

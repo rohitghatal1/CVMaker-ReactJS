@@ -18,10 +18,47 @@
 }
 
 .awardsComponent .awardsSection p{
-    font-size: 14px;
+    font-size: 12px;
     color: #999;
 }
 
+.awardsComponent .awardsSection .addedAwards .awardItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+}
+
+.awardsComponent .awardsSection .addedAwards .awardItem .title{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.awardsComponent .awardsSection .addedAwards .awardItem .title span{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.awardsComponent .awardsSection .addedAwards .awardItem .title .deleteAwardBtn{
+    background-color: #fff;
+    color: red;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.awardsComponent .awardsSection .addedAwards .awardItem .awardDetails{
+    width: 90%;
+    margin: auto;
+}
 .awardsComponent .awardsSection .newAwards .addNewAwardModal{
     padding: 0.5rem;
 }
@@ -78,4 +115,31 @@
     border: none;
     margin-top: 0.5rem;
     cursor: pointer;
+}
+
+.awardsComponent .awardsSection  .nextAndBackBtn{
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.awardsComponent .awardsSection   .nextAndBackBtn button{
+    padding: 0.7rem;
+    font-size: 14px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.awardsComponent .awardsSection  .nextAndBackBtn .nextBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.awardsComponent .awardsSection  .nextAndBackBtn .prevBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
 }
