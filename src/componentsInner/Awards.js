@@ -26,13 +26,13 @@ export default function Awards() {
   });
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setNewAwards({...newAwards, [name]: value});
+    const { name, value } = e.target;
+    setNewAwards({ ...newAwards, [name]: value });
   }
 
   const submitAwardForm = (e) => {
     e.preventDefault();
-    if(newAwards.awardTitle && newAwards.organization && newAwards.location && newAwards.receivedYear && newAwards.description){
+    if (newAwards.awardTitle && newAwards.organization && newAwards.location && newAwards.receivedYear && newAwards.description) {
       const updatedAwards = [...award, newAwards];
 
       setAward(updatedAwards);
@@ -50,6 +50,21 @@ export default function Awards() {
       })
     }
   }
+
+  useEffect(() => {
+    const storedAwardData = JSON.parse(localStorage.getItem('awardData'));
+    if (storedAwardData) {
+      setAward(storedAwardData);
+    }
+  }, [])
+
+  const deleteAward = (indexToDelete) => {
+    const updatedAwardData = award.filter((_,index) => index !== indexToDelete);
+
+    setAward(updatedAwardData);
+    localStorage.setItem('awardData', JSON.stringify(updatedAwardData));
+  }
+
   return (
     <div>
       <div className="awardsComponent">
@@ -58,6 +73,25 @@ export default function Awards() {
 
         <section className="awardsSection">
           <div className="addedAwards">
+            <p>Added Awards</p>
+            {award.length > 0 ? (
+              award.map((Award, index) => (
+                <div className="awardItem" key={index}>
+                  <div className="title">
+                    <h4>{Award.awardTitle}</h4>
+                    <button className='deleteEducationBtn' onClick={() => deleteAward(index)}><i className='fas fa-trash'></i></button>
+                  </div>
+                  <div className="awardDetails">
+                    <p>{Award.organization}</p>
+                    <p>{Award.location}</p>
+                    <p>{Award.receivedYear}</p>
+                    <p>{Award.description}</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No Awards yet!!!</p>
+            )}
 
           </div>
           <div className="newAwards">
@@ -65,7 +99,7 @@ export default function Awards() {
             {isModalOpen && <div className="addNewAwardModal">
               <form onSubmit={submitAwardForm}>
                 <label htmlFor="awardTitle">Title</label>
-                <input type="text" placeholder='eg: Best employee award' name='awardTitle' value={newAwards.awardTitle} onChange={handleInputChange}/>
+                <input type="text" placeholder='eg: Best employee award' name='awardTitle' value={newAwards.awardTitle} onChange={handleInputChange} />
 
                 <label htmlFor="organization">Organization</label>
                 <input type="text" placeholder='organization' name='organization' value={newAwards.organization} onChange={handleInputChange} />
@@ -74,7 +108,7 @@ export default function Awards() {
                 <input type="text" placeholder='location' name='location' value={newAwards.location} onChange={handleInputChange} />
 
                 <label htmlFor="receivedYear">Received Year</label>
-                <input type="text" placeholder='receivedYear' name='receivedYear' value={newAwards.receivedYear} onChange={handleInputChange}/>
+                <input type="text" placeholder='receivedYear' name='receivedYear' value={newAwards.receivedYear} onChange={handleInputChange} />
 
                 <label htmlFor="desc">Description</label>
                 <textarea rows={5} placeholder="Describe about the award" name='description' value={newAwards.description} onChange={handleInputChange}></textarea>
