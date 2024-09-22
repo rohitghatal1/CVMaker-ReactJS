@@ -1,9 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './basicTemplate.css';
-import peronPhoto from '../../assets/personPhotos/rohit2.jpg';
 
 export default function BasicTemplate() {
-  // Fetch data from localStorage directly
+  // Fetch data from localStorage
+  const storedUserPhoto = localStorage.getItem('userPhoto');
+  const userPhoto = storedUserPhoto ? storedUserPhoto : null; // Check if user photo exists
+
   const storedPersonalData = localStorage.getItem('personalInfo');
   const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
 
@@ -30,7 +34,11 @@ export default function BasicTemplate() {
       <div className="container">
         <div className="left-section">
           <div className="profile-picture">
-            <img src={peronPhoto} alt="Profile Picture" />
+            {userPhoto ? (
+              <img src={userPhoto} alt="Profile" />
+            ) : (
+              <FontAwesomeIcon icon={faUser} size="6x" />
+            )}
           </div>
 
           {/* Personal Information */}
@@ -82,10 +90,10 @@ export default function BasicTemplate() {
           {achievementData.length > 0 && (
             <div className="section achievements">
               <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
-              {achievementData.map((achivement, index) => (
+              {achievementData.map((achievement, index) => (
                 <div key={index}>
-                  <strong>{achivement.title}</strong><br />
-                  <p>{achivement.desc}</p>
+                  <strong>{achievement.title}</strong><br />
+                  <p>{achievement.desc}</p>
                 </div>
               ))}
             </div>
@@ -133,7 +141,7 @@ export default function BasicTemplate() {
 
           {/* Skills */}
           {skillData.length > 0 && (
-            <div className="section skills">
+            <div className="section skillSection">
               <h3><i className="fa-solid fa-code-compare"></i> SKILLS</h3>
               <div className="skillItemContainer">
                 {skillData.map((skill, index) => (

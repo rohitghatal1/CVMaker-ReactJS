@@ -12,9 +12,9 @@
 }
 
 .allTemplateDisplay .templateContainerHeading .nextbtn{
-    position: absolute;
+    position: fixed;
     top: 1rem;
-    right: 1rem;
+    right: 4rem;
     background-color: #007bff;
     color: #fff;
     border-radius: 5px;

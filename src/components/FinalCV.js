@@ -20,10 +20,10 @@ export default function FinalCV({ template }) {
   return (
     <div>
       <div className="finalCVSection">
-      <div className="headingAndDownloadBtn">
+      {template && <div className="headingAndDownloadBtn">
         <h2 className='cvHeading'>Here is your final CV</h2>
         <button onClick={downloadCV} className='downloadCVBtn'><i class="fa-solid fa-download"></i> Download CV</button>
-      </div>
+      </div>}
 
         <div className="finalCVContainer" ref={cvRef}>
           {template 

@@ -54,7 +54,7 @@
     margin: 0;
 }
 
-.skillItemContainer {
+.infoAndSkillsSection .infoAndSkills .contactAndSkills .skillItemContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

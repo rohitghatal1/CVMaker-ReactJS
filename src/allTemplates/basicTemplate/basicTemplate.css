@@ -109,12 +109,12 @@
     width: 100%;
 }
 
-.right-section .skills h3 {
+.right-section .skillSection h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
 }
 
-.right-section .skillItemContainer {
+.right-section .skillSection .skillItemContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
