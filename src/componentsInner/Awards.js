@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './awards.css'
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 export default function Awards() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
 
   const openAddAwardModal = () => {
-
+    setIsModalOpen(true);
+    setIsAddButtonVisible(false);
   }
 
   const handleCloseForm = () => {
-    
+    setIsModalOpen(false);
+    setIsAddButtonVisible(true);
   }
+
   return (
     <div>
       <div className="awardsComponent">
@@ -22,7 +28,7 @@ export default function Awards() {
           </div>
           <div className="newAwards">
             <p>New Achievement</p>
-            <div className="addNewAwardModal">
+            {isModalOpen && <div className="addNewAwardModal">
               <form action="">
                 <label htmlFor="awardTitle">Title</label>
                 <input type="text" />
@@ -45,8 +51,9 @@ export default function Awards() {
                 </div>
 
               </form>
-            </div>
-            <button className='addNewAwardbtn' onClick={openAddAwardModal}><i className='fas fa-plus'></i> Add Award</button>
+            </div>}
+
+            {isAddButtonVisible && <button className='addNewAwardbtn' onClick={openAddAwardModal}><i className='fas fa-plus'></i> Add Award</button>}
           </div>
         </section>
       </div>
