@@ -28,11 +28,6 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
       }
     }, []);
 
-  // const storedPhoto = localStorage.getItem('userPhoto');
-  // if(storedPhoto){
-  //   setPhoto(storedPhoto);
-  // }
-
   const handleDeletePhoto = () => {
     setPhoto(null);
     localStorage.removeItem('userPhoto');
@@ -154,7 +149,7 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
             </figure>
 
             <div className="uploadDeleteBtn">
-            <label className='uploadBtn'>
+            <label className='uploadbtn'>
               <i className='fa-solid fa-pencil'></i>Upload Photo 
               <input type="file" onChange={handlePhotoUpload} style={{display: 'none'}} />
             </label>

@@ -1,0 +1,35 @@
+.awardsComponent{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.awardsComponent h2{
+    font-size: 32px;
+}
+
+.awardsComponent .awardsSection{
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+}
+
+.awardsComponent .awardsSection p{
+    font-size: 14px;
+    color: #999;
+}
+
+.awardsComponent .awardsSection .newAwards .addNewAwardbtn{
+    padding: 0.8rem;
+    background-color: #15bdfa;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0.4rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
