@@ -1,8 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import './personal.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import personPhoto from '../assets/personPhotos/rohit2.jpg';
 
 export default function PersonalData({goToPreviousStep, goToNextStep}) {
+
+  const [photo, setPhoto] = useState(null);
+  //for storing, retriving user photo
+  const handlePhotoUpload = (event) => {
+    const getphoto = event.target.files[0];
+    if(getphoto){
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPhoto(reader.result);
+        localStorage.setItem('userPhoto', reader.result);
+      };
+      reader.readAsDataURL(getphoto);
+    }
+  }
+
+    // Retrieve stored photo from localStorage on component mount
+    useEffect(() => {
+      const storedPhoto = localStorage.getItem('userPhoto');
+      if (storedPhoto) {
+        setPhoto(storedPhoto);
+      }
+    }, []);
+
+  // const storedPhoto = localStorage.getItem('userPhoto');
+  // if(storedPhoto){
+  //   setPhoto(storedPhoto);
+  // }
+
+  const handleDeletePhoto = () => {
+    setPhoto(null);
+    localStorage.removeItem('userPhoto');
+  }
 
   // for storing and retreiving personal info 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -112,12 +146,23 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
         <div className="personalInformation">
           <div className="photoSection">
             <figure className='personPhoto'>
-              <img src={personPhoto} alt="photo" />
+            {photo ? (
+              <img src={photo} alt="User Photo" />
+            ):(
+              <FontAwesomeIcon icon = {faUser} size="3x" className = "defaultUserIcon" />
+            )}
             </figure>
 
             <div className="uploadDeleteBtn">
-              <span className='uploadbtn'><i className="fa-solid fa-pencil"></i> Upload Photo</span>
-              <span className='deletebtn'><i className="fa-regular fa-trash-can"></i> Delete Photo</span>
+            <label className='uploadBtn'>
+              <i className='fa-solid fa-pencil'></i>Upload Photo 
+              <input type="file" onChange={handlePhotoUpload} style={{display: 'none'}} />
+            </label>
+            {photo && (
+              <span className='deletebtn' onClick={handleDeletePhoto}>
+              <i className="fa-regular fa-trash-can"></i> Delete Photo
+              </span> 
+            )}
             </div>
           </div>
 
