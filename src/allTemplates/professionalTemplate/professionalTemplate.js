@@ -1,7 +1,7 @@
 import React from 'react'
 import './professionalTemplate.css'
 
-export default function professionalTemplate() {
+export default function ProfessionalTemplate() {
     return (
         <div className="container">
             <aside className="sidebar">
