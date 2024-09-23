@@ -27,11 +27,6 @@ export default function ProfessionalTemplate() {
                             <p><strong>Address</strong><br />{personal.PAddress}, {personal.city}</p>
                             <p><strong>Phone number</strong><br />{personal.contactNo}</p>
                             <p><strong>Email</strong><br />{personal.email}</p>
-                            <p><strong>Date of birth</strong><br />{personal.DOB}</p>
-                            <p><strong>Place of birth</strong><br />{personal.birthPlace}</p>
-                            <p><strong>Gender</strong><br />{personal.gender}</p>
-                            <p><strong>Nationality</strong><br />{personal.nationality}</p>
-                            <p><strong>Marital status</strong><br />{personal.maritalStatus}</p>
                             {socialLinks.length > 0 && socialLinks.map((social, index) => (
                                 <p key={index}><strong>{social.platform}</strong><br />{social.url}</p>
                             ))}
@@ -58,7 +53,7 @@ export default function ProfessionalTemplate() {
                     {educationData.length > 0 && educationData.map((education, index) => (
                         <div className="education-item" key={index}>
                             <h3>{education.degree}</h3>
-                            <p><strong>{education.institution}</strong><br />{education.startDate} - {education.endDate}</p>
+                            <p><strong>{education.institution}</strong><br />{education.startDate} to {education.passDate}</p>
                             <p>{education.description}</p>
                         </div>
                     ))}
@@ -69,10 +64,7 @@ export default function ProfessionalTemplate() {
                     <hr />
                     {skillData.length > 0 && skillData.map((skill, index) => (
                         <div className="skill-item" key={index}>
-                            <p>{skill.skillName}</p>
-                            <div className="skill-bar">
-                                <div className="fill" style={{ width: `${skill.skillLevel}%` }}></div>
-                            </div>
+                            <p>{skill.skillName} - {skill.skillLevel}</p>
                         </div>
                     ))}
                 </section>
