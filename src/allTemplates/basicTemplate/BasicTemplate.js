@@ -14,7 +14,7 @@ export default function BasicTemplate() {
   const storedSocialLinks = localStorage.getItem('socialLinks');
   const socialLinks = storedSocialLinks ? JSON.parse(storedSocialLinks) : [];
 
-  const storedAwardsData = localStorage.getItem('awardsData');
+  const storedAwardsData = localStorage.getItem('awardData');
   const awardData = storedAwardsData ? JSON.parse(storedAwardsData) : [];
 
   const storedAchievementData = localStorage.getItem('achievementData');
@@ -81,7 +81,11 @@ export default function BasicTemplate() {
             <div className="section awards">
               <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
               {awardData.map((award, index) => (
-                <p className='awardDetail' key={index}><strong>{award.title}</strong><br />{award.details}</p>
+                <div className="awardItem">
+                  <p className='awardDetail' key={index}><strong>{award.awardTitle}({award.receivedYear})</strong></p>
+                  <p>{award.organization}, {award.location}</p>
+                  <p>{award.description}</p>
+                </div>
               ))}
             </div>
           )}
