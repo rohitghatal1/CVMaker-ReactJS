@@ -1,0 +1,179 @@
+/* General container styles */
+.professionalII-templateContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    page-break-after: always;
+}
+
+/* Header section */
+.professionalII-headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #0077b6;
+}
+
+.professionalII-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0077b6;
+}
+
+.professionalII-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.professionalII-personalDetails {
+    flex-grow: 1;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.professionalII-personalDetails h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #023e8a;
+}
+
+.professionalII-personalDetails p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Main content */
+.professionalII-mainContent {
+    padding: 20px 0;
+}
+
+/* Contact section */
+.professionalII-contactSection {
+    margin-bottom: 15px;
+}
+
+.professionalII-contactSection h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0077b6;
+}
+
+.professionalII-contactSection p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.professionalII-socialLinks p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Skills section */
+.professionalII-skillsSection {
+    margin-bottom: 15px;
+}
+
+.professionalII-skillsSection h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0077b6;
+}
+
+.professionalII-skillsSection ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.professionalII-skillsSection li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Experience section */
+.professionalII-experienceSection {
+    margin-bottom: 15px;
+}
+
+.professionalII-experienceSection h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0077b6;
+}
+
+.professionalII-experienceItem {
+    margin-bottom: 10px;
+}
+
+.professionalII-experienceItem h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #023e8a;
+}
+
+.professionalII-experienceItem p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Projects section */
+.professionalII-projectsSection {
+    margin-bottom: 15px;
+}
+
+.professionalII-projectsSection h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0077b6;
+}
+
+.professionalII-projectItem {
+    margin-bottom: 10px;
+}
+
+.professionalII-projectItem h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #023e8a;
+}
+
+.professionalII-projectItem p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Media queries for A4 paper size */
+@media print {
+    .professionalII-templateContainer {
+        width: 100%;
+        height: 100%;
+        max-width: 210mm;
+        max-height: 297mm;
+        margin: 0;
+        padding: 20mm;
+        box-shadow: none;
+        page-break-after: auto;
+    }
+
+    .professionalII-headerSection {
+        margin-bottom: 10px;
+        border-bottom: none;
+    }
+
+    .professionalII-mainContent {
+        padding: 0;
+    }
+}

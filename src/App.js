@@ -1,6 +1,7 @@
 
 import BasicTemplate from './allTemplates/basicTemplate/BasicTemplate';
 import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
+import ProfessionalIITemplate from './allTemplates/ProfessionalIITemplate/ProfessionalIITemplate';
 import ProfessionalTemplate from './allTemplates/professionalTemplate/ProfessionalTemplate';
 import './App.css';
 import AboutUs from './components/AboutUs';
@@ -33,7 +34,8 @@ function App() {
       {/* <CVgenerator/> */}
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
-      <ProfessionalTemplate/>
+      {/* <ProfessionalTemplate/> */}
+      <ProfessionalIITemplate/>
     </>
   );
 }

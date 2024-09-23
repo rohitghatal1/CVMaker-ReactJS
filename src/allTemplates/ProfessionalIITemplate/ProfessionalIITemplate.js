@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import './professionalIITemplate.css';
+import './professionalII.css';
 
 export default function ProfessionalIITemplate() {
     // Fetch data from localStorage
