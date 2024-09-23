@@ -15,6 +15,9 @@ export default function ProfessionalTemplate() {
     const storedEducationData = localStorage.getItem('educationData');
     const educationData = storedEducationData ? JSON.parse(storedEducationData) : [];
 
+    const storedProjectsData = localStorage.getItem('projectData');
+    const projectsData = storedProjectsData ? JSON.parse(storedProjectsData) : [];
+
     return (
         <div className="container">
             <aside className="sidebar">
@@ -58,6 +61,26 @@ export default function ProfessionalTemplate() {
                         </div>
                     ))}
                 </section>
+
+                {projectsData.length > 0 && (
+                    <section className="projectsContainer">
+                        <div className="projectHeader">
+                            <div className="iconAndHeading">
+                                <i className="fas fa-rocket"></i>
+                                <h2>Projects</h2>
+                            </div>
+                        </div>
+                        {projectsData.map((project, index) => (
+                            <div className="project-item" key={index}>
+                                <div className="line"></div>
+                                <div className="project-content">
+                                    <h3>{project.projectTitle}</h3>
+                                    <p>{project.projectDesc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </section>
+                )}
 
                 <section className="skills">
                     <h2>Skills</h2>
