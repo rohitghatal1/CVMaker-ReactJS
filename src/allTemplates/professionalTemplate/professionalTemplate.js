@@ -18,6 +18,9 @@ export default function ProfessionalTemplate() {
     const storedProjectsData = localStorage.getItem('projectData');
     const projectsData = storedProjectsData ? JSON.parse(storedProjectsData) : [];
 
+    const storedExperienceData = localStorage.getItem('experienceData');
+    const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
+
     return (
         <div className="container">
             <aside className="sidebar">
@@ -81,6 +84,21 @@ export default function ProfessionalTemplate() {
                         ))}
                     </section>
                 )}
+
+                {/* Work Experience */}
+                {experienceData.length > 0 && (
+                    <div className="section work-experience">
+                        <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
+                        {experienceData.map((experience, index) => (
+                            <p key={index}>
+                                <strong>{experience.jobTitle}</strong><br />
+                                {experience.organization}, {experience.location} <br />
+                                {experience.startDate} to {experience.endDate}
+                            </p>
+                        ))}
+                    </div>
+                )}
+
 
                 <section className="skills">
                     <h2>Skills</h2>
