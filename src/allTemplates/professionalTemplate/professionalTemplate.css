@@ -39,7 +39,7 @@
 }
 
 .professionalTemplate .sidebar .achievementsItem{
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .professionalTemplate .sidebar .achievementsItem .achievementTitle{
@@ -49,6 +49,16 @@
 .professionalTemplate .sidebar .achievementsItem .achievementDesc{
     font-size: 14px;
     margin-left: 1rem;
+}
+
+.professionalTemplate .sidebar .awardData{
+    margin-top: 2.5rem;
+}
+
+.professionalTemplate .sidebar .awardData .awardItem p{
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-top: -10px;
 }
 
 .professionalTemplate .main-content {
@@ -68,6 +78,7 @@
     margin: 20px 0;
     font-size: 18px;
     line-height: 1.6;
+    padding-left: 0.6rem;
 }
 
 .professionalTemplate .main-content .education, .experienceData, .skills {

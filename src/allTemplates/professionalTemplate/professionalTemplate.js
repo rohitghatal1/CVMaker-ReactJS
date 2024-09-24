@@ -15,6 +15,9 @@ export default function ProfessionalTemplate() {
     const storedAchievementData = localStorage.getItem('achievementData');
     const achievementData = storedAchievementData ? JSON.parse(storedAchievementData) : [];
 
+    const storedAwardsData = localStorage.getItem('awardData');
+    const awardData = storedAwardsData ? JSON.parse(storedAwardsData) : [];
+
     const storedEducationData = localStorage.getItem('educationData');
     const educationData = storedEducationData ? JSON.parse(storedEducationData) : [];
 
@@ -53,6 +56,21 @@ export default function ProfessionalTemplate() {
                             <div key={index}>
                                 <strong className='achievementTitle'>{achievement.title}</strong><br />
                                 <p className='achievementDesc'>{achievement.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {/* Awards */}
+                {awardData.length > 0 && (
+                    <div className="awardData">
+                        <h3><i className="fa-solid fa-award"></i> AWARDS</h3>
+                        <hr />
+                        {awardData.map((award, index) => (
+                            <div className="awardItem" key={index}>
+                                <h4 className='awardTitle'>{award.awardTitle}({award.receivedYear})</h4>
+                                <p><strong>{award.organization}, {award.location}</strong></p>
+                                <p>{award.description}</p>
                             </div>
                         ))}
                     </div>
