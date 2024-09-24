@@ -34,8 +34,8 @@ function App() {
       {/* <CVgenerator/> */}
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
-      {/* <ProfessionalTemplate/> */}
-      <ProfessionalIITemplate/>
+      <ProfessionalTemplate/>
+      {/* <ProfessionalIITemplate/> */}
     </>
   );
 }

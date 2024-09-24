@@ -12,6 +12,9 @@ export default function ProfessionalTemplate() {
     const storedSkillData = localStorage.getItem('skillData');
     const skillData = storedSkillData ? JSON.parse(storedSkillData) : [];
 
+    const storedAchievementData = localStorage.getItem('achievementData');
+    const achievementData = storedAchievementData ? JSON.parse(storedAchievementData) : [];
+
     const storedEducationData = localStorage.getItem('educationData');
     const educationData = storedEducationData ? JSON.parse(storedEducationData) : [];
 
@@ -40,6 +43,17 @@ export default function ProfessionalTemplate() {
                     ))}
                 </div>
 
+                {achievementData.length > 0 && (
+                    <div className="section achievements">
+                        <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
+                        {achievementData.map((achievement, index) => (
+                            <div key={index}>
+                                <strong>{achievement.title}</strong><br />
+                                <p className='achievementDesc'>{achievement.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </aside>
 
             <main className="main-content">
