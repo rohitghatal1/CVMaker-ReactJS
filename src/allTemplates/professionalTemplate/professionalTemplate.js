@@ -25,7 +25,7 @@ export default function ProfessionalTemplate() {
     const experienceData = storedExperienceData ? JSON.parse(storedExperienceData) : [];
 
     return (
-        <div className="container">
+        <div className="container professionalTemplate">
             <aside className="sidebar">
                 <div className="personal-info">
                     <h2>Personal</h2>
@@ -44,7 +44,7 @@ export default function ProfessionalTemplate() {
                 </div>
 
                 {achievementData.length > 0 && (
-                    <div className="section achievements">
+                    <div className="achievementsItem">
                         <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
                         {achievementData.map((achievement, index) => (
                             <div key={index}>
