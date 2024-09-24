@@ -27,21 +27,23 @@ export default function ProfessionalTemplate() {
     return (
         <div className="container professionalTemplate">
             <aside className="sidebar">
-                <div className="personal-info">
-                    <h2>Personal</h2>
-                    <hr />
-                    {personalData.length > 0 && personalData.map((personal, index) => (
-                        <div key={index}>
-                            <p><strong>Name</strong><br /><span>{personal.fName} {personal.lName}</span></p>
-                            <p><strong>Address</strong><br /><span>{personal.PAddress}, {personal.city}</span></p>
-                            <p><strong>Phone number</strong><br /><span>{personal.contactNo}</span></p>
-                            <p><strong>Email</strong><br /><span>{personal.email}</span></p>
-                            {socialLinks.length > 0 && socialLinks.map((social, index) => (
-                                <p key={index}><strong>{social.platform}</strong><br /><span>{social.url}</span></p>
-                            ))}
-                        </div>
-                    ))}
-                </div>
+                {personalData.length > 0 && (
+                    <div className="personal-info">
+                        <h2>Personal</h2>
+                        <hr />
+                        {personalData.map((personal, index) => (
+                            <div key={index}>
+                                <p><strong>Name</strong><br /><span>{personal.fName} {personal.lName}</span></p>
+                                <p><strong>Address</strong><br /><span>{personal.PAddress}, {personal.city}</span></p>
+                                <p><strong>Phone number</strong><br /><span>{personal.contactNo}</span></p>
+                                <p><strong>Email</strong><br /><span>{personal.email}</span></p>
+                                {socialLinks.length > 0 && socialLinks.map((social, index) => (
+                                    <p key={index}><strong>{social.platform}</strong><br /><span>{social.url}</span></p>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                )}
 
                 {achievementData.length > 0 && (
                     <div className="achievementsItem">
@@ -68,31 +70,30 @@ export default function ProfessionalTemplate() {
                     </div>
                 )}
 
-                <section className="education">
-                    <h2>Education and Qualifications</h2>
-                    <hr />
-                    {educationData.length > 0 && educationData.map((education, index) => (
-                        <div className="education-item" key={index}>
-                            <h3>{education.degree}</h3>
-                            <div className="educationDetail">
-                                <p>{education.college}</p>
-                                <p>{education.startDate} to {education.passDate}</p>
+                {educationData.length > 0 && (
+                    <section className="education">
+                        <h3><i className="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
+                        <hr />
+                        {educationData.map((education, index) => (
+                            <div className="education-item" key={index}>
+                                <h3>{education.degree}</h3>
+                                <div className="educationDetail">
+                                    <p>{education.college}</p>
+                                    <p>{education.startDate} to {education.passDate}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </section>
+                        ))}
+                    </section>
+                )}
 
                 {projectsData.length > 0 && (
-                    <section className="projectsContainer">
-                        <div className="projectHeader">
-                            <div className="iconAndHeading">
-                                <i className="fas fa-rocket"></i>
-                                <h2>Projects</h2>
-                            </div>
+                    <section className="projectData">
+                        <div className="project">
+                            <h3><i className="fas fa-rocket"></i> Projects</h3>
+                            <hr />
                         </div>
                         {projectsData.map((project, index) => (
-                            <div className="project-item" key={index}>
-                                <div className="line"></div>
+                            <div className="projectItem" key={index}>
                                 <div className="project-content">
                                     <h3>{project.projectTitle}</h3>
                                     <p>{project.projectDesc}</p>
@@ -102,30 +103,31 @@ export default function ProfessionalTemplate() {
                     </section>
                 )}
 
-                {/* Work Experience */}
                 {experienceData.length > 0 && (
-                    <div className="section work-experience">
+                    <section className="experienceData">
                         <h3><i className="fa-solid fa-layer-group"></i> WORK EXPERIENCE</h3>
+                        <hr />
                         {experienceData.map((experience, index) => (
-                            <p key={index}>
-                                <strong>{experience.jobTitle}</strong><br />
-                                {experience.organization}, {experience.location} <br />
-                                {experience.startDate} to {experience.endDate}
-                            </p>
+                            <div className='experienceItem' key={index}>
+                                <h4>{experience.jobTitle}</h4>
+                                <p>{experience.organization}, {experience.location}</p>
+                                <p>{experience.startDate} to {experience.endDate}</p>
+                            </div>
                         ))}
-                    </div>
+                    </section>
                 )}
 
-
-                <section className="skills">
-                    <h2>Skills</h2>
-                    <hr />
-                    {skillData.length > 0 && skillData.map((skill, index) => (
-                        <div className="skill-item" key={index}>
-                            <p>{skill.skillName} - {skill.skillLevel}</p>
-                        </div>
-                    ))}
-                </section>
+                {skillData.length > 0 && (
+                    <section className="skills">
+                        <h3>Skills</h3>
+                        <hr />
+                        {skillData.map((skill, index) => (
+                            <div className="skill-item" key={index}>
+                                <p>{skill.skillName} - {skill.skillLevel}</p>
+                            </div>
+                        ))}
+                    </section>
+                )}
             </main>
         </div>
     );
