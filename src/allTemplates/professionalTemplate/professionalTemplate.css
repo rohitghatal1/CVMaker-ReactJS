@@ -107,9 +107,22 @@
     margin-top: -10px;
 }
 
-.professionalTemplate .main-content .skills .skill-item {
-    margin: 10px 0;
+.professionalTemplate .main-content .skills .skillsContainer {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
 }
+
+.professionalTemplate .main-content .skills .skillsContainer .skill-item p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 
 .professionalTemplate hr{
     width: 100%;

@@ -139,11 +139,13 @@ export default function ProfessionalTemplate() {
                     <section className="skills">
                         <h3>Skills</h3>
                         <hr />
-                        {skillData.map((skill, index) => (
-                            <div className="skill-item" key={index}>
-                                <p>{skill.skillName} - {skill.skillLevel}</p>
-                            </div>
-                        ))}
+                        <div className="skillsContainer">
+                            {skillData.map((skill, index) => (
+                                <div className="skill-item" key={index}>
+                                    <p><i class="fa-solid fa-arrow-right" /> {skill.skillName} - {skill.skillLevel}</p>
+                                </div>
+                            ))}
+                        </div>
                     </section>
                 )}
             </main>
