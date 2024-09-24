@@ -1,13 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
 
 .professionalTemplate {
     display: flex;
-    max-width: 1000px;
+    width: 900px;
     margin: 20px auto;
     background-color: #fff;
     border-radius: 8px;
@@ -32,11 +26,31 @@ body {
     margin: 10px 0;
 }
 
+.professionalTemplate .sidebar .personal-info p>strong{
+    font-size: 16px;
+}
+
+.professionalTemplate .sidebar .personal-info p>span{
+    font-size: 14px;
+}
+
 .professionalTemplate .sidebar a {
     color: #3498db;
     text-decoration: none;
 }
 
+.professionalTemplate .sidebar .achievementsItem{
+    margin-top: 2rem;
+}
+
+.professionalTemplate .sidebar .achievementsItem .achievementTitle{
+    font-size: 16px;
+}
+
+.professionalTemplate .sidebar .achievementsItem .achievementDesc{
+    font-size: 14px;
+    margin-left: 1rem;
+}
 .professionalTemplate .main-content {
     width: 70%;
     margin: auto;

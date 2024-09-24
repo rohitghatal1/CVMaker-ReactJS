@@ -32,12 +32,12 @@ export default function ProfessionalTemplate() {
                     <hr />
                     {personalData.length > 0 && personalData.map((personal, index) => (
                         <div key={index}>
-                            <p><strong>Name</strong><br />{personal.fName} {personal.lName}</p>
-                            <p><strong>Address</strong><br />{personal.PAddress}, {personal.city}</p>
-                            <p><strong>Phone number</strong><br />{personal.contactNo}</p>
-                            <p><strong>Email</strong><br />{personal.email}</p>
+                            <p><strong>Name</strong><br /><span>{personal.fName} {personal.lName}</span></p>
+                            <p><strong>Address</strong><br /><span>{personal.PAddress}, {personal.city}</span></p>
+                            <p><strong>Phone number</strong><br /><span>{personal.contactNo}</span></p>
+                            <p><strong>Email</strong><br /><span>{personal.email}</span></p>
                             {socialLinks.length > 0 && socialLinks.map((social, index) => (
-                                <p key={index}><strong>{social.platform}</strong><br />{social.url}</p>
+                                <p key={index}><strong>{social.platform}</strong><br /><span>{social.url}</span></p>
                             ))}
                         </div>
                     ))}
@@ -46,9 +46,10 @@ export default function ProfessionalTemplate() {
                 {achievementData.length > 0 && (
                     <div className="achievementsItem">
                         <h3><i className="fa-solid fa-star"></i> ACHIEVEMENTS</h3>
+                        <hr />
                         {achievementData.map((achievement, index) => (
                             <div key={index}>
-                                <strong>{achievement.title}</strong><br />
+                                <strong className='achievementTitle'>{achievement.title}</strong><br />
                                 <p className='achievementDesc'>{achievement.desc}</p>
                             </div>
                         ))}
