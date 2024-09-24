@@ -93,11 +93,11 @@
     margin-bottom: 5px;
 }
 
-.awards p, .achievements p {
+.left-section .awards p, .achievements p {
     margin-bottom: 5px;
 }
 
-.awards strong, .achievements strong {
+.left-section .awards strong, .achievements strong {
     font-size: 16px;
     display: block;
     margin-bottom: 5px;
@@ -107,11 +107,11 @@
     margin-top: -12px;
     margin-bottom: 10px;
 }
-.education p, .work-experience p {
+.right-section .education p, .work-experience p {
     margin-bottom: 5px;
 }
 
-.education strong, .work-experience strong {
+.right-section .education strong, .work-experience strong {
     font-size: 16px;
     display: block;
     margin-bottom: 5px;

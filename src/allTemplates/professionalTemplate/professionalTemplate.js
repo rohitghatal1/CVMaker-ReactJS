@@ -59,7 +59,7 @@ export default function ProfessionalTemplate() {
 
             <main className="main-content">
                 {personalData.length > 0 && (
-                    <div>
+                    <div className='userName'>
                         <h1>{personalData[0].fName} {personalData[0].lName}</h1>
                         <hr />
                         <p className="summary">
@@ -74,8 +74,10 @@ export default function ProfessionalTemplate() {
                     {educationData.length > 0 && educationData.map((education, index) => (
                         <div className="education-item" key={index}>
                             <h3>{education.degree}</h3>
-                            <p><strong>{education.institution}</strong><br />{education.startDate} to {education.passDate}</p>
-                            <p>{education.description}</p>
+                            <div className="educationDetail">
+                                <p>{education.college}</p>
+                                <p>{education.startDate} to {education.passDate}</p>
+                            </div>
                         </div>
                     ))}
                 </section>
