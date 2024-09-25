@@ -17,7 +17,7 @@
 
 .professionalTemplate .sidebar h2 {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: #ecf0f1;
 }
 
@@ -26,11 +26,11 @@
 }
 
 .professionalTemplate .sidebar .personal-info p>strong{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .professionalTemplate .sidebar .personal-info p>span{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .professionalTemplate .sidebar a {
@@ -43,11 +43,11 @@
 }
 
 .professionalTemplate .sidebar .achievementsItem .achievementTitle{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .professionalTemplate .sidebar .achievementsItem .achievementDesc{
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 1rem;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .professionalTemplate .sidebar .awardData .awardItem p{
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 1rem;
     margin-top: -10px;
 }
