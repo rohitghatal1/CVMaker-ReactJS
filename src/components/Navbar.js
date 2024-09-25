@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import logo from '../CVCraft.png'
 
 export default function Navbar() {
@@ -10,10 +10,10 @@ export default function Navbar() {
         <div className="navbar">
             <div className="logo"><img src={logo} alt="CVCraft" /></div>
             <div className="navitems">
-                <span className="navlinks">Home</span>
-                <span className="navlinks">Templates</span>
-                <span className="navlinks">CV-Generator</span>
-                <span className="navlinks">About</span>
+                <Link to = "/" className="navlinks">Home</Link>
+                <Link to = "/templates" className="navlinks">Templates</Link>
+                <Link to = "/cvgenerator" className="navlinks">CV-Generator</Link>
+                <Link to = "/about" className="navlinks">About</Link>
             </div>
             <div className="loginSignup">
                 <button className='loginbtn'>Login / Register</button>

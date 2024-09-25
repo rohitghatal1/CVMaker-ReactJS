@@ -1,4 +1,5 @@
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BasicTemplate from './allTemplates/basicTemplate/BasicTemplate';
 import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
 import ProfessionalIITemplate from './allTemplates/ProfessionalIITemplate/ProfessionalIITemplate';
@@ -26,6 +27,15 @@ function App() {
   
   return (
     <>
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element = {<HomeTab/>}/>
+        <Route path='/templates' element = {<Templates/>}/>
+        <Route path='/cvgenerator' element = {<CVgenerator/>}/>
+        <Route path='/about' element = {<AboutUs/>}/>
+      </Routes>
+    </Router>
       {/* <Navbar/>
       <HomeTab/>
       <Templates/>
@@ -34,7 +44,7 @@ function App() {
       {/* <CVgenerator/> */}
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
-      <ProfessionalTemplate/>
+      {/* <ProfessionalTemplate/> */}
       {/* <ProfessionalIITemplate/> */}
     </>
   );
