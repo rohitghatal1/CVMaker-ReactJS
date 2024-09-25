@@ -1,4 +1,5 @@
 import React from 'react'
+import './executive.css'
 
 export default function ExecutiveTemplate() {
   return (
