@@ -38,8 +38,10 @@ nav{
     gap: 1rem;
 }
 .navbar .navlinks{
+    text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: black;
 }
 
 .navbar .loginbtn{
