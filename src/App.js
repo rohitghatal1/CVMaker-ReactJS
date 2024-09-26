@@ -35,6 +35,7 @@ function App() {
         <Route path='/cvgenerator' element = {<CVgenerator/>}/>
         <Route path='/about' element = {<AboutUs/>}/>
       </Routes>
+      <Footer/>
     </Router>
       {/* <Navbar/>
       <HomeTab/>
