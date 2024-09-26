@@ -5,16 +5,15 @@
     display: flex;
     gap: 1rem;
     position: relative;
-    height: 100vh; /* Ensure the container spans the full height of the viewport */
+    /* height: 100vh; */
 }
 
 .cvGeneratorContainer .stepsIdicator {
-    position: fixed;
+    position: sticky;
     width: 9rem;
     left: 0;
     top: 8rem;
     padding: 1rem;
-    height: 100vh;
     overflow-y: auto; 
     scrollbar-width: thin;
     scrollbar-color: #228b22 #f1f1f1;

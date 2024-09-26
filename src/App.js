@@ -27,7 +27,7 @@ function App() {
   
   return (
     <>
-    {/* <Router>
+    <Router>
       <Navbar/>
       <Routes>
         <Route path='/' element = {<HomeTab/>}/>
@@ -35,7 +35,7 @@ function App() {
         <Route path='/cvgenerator' element = {<CVgenerator/>}/>
         <Route path='/about' element = {<AboutUs/>}/>
       </Routes>
-    </Router> */}
+    </Router>
       {/* <Navbar/>
       <HomeTab/>
       <Templates/>
@@ -44,7 +44,7 @@ function App() {
       {/* <CVgenerator/> */}
       {/* <CreativeTemplate/> */}
       {/* <BasicTemplate/> */}
-      <ProfessionalTemplate/>
+      {/* <ProfessionalTemplate/> */}
       {/* <ProfessionalIITemplate/> */}
     </>
   );
