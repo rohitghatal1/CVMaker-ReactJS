@@ -5,15 +5,15 @@
     display: flex;
     gap: 1rem;
     position: relative;
-    /* height: 100vh; */
 }
 
 .cvGeneratorContainer .stepsIdicator {
-    position: sticky;
+    position: absolute;
     width: 9rem;
     left: 0;
-    top: 8rem;
+    top: 7rem;
     padding: 1rem;
+    padding-top: 0.5rem;
     overflow-y: auto; 
     scrollbar-width: thin;
     scrollbar-color: #228b22 #f1f1f1;
@@ -37,6 +37,12 @@
 .cvGeneratorContainer .stepInfo {
     width: 88%;
     margin: auto;
+    height: 145vh;
+    overflow-y: auto;
+}
+
+.cvGeneratorContainer .stepInfo::-webkit-scrollbar{
+    display: none;
 }
 
 .cvGeneratorContainer .stepsIdicator .stepItemsContainer {
