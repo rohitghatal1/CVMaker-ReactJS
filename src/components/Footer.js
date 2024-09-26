@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../CVCraft.png'
 import './footer.css'
 
@@ -17,9 +18,10 @@ export default function Footer() {
             </div>
             <div className="quickLinks">
                 <h2>Go to:</h2>
-                <span className="links">Home</span>
-                <span className="links">Templates</span>
-                <span className="links">About</span>
+                <Link to = "/" className="links">Home</Link>
+                <Link to = "/templates" className="links">Templates</Link>
+                <Link to = "/cvgenerator" className='links'>CV Generator</Link>
+                <Link to = "/about" className="links">About</Link>
             </div>
             <div className="socialSection">
                 <h2>Follow Us:</h2>

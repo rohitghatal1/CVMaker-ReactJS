@@ -43,6 +43,7 @@ footer{
 }
 
 .quickLinks .links{
+    text-decoration: none;
     font-size: 1.2rem;
     cursor: pointer;
     font-weight: bold;
