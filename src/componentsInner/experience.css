@@ -1,6 +1,7 @@
 .experienceComponent{
     width: 80%;
     margin: auto;
+    margin-top: 6rem;
     text-align: center;
     background-color: aliceblue;
 }
