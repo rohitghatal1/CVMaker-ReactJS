@@ -29,12 +29,12 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router>
         <Navbar />
         <MainContent/>
-      </Router>
+      </Router> */}
 
-    {/* <TemplateTab/> */}
+    <TemplateTab/>
       {/* <Navbar/>
       <HomeTab/>
       <Templates/>
@@ -60,6 +60,7 @@ function MainContent() {
         <Route path='/cvgenerator' element={<CVgenerator />} />
         <Route path='/about' element={<AboutUs />} />
       </Routes>
+      <Templates/>
       {showFooter && <Footer />}
     </>
   )

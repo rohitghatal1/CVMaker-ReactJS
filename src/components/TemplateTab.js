@@ -1,5 +1,6 @@
 import React from 'react'
 import templateData from '../templateSelector/templateData';
+import './templateTab.css'
 
 export default function TemplateTab() {
   return (

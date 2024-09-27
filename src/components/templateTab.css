@@ -1,0 +1,9 @@
+.TemplateTab{
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+}
+.TemplateTab h2,p{
+    text-align: center;
+    padding: 0.4rem;
+}
