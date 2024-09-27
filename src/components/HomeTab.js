@@ -1,4 +1,5 @@
 import React from 'react'
+import Templates from './Templates';
 import './home.css'
 
 export default function HomeTab() {
@@ -51,6 +52,7 @@ export default function HomeTab() {
                     </div>
                 </div>
             </section>
+            <Templates/>
         </div>
     )
 }

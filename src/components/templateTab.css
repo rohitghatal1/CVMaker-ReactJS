@@ -2,10 +2,11 @@
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
+    margin-top: 6rem;
   }
   
   .TemplateTab h2 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 10px;
   }
   
@@ -13,6 +14,11 @@
     font-size: 16px;
     color: #555;
     margin-bottom: 20px;
+  }
+
+  .TemplateTab p span{
+    color: #1a1a7d;
+    font-weight: bold;
   }
   
   .TemplateTab .templates-Container {

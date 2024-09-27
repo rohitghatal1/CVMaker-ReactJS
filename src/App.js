@@ -10,7 +10,6 @@ import CVgenerator from './components/CVgenerator';
 import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
-import Templates from './components/Templates';
 import TemplateTab from './components/TemplateTab';
 
 function App() {
@@ -29,12 +28,12 @@ function App() {
 
   return (
     <>
-      {/* <Router>
+      <Router>
         <Navbar />
         <MainContent/>
-      </Router> */}
+      </Router>
 
-    <TemplateTab/>
+    {/* <TemplateTab/> */}
       {/* <Navbar/>
       <HomeTab/>
       <Templates/>
@@ -56,11 +55,10 @@ function MainContent() {
     <>
       <Routes>
         <Route path='/' element={<HomeTab />} />
-        <Route path='/templates' element={<Templates />} />
+        <Route path='/templateTab' element={<TemplateTab />} />
         <Route path='/cvgenerator' element={<CVgenerator />} />
         <Route path='/about' element={<AboutUs />} />
       </Routes>
-      <Templates/>
       {showFooter && <Footer />}
     </>
   )

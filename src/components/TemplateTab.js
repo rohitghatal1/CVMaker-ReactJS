@@ -6,7 +6,7 @@ export default function TemplateTab() {
   return (
     <div>
       <div className="TemplateTab">
-        <h2>Template</h2>
+        <h2>Templates</h2>
         <p>Here Are the list of <span>Templates</span> available!!!</p>
 
         <div className="templates-Container">

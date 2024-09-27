@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="logo"><img src={logo} alt="CVCraft" /></div>
             <div className="navitems">
                 <Link to = "/" className="navlinks">Home</Link>
-                <Link to = "/templates" className="navlinks">Templates</Link>
+                <Link to = "/templateTab" className="navlinks">Templates</Link>
                 <Link to = "/cvgenerator" className="navlinks">CV-Generator</Link>
                 <Link to = "/about" className="navlinks">About</Link>
             </div>
