@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import Templates from './components/Templates';
+import TemplateTab from './components/TemplateTab';
 
 function App() {
   let scrollTimeout;
@@ -33,6 +34,7 @@ function App() {
         <MainContent/>
       </Router>
 
+    {/* <TemplateTab/> */}
       {/* <Navbar/>
       <HomeTab/>
       <Templates/>
