@@ -1,6 +1,7 @@
 .TemplateTab {
     padding: 20px;
     text-align: center;
+    box-sizing: border-box;
   }
   
   .TemplateTab h2 {
@@ -18,7 +19,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 2rem;
   }
   
   .TemplateTab .templates-Container .template-Card {
@@ -28,9 +30,7 @@
     height: 42rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-top: 1rem;
   }
   
   .TemplateTab .templates-Container .template-Card:hover {
@@ -38,16 +38,16 @@
   }
   
   .TemplateTab .templates-Container .template-Card .templateImage {
+    margin: 0;
     width: 100%;
-    height: 90%;
-    overflow: hidden;
+    height: 95%;
     border-radius: 10px 10px 0 0;
   }
   
   .TemplateTab .templates-Container .template-Card .templateImage img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
   
   .TemplateTab .templates-Container .template-Card p {
@@ -56,8 +56,10 @@
     padding: 10px;
     margin: 0;
     background-color: #f1f1f1;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     border-radius: 0 0 10px 10px;
+    height: 5%;
+    vertical-align: middle;
   }
   
