@@ -1,26 +1,47 @@
 /* Initially hiding scrollbar by making it transparent */
 body::-webkit-scrollbar {
-    width: 7px; /* Keep the width consistent */
-    background: transparent; /* Transparent background */
+    width: 7px;
+    background: transparent;
     transition: background 1.5s ease;
 }
 
 /* Scrollbar track styling */
 body::-webkit-scrollbar-track {
-    background-color: transparent; /* Keep track transparent when hidden */
+    background-color: transparent;
 }
 
 /* Scrollbar thumb styling */
 body::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Keep thumb transparent when hidden */
-    border-radius: 0.6rem; 
+    background-color: transparent;
+    border-radius: 0.6rem;
 }
 
 /* Show scrollbar when scrolling */
 .showScrollbar::-webkit-scrollbar-track {
-    background-color: skyblue; /* Show track color */
+    background-color: skyblue;
 }
 
 .showScrollbar::-webkit-scrollbar-thumb {
-    background-color: #1a1a7d; /* Show thumb color */
+    background-color: #1a1a7d;
+}
+
+/* NProgress Bar styling */
+#nprogress .bar {
+    background: red !important;
+    height: 8px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1031; /* Ensures it shows above everything else */
+}
+
+/* Peg (optional glow effect for the progress bar) */
+#nprogress .peg {
+    box-shadow: 0 0 10px red, 0 0 5px red;
+}
+
+/* Optional: Hide the spinner if not needed */
+#nprogress .spinner {
+    display: none; /* Hides the spinner */
 }
