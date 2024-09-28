@@ -29,7 +29,7 @@ export default function Templates() {
         <div className="templateContainer">
           {/* Swiper Frame */}
           <div className="customSwiper">
-            <button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>Prev</button>
+            <button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>&#60;</button>
             <div className="swiperWrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
               {templateData.map((template, index) => (
                 <div className="swiperSlide" key={template.id}>
@@ -44,7 +44,7 @@ export default function Templates() {
                 </div>
               ))}
             </div>
-            <button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>Next</button>
+            <button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>&#62;</button>
           </div>
           {/* Pagination */}
           <div className="pagination">

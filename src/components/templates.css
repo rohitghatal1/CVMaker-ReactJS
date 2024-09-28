@@ -68,8 +68,8 @@
 }
 
 .templateContainer .imageContainer {
-    width: 20rem;
-    height: 25rem;
+    width: 25rem;
+    height: 30rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -92,18 +92,19 @@
     color: #333;
 }
 
-.templateContainer .prevBtn, 
+.templateContainer .prevBtn,
 .templateContainer .nextBtn {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: transparent;
     border: none;
-    padding: 0.5rem 1rem;
+    color: #333;
+    font-size: 2rem;
     cursor: pointer;
-    pointer-events: all;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: 5;
 }
 
 .templateContainer .prevBtn {
@@ -114,10 +115,11 @@
     right: 0;
 }
 
-.templateContainer .prevBtn:hover, 
+.templateContainer .prevBtn:hover,
 .templateContainer .nextBtn:hover {
-    background-color: #1a1a7d;
+    color: #1a1a7d;
 }
+
 
 .templateContainer .pagination {
     display: flex;
