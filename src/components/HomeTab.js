@@ -1,8 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Templates from './Templates';
 import './home.css'
 
 export default function HomeTab() {
+    const goToCVgenerator = useNavigate();
+    
+    const goToGenerator = () => {
+        goToCVgenerator('/cvgenerator')
+    }
+
     return (
         <div>
             <div className="banner">
@@ -10,7 +17,7 @@ export default function HomeTab() {
                     <h2>BUILD YOUR PROFESSIONAL CV/RESUME</h2>
                     <h3>IN JUST FEW MINUTES</h3>
                     <p><i class="fas fa-clock "></i> Time saving. <i class="fas fa-check-circle"></i> Easy to Use. <i class="fas fa-briefcase"></i> Professional</p>
-                    <button className='getStartedbtn'>Get Started !</button>
+                    <button className='getStartedbtn' onClick={goToGenerator}>Get Started !</button>
                 </div>
             </div>
             <section className="stepsInfo">
@@ -39,7 +46,7 @@ export default function HomeTab() {
                                 <p>Provide your information for Resume</p>
                             </div>
                         </div>
-                        
+
                         <div className="step">
                             <div className="logo">
                                 <i class="fa-solid fa-download"></i>
@@ -52,7 +59,7 @@ export default function HomeTab() {
                     </div>
                 </div>
             </section>
-            <Templates/>
+            <Templates />
         </div>
     )
 }

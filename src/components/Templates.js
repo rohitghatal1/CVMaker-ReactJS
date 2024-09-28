@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import templateData from '../templateSelector/templateData';
 import './templates.css';
 
@@ -7,6 +8,13 @@ export default function Templates() {
   const slidesPerPage = 2; // Number of visible slides per frame
 
   const totalSlides = Math.ceil(templateData.length / slidesPerPage);
+
+  //initializing useNavigate hook
+  const goToTemplate = useNavigate();
+
+  const handleSeeMore = () => {
+    goToTemplate('/templateTab');
+  }
 
   // Handle the next and previous buttons
   const goNext = () => {
@@ -57,7 +65,7 @@ export default function Templates() {
             ))}
           </div>
         </div>
-        <button className="seeMoreTemplateBtn">See More...</button>
+        <button className="seeMoreTemplateBtn" onClick={handleSeeMore}>See More...</button>
       </section>
     </div>
   );
