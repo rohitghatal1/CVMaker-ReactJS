@@ -67,9 +67,6 @@
     width: 100%;
 }
 
-.templateContainer .templateCard:hover{
-    transform: translateY(-5px);
-}
 .templateContainer .imageContainer {
     width: 25rem;
     height: 30rem;
