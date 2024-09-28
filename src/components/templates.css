@@ -30,44 +30,117 @@
     overflow: hidden;
 }
 
-.templateCardContainer {
+.templateContainer .customSwiper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.templateContainer .customSwiper .swiperWrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.templateContainer .customSwiper .swiperSlide {
+    flex: 0 0 50%; /* 2 slides visible per frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.templateContainer .templateCardContainer {
     display: flex;
     justify-content: center;
 }
 
-.templateCard {
+.templateContainer .templateCard {
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%; /* Make the card responsive */
+    width: 100%;
 }
 
-.imageContainer {
-    width: 20rem; /* Adjusted for two slides */
+.templateContainer .imageContainer {
+    width: 20rem;
     height: 25rem;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imageContainer img {
+.templateContainer .imageContainer img {
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
 }
 
-.imageContainer img:hover {
+.templateContainer .imageContainer img:hover {
     transform: scale(1.05);
 }
 
-.templateCard h3 {
+.templateContainer .templateCard h3 {
     margin-top: 0.5rem;
     font-size: 1.5rem;
     color: #333;
+}
+
+.templateContainer .prevBtn, 
+.templateContainer .nextBtn {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    pointer-events: all;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.templateContainer .prevBtn {
+    left: 0;
+}
+
+.templateContainer .nextBtn {
+    right: 0;
+}
+
+.templateContainer .prevBtn:hover, 
+.templateContainer .nextBtn:hover {
+    background-color: #1a1a7d;
+}
+
+.templateContainer .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0rem; /* Position the pagination below the swiper */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.templateContainer .pagination .paginationDot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.templateContainer .pagination .paginationDot.active {
+    background-color: #1a1a7d;
 }
 
 .seeMoreTemplateBtn {
@@ -84,70 +157,4 @@
 .seeMoreTemplateBtn:hover {
     background-color: skyblue;
     color: black;
-}
-
-/* Custom Slider Styles */
-.custom-swiper-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.custom-swiper-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.custom-swiper-slide {
-    flex: 0 0 50%; /* Adjust width to show 2 slides */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-/* Pagination */
-.custom-swiper-pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.custom-swiper-pagination span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #ddd;
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.custom-swiper-pagination span.active {
-    background-color: #1a1a7d;
-}
-
-/* Navigation */
-.custom-swiper-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-}
-
-.custom-swiper-nav button {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    pointer-events: all;
-}
-
-.custom-swiper-nav button:hover {
-    background: #1a1a7d;
 }
