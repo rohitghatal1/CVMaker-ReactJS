@@ -7,48 +7,47 @@
     padding-bottom: 3rem;
 }
 
-.templatesSection h2{
+.templatesSection h2 {
     font-size: 2rem;
 }
 
-.templatesSection h2 > span{
+.templatesSection h2 > span {
     color: #1a1a7d;
 }
 
-.templatesSection p{
+.templatesSection p {
     font-size: 1.5rem;
     width: 27.5rem;
     margin: auto;
 }
 
-.templateContainer{
+.templateContainer {
     position: relative;
     width: 100%;
-    height: 52rem;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-.templateCardContainer{
-    width: 100%;
+.templateCardContainer {
     display: flex;
     justify-content: center;
 }
+
 .templateCard {
     padding: 0.5rem;
-    width: 55rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%; /* Make the card responsive */
 }
 
 .imageContainer {
-    width: 40rem;
-    height: 50rem;
+    width: 20rem; /* Adjusted for two slides */
+    height: 25rem;
     overflow: hidden; 
     display: flex;
     justify-content: center;
@@ -58,7 +57,7 @@
 .imageContainer img {
     width: 100%;
     height: 100%;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .imageContainer img:hover {
@@ -66,14 +65,12 @@
 }
 
 .templateCard h3 {
-    margin-left: 11rem;
     margin-top: 0.5rem;
     font-size: 1.5rem;
     color: #333;
 }
 
-
-.seeMoreTemplateBtn{
+.seeMoreTemplateBtn {
     background-color: #1a1a7d;
     color: #fff;
     padding: 1rem;
@@ -84,7 +81,73 @@
     margin-top: 1rem;
 }
 
-.seeMoreTemplateBtn:hover{
+.seeMoreTemplateBtn:hover {
     background-color: skyblue;
     color: black;
+}
+
+/* Custom Slider Styles */
+.custom-swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.custom-swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-swiper-slide {
+    flex: 0 0 50%; /* Adjust width to show 2 slides */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Pagination */
+.custom-swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.custom-swiper-pagination span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.custom-swiper-pagination span.active {
+    background-color: #1a1a7d;
+}
+
+/* Navigation */
+.custom-swiper-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.custom-swiper-nav button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.custom-swiper-nav button:hover {
+    background: #1a1a7d;
 }

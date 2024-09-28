@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { Navigation, Pagination } from 'swiper/modules'; // Correct import for Swiper modules
 import templateData from '../templateSelector/templateData';
 import './templates.css';
 
 export default function Templates() {
-  const [selectedTemplate, setSelectedTemplate] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0); // For keeping track of the current slide
+  const slidesPerPage = 2; // Number of visible slides per frame
+
+  const totalSlides = Math.ceil(templateData.length / slidesPerPage);
+
+  // Handle the next and previous buttons
+  const goNext = () => {
+    if (currentSlide < totalSlides - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const goPrev = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
 
   return (
     <div>
@@ -14,27 +27,35 @@ export default function Templates() {
         <h2>Here are the Best <span>Template Designs</span> for you</h2>
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={2}
-            loop={true}
-            pagination={{ clickable: true }}
-            navigation={true}
-            modules={[Navigation, Pagination]} // Pass modules as props
-          >
-            {templateData.map((template) => (
-              <SwiperSlide key={template.id}>
-                <div className="templateCardContainer">
-                  <div className="templateCard" onClick={() => setSelectedTemplate(() => template.component)}>
-                    <figure className="imageContainer">
-                      <img src={template.image} alt={template.name} />
-                    </figure>
-                    <h3>{template.name}</h3>
+          {/* Swiper Frame */}
+          <div className="customSwiper">
+            <button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>Prev</button>
+            <div className="swiperWrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {templateData.map((template, index) => (
+                <div className="swiperSlide" key={template.id}>
+                  <div className="templateCardContainer">
+                    <div className="templateCard">
+                      <figure className="imageContainer">
+                        <img src={template.image} alt={template.name} />
+                      </figure>
+                      <h3>{template.name}</h3>
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
+              ))}
+            </div>
+            <button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>Next</button>
+          </div>
+          {/* Pagination */}
+          <div className="pagination">
+            {Array.from({ length: totalSlides }, (_, i) => (
+              <span
+                key={i}
+                className={`paginationDot ${currentSlide === i ? 'active' : ''}`}
+                onClick={() => setCurrentSlide(i)}
+              />
             ))}
-          </Swiper>
+          </div>
         </div>
         <button className="seeMoreTemplateBtn">See More...</button>
       </section>
