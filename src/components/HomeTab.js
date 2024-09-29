@@ -16,7 +16,7 @@ export default function HomeTab() {
                 <div className="bannerInfo">
                     <h2>BUILD YOUR PROFESSIONAL CV/RESUME</h2>
                     <h3>IN JUST FEW MINUTES</h3>
-                    <p><i class="fas fa-clock "></i> Time saving. <i class="fas fa-check-circle"></i> Easy to Use. <i class="fas fa-briefcase"></i> Professional</p>
+                    <p><i className="fas fa-clock "></i> Time saving. <i className="fas fa-check-circle"></i> Easy to Use. <i className="fas fa-briefcase"></i> Professional</p>
                     <button className='getStartedbtn' onClick={goToGenerator}>Get Started !</button>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export default function HomeTab() {
                     <div className="stepsDesc">
                         <div className="step">
                             <div className="logo">
-                                <i class="fa-regular fa-copy"></i>
+                                <i className="fa-regular fa-copy"></i>
                             </div>
                             <div className="aboutStep">
                                 <h3>Choose a template</h3>
@@ -39,7 +39,7 @@ export default function HomeTab() {
 
                         <div className="step">
                             <div className="logo">
-                                <i class="fa-regular fa-file-lines"></i>
+                                <i className="fa-regular fa-file-lines"></i>
                             </div>
                             <div className="aboutStep">
                                 <h3>Fill your Information</h3>
@@ -49,7 +49,7 @@ export default function HomeTab() {
 
                         <div className="step">
                             <div className="logo">
-                                <i class="fa-solid fa-download"></i>
+                                <i className="fa-solid fa-download"></i>
                             </div>
                             <div className="aboutStep">
                                 <h3>Quick Download</h3>
