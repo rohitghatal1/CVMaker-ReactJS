@@ -1,18 +1,18 @@
-.allTemplateDisplay{
+.allTemplateDisplay {
     margin-top: 5rem;
     padding: 0.5rem;
     background-color: aliceblue;
     text-align: center;
 }
 
-.allTemplateDisplay .templateContainerHeading{
+.allTemplateDisplay .templateContainerHeading {
     display: flex;
     justify-content: center;
     position: relative;
     text-align: center;
 }
 
-.allTemplateDisplay .templateContainerHeading .nextbtn{
+.allTemplateDisplay .templateContainerHeading .nextbtn {
     position: fixed;
     top: 9rem;
     right: 4rem;
@@ -25,7 +25,8 @@
     width: 6rem;
     cursor: pointer;
 }
-.allTemplateDisplay .allTemplateContainer{
+
+.allTemplateDisplay .allTemplateContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -33,7 +34,7 @@
     gap: 1rem;
 }
 
-.allTemplateDisplay .allTemplateContainer .templateCard{
+.allTemplateDisplay .allTemplateContainer .templateCard {
     width: 26rem;
     height: 38rem;
     display: flex;
@@ -41,20 +42,40 @@
     padding: 10px;
     border: 1px solid transparent;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center; /* Center content inside the card */
+    align-items: center;     /* Center content inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .allTemplateDisplay .allTemplateContainer .templateCard.selectedCard {
-    border: 2px solid #007bff;
-    transform: scale(1.2);
+    transform: scale(0.98);  /* Slightly pressed-in look */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -4px 8px rgba(0, 0, 0, 0.2); /* Inset shadow for pressed-in look */
 }
 
-.allTemplateDisplay .allTemplateContainer .templateCard figure{
-   width: 100%; 
-   height: 90%;
-}
-
-.allTemplateDisplay .allTemplateContainer .templateCard figure img{
+.allTemplateDisplay .allTemplateContainer .templateCard figure {
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard figure img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.allTemplateDisplay .allTemplateContainer .templateCard label {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
 }
