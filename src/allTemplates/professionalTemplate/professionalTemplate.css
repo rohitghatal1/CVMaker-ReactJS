@@ -64,6 +64,7 @@
 .professionalTemplate .main-content {
     width: 70%;
     margin: auto;
+    margin-top: 20px;
     padding: 15px;
     text-align: justify;
 }
@@ -150,7 +151,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0;
-    padding: 0;
+    padding-left: 0.6rem;
 }
 
 .professionalTemplate .main-content .skills .skillsContainer .skill-item p {

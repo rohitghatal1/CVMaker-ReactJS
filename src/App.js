@@ -28,13 +28,12 @@ function App() {
   });
 
   return (
-    // <>
-    //   <Router>
-    //     <Navbar />
-    //     <MainContent />
-    //   </Router>
-    // </>
-    <ProfessionalTemplate/>
+    <>
+      <Router>
+        <Navbar />
+        <MainContent />
+      </Router>
+    </>
   );
 }
 

@@ -137,7 +137,7 @@ export default function ProfessionalTemplate() {
 
                 {skillData.length > 0 && (
                     <section className="skills">
-                        <h3>Skills</h3>
+                        <h3><i class="fa-solid fa-code-compare"></i> Skills</h3>
                         <hr />
                         <div className="skillsContainer">
                             {skillData.map((skill, index) => (
