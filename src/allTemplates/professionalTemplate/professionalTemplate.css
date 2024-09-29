@@ -89,6 +89,9 @@
     padding-bottom: 10px;
 }
 
+.professionalTemplate .main-content .education h3{
+    font-size: 16px;
+}
 .professionalTemplate .main-content .education-item {
     margin-bottom: 15px;
     padding-left: 0.6rem;
@@ -96,7 +99,7 @@
 
 .professionalTemplate .main-content .education-item h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: #2c3e50;
 }
 
@@ -106,6 +109,18 @@
     font-size: 12px;
 }
 
+.professionalTemplate .main-content .projectData h3{
+    font-size: 16px;
+}
+
+.professionalTemplate .main-content .projectData .projectItem .project-content h3{
+    font-size: 14px;
+}
+
+.professionalTemplate .main-content .projectData .projectItem .project-content p{
+    font-size: 12px;
+    margin-top: 0;
+}
 .professionalTemplate .main-content .experienceData h3{
     margin: 0;
     font-size: 16px;
@@ -117,6 +132,7 @@
 
 .professionalTemplate .main-content .experienceData .experienceItem h4{
     margin-bottom: 0;
+    font-size: 14px;
 }
 .professionalTemplate .main-content .experienceData .experienceItem p{
     margin-top: 0;
@@ -124,6 +140,9 @@
     font-size: 12px;
 }
 
+.professionalTemplate .main-content .skills h3{
+    font-size: 16px;
+}
 .professionalTemplate .main-content .skills .skillsContainer {
     height: 10rem;
     display: flex;
@@ -135,7 +154,7 @@
 }
 
 .professionalTemplate .main-content .skills .skillsContainer .skill-item p {
-    font-size: 16px;
+    font-size: 13px;
     margin-top: 0;
     margin-bottom: 5px;
 }
