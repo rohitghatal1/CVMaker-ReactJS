@@ -39,17 +39,18 @@
     height: 38rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
     padding: 10px;
     border: 1px solid transparent;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    justify-content: center; /* Center content inside the card */
-    align-items: center;     /* Center content inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+    justify-content: center;
+    align-items: center;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .allTemplateDisplay .allTemplateContainer .templateCard:hover {
-    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -60,7 +61,7 @@
 
 .allTemplateDisplay .allTemplateContainer .templateCard figure {
     width: 100%;
-    height: auto;
+    height: 95%;
     margin: 0;
     display: flex;
     justify-content: center;
