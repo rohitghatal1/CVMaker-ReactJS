@@ -3,7 +3,7 @@ import './navbar.css'
 import {Link} from 'react-router-dom';
 import logo from '../CVCraft.png'
 
-export default function Navbar() {
+export default function Navbar({openForm}) {
   return (
     <div>
       <nav>
@@ -16,7 +16,7 @@ export default function Navbar() {
                 <Link to = "/about" className="navlinks">About</Link>
             </div>
             <div className="loginSignup">
-                <button className='loginbtn'>Login / Register</button>
+                <button className='loginbtn' onClick={openForm}>Login / Register</button>
             </div>
         </div>
       </nav>

@@ -1,13 +1,13 @@
 import React from 'react'
 import './loginSignup.css'
 
-export default function LoginSignupForm() {
+export default function LoginSignupForm({closeLoginSignupForm}) {
     return (
         <div>
             <div class="card">
                 <div class="card2">
                     <form class="form">
-                        <span className='closeLoginForm'>&times;</span>
+                        <span className='closeLoginForm' onClick={closeLoginSignupForm}>&times;</span>
                         <p id="heading">Login</p>
                         <div class="field">
                             <svg

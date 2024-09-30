@@ -10,10 +10,18 @@ import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import TemplateTab from './components/TemplateTab';
 import 'nprogress/nprogress.css';
+// import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
+  const openLoginSignupForm = () => {
+    setIsLoginOpen(true);
+  }
+
+  const closeLoginSignupForm = () => {
+    setIsLoginOpen(false)
+  }
   let scrollTimeout;
 
   document.addEventListener('scroll', () => {
@@ -28,9 +36,9 @@ function App() {
 
   return (
     <>
-    <LoginSignupForm/>
+    {isLoginOpen && <LoginSignupForm closeLoginSignupForm = {closeLoginSignupForm}/>}
       <Router>
-        <Navbar />
+        <Navbar openForm = {openLoginSignupForm} />
         <MainContent />
       </Router>
     </>
