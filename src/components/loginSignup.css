@@ -1,5 +1,5 @@
 .loginSignupModal{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -12,7 +12,6 @@
 
 .loginSignupModal .loginModal, .signupModal{
     width: 100%;
-    padding: 0.5rem;
 }
 
 .loginSignupModal .loginModal h2, .signupModal h2{
@@ -20,18 +19,27 @@
     padding: 0.4rem;
 }
 
-.loginSignupModal .loginModal .loginform input .signupModal .signupForm input{
+.loginSignupModal .loginModal .loginform,
+.loginSignupModal .signupModal .signupForm{
+    width: 100%;
+}
+
+.loginSignupModal .loginModal .loginform input,
+ .signupModal .signupForm input{
+    display: block;
     width: 100%;
     padding: 0.4rem;
     border-radius: 0.4rem;
     border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
 }
 
 .loginSignupModal .loginModal .loginform .loginBtn{
     background-color: #1128ff;
     color: #fff;
     border-radius: 0.4rem;
-    padding: 1rem;
+    padding: 0.5rem;
+    border: none;
 }
 
 
