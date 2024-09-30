@@ -7,6 +7,7 @@ export default function LoginSignupForm() {
             <div class="card">
                 <div class="card2">
                     <form class="form">
+                        <span className='closeLoginForm'>&times;</span>
                         <p id="heading">Login</p>
                         <div class="field">
                             <svg
