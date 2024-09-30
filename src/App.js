@@ -1,10 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import NProgress from 'nprogress';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import BasicTemplate from './allTemplates/basicTemplate/BasicTemplate';
-import CreativeTemplate from './allTemplates/CreativeTemplate/CreativeTemplate';
-import ProfessionalIITemplate from './allTemplates/ProfessionalIITemplate/ProfessionalIITemplate';
-import ProfessionalTemplate from './allTemplates/professionalTemplate/ProfessionalTemplate';
+import LoginSignupForm from './components/LoginSignupForm';
 import './App.css'; // Import your custom CSS
 import AboutUs from './components/AboutUs';
 import CVgenerator from './components/CVgenerator';
@@ -12,9 +9,11 @@ import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import TemplateTab from './components/TemplateTab';
-import 'nprogress/nprogress.css'; // Make sure this is imported for default styles
+import 'nprogress/nprogress.css';
 
 function App() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   let scrollTimeout;
 
   document.addEventListener('scroll', () => {
@@ -29,6 +28,7 @@ function App() {
 
   return (
     <>
+    <LoginSignupForm/>
       <Router>
         <Navbar />
         <MainContent />

@@ -1,12 +1,13 @@
 .loginSignupModal{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 30rem;
     border-radius: 0.4rem;
     padding: 1rem;
     background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 5;
 }
 
 .loginSignupModal .loginModal, .signupModal{
