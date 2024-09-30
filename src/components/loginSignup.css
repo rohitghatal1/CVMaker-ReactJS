@@ -38,10 +38,11 @@
     background-color: #1128ff;
     color: #fff;
     border-radius: 0.4rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
-
 
 .loginSignupModal .signupModal .signInOptions{
     padding: 1rem;
@@ -52,8 +53,10 @@
     text-align: center;
 }
 .loginSignupModal .signupModal .signupForm .submitBtn{
-    background-color: aliceblue;
+    background-color: greenyellow;
     color: black;
     border-radius: 0.4rem;
-    padding: 1rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    cursor: pointer;
 }
