@@ -14,9 +14,6 @@ export default function AboutUs() {
             <legend>Developer</legend>
             <div className="ownerInfo">
               <h3>Rohit Ghatal</h3>
-              <figure className='developerPhoto'>
-                <img src={developerPhoto} alt="Developer" />
-              </figure>
 
               {/* Social Media Section */}
               <div className="social">
@@ -36,6 +33,9 @@ export default function AboutUs() {
                 </ul>
               </div>
             </div>
+            <figure className='developerPhoto'>
+              <img src={developerPhoto} alt="Developer" />
+            </figure>
           </fieldset>
           <div className="aboutApp">
             {/* Additional content for the app description can go here */}
