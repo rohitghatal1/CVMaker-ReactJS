@@ -1,46 +1,191 @@
-.aboutUsConponent{
+.aboutUsWrapper {
     margin-top: 6rem;
     padding: 1rem;
     background-color: aliceblue;
-}
-
-.aboutUsConponent h2{
+  }
+  
+  .aboutUsWrapper h2 {
     text-align: center;
     padding: 0.5rem;
-}
-
-.aboutUsConponent .aboutUsContainer{
+  }
+  
+  .aboutUsWrapper .aboutUsContainer {
     background-color: white;
     width: 80%;
     margin: auto;
     padding: 0.5rem;
     border-radius: 0.4rem;
-}
-
-.aboutUsConponent .aboutUsContainer .owner{
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 70%;
     margin: auto;
-}
-
-.aboutUsConponent .aboutUsContainer .owner .developerPhoto{
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo {
+    text-align: center;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .tooltipContainer {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .tooltipBox {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3),
+      -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .profileBox {
+    background: #3b5998;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid #29487d;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer:hover .tooltipBox {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon .layer {
+    width: 55px;
+    height: 55px;
+    border: 3px solid #1877f2;
+    border-radius: 50%;
+    transition: transform 0.3s, border 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.7), 0 0 20px rgba(24, 119, 242, 0.5);
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon:hover .layer {
+    transform: rotate(-35deg) skew(20deg);
+    box-shadow: 0 0 30px rgba(24, 119, 242, 1), 0 0 40px rgba(24, 119, 242, 0.7);
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon:hover .layer span {
+    box-shadow: -1px 1px 3px #1877f2;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon .text {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .icon:hover .text {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .facebookSVG {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1877f2 0%, #3b5998 25%, #1877f2 50%, #3b5998 75%, #1877f2 100%);
+    border-radius: 50%;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .userInfo {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .userImage {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #1877f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .userName {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1877f2;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .userDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerInfo .socialSection .facebookContainer .about {
+    color: #ccc;
+    padding-top: 5px;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerSection .developerPhoto {
     width: 21rem;
     height: 20rem;
-}
-.aboutUsConponent .aboutUsContainer .owner .developerPhoto img{
+    transition: all ease 0.8s;
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerSection .developerPhoto img {
     width: 100%;
     height: 100%;
     border-radius: 0.4rem;
-}
-
-.aboutUsConponent .aboutUsContainer .aboutApp{
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .developerSection:hover .developerPhoto {
+    transform: scale(1.15);
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .aboutApp {
     width: 70%;
     margin: auto;
-}
-
-.aboutUsConponent .aboutUsContainer .aboutApp p{
+  }
+  
+  .aboutUsWrapper .aboutUsContainer .aboutApp p {
     text-align: justify;
     font-size: 15px;
-}
+  }
+  
