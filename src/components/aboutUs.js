@@ -20,20 +20,20 @@ export default function AboutUs() {
                 <ul className="wrapper">
                   <li className="icon facebook">
                     <span className="tooltip">Facebook</span>
-                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/rohit.rohit.ghatal" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                   </li>
-                  
+
                   <li className="icon instagram">
                     <span className="tooltip">Instagram</span>
-                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/_rohit.ghatal_/" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </li>
                   <li className="icon github">
                     <span className="tooltip">GitHub</span>
-                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/rohitghatal1" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   </li>
