@@ -1,4 +1,5 @@
 .aboutUsConponent{
+    margin-top: 6rem;
     padding: 1rem;
     background-color: aliceblue;
 }
@@ -9,7 +10,7 @@
 }
 
 .aboutUsConponent .aboutUsContainer{
-    background-color: white;
+    /* background-color: white; */
     padding: 0.5rem;
     border-radius: 0.4rem;
 }
