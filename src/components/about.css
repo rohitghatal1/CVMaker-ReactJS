@@ -10,7 +10,9 @@
 }
 
 .aboutUsConponent .aboutUsContainer{
-    /* background-color: white; */
+    background-color: white;
+    width: 80%;
+    margin: auto;
     padding: 0.5rem;
     border-radius: 0.4rem;
 }
@@ -21,6 +23,16 @@
     align-items: center;
     width: 70%;
     margin: auto;
+}
+
+.aboutUsConponent .aboutUsContainer .owner .developerPhoto{
+    width: 21rem;
+    height: 20rem;
+}
+.aboutUsConponent .aboutUsContainer .owner .developerPhoto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
 }
 
 .aboutUsConponent .aboutUsContainer .aboutApp{
