@@ -2,7 +2,7 @@ import React from 'react';
 import './about.css';
 import developerPhoto from '../assets/personPhotos/profilePic.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function AboutUs() {
   return (
@@ -20,15 +20,22 @@ export default function AboutUs() {
                 <ul className="wrapper">
                   <li className="icon facebook">
                     <span className="tooltip">Facebook</span>
-                    <FontAwesomeIcon icon={faFacebookF} />
+                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon icon={faFacebookF} />
+                    </a>
                   </li>
-                  <li className="icon twitter">
-                    <span className="tooltip">Twitter</span>
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </li>
+                  
                   <li className="icon instagram">
                     <span className="tooltip">Instagram</span>
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </li>
+                  <li className="icon github">
+                    <span className="tooltip">GitHub</span>
+                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
                   </li>
                 </ul>
               </div>

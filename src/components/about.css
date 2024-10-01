@@ -1,15 +1,15 @@
-.aboutUsConponent{
+.aboutUsConponent {
     margin-top: 6rem;
     padding: 1rem;
     background-color: aliceblue;
 }
 
-.aboutUsConponent h2{
+.aboutUsConponent h2 {
     text-align: center;
     padding: 0.5rem;
 }
 
-.aboutUsConponent .aboutUsContainer{
+.aboutUsConponent .aboutUsContainer {
     background-color: white;
     width: 80%;
     margin: auto;
@@ -17,7 +17,7 @@
     border-radius: 0.4rem;
 }
 
-.aboutUsConponent .aboutUsContainer .owner{
+.aboutUsConponent .aboutUsContainer .owner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,35 +25,36 @@
     margin: auto;
 }
 
-.aboutUsConponent .aboutUsContainer .owner .ownerInfo{
+.aboutUsConponent .aboutUsContainer .owner .ownerInfo {
     text-align: center;
 }
 
-.aboutUsConponent .aboutUsContainer .owner .ownerInfo h3{
+.aboutUsConponent .aboutUsContainer .owner .ownerInfo h3 {
     text-align: center;
 }
-.aboutUsConponent .aboutUsContainer .owner .developerPhoto{
+
+.aboutUsConponent .aboutUsContainer .owner .developerPhoto {
     width: 21rem;
     height: 20rem;
     transition: all ease 0.8s;
 }
 
-.aboutUsConponent .aboutUsContainer .owner .developerPhoto img{
+.aboutUsConponent .aboutUsContainer .owner .developerPhoto img {
     width: 100%;
     height: 100%;
     border-radius: 0.4rem;
 }
 
-.aboutUsConponent .aboutUsContainer .owner:hover .developerPhoto{
+.aboutUsConponent .aboutUsContainer .owner:hover .developerPhoto {
     transform: scale(1.15);
 }
 
-.aboutUsConponent .aboutUsContainer .aboutApp{
+.aboutUsConponent .aboutUsContainer .aboutApp {
     width: 70%;
     margin: auto;
 }
 
-.aboutUsConponent .aboutUsContainer .aboutApp p{
+.aboutUsConponent .aboutUsContainer .aboutApp p {
     text-align: justify;
     font-size: 15px;
 }
@@ -66,6 +67,10 @@
     width: 100%;
     padding-top: 40px;
     justify-content: center;
+}
+
+.social .wrapper a {
+    text-decoration: none;
 }
 
 .social .wrapper .icon {
@@ -130,16 +135,17 @@
     color: #fff;
 }
 
-.social .twitter:hover,
-.social .twitter:hover .tooltip,
-.social .twitter:hover .tooltip::before {
-    background: #1da1f2;
-    color: #fff;
-}
-
 .social .instagram:hover,
 .social .instagram:hover .tooltip,
 .social .instagram:hover .tooltip::before {
     background: #e4405f;
+    color: #fff;
+}
+
+/* GitHub Styles */
+.social .github:hover,
+.social .github:hover .tooltip,
+.social .github:hover .tooltip::before {
+    background: #211F1F; /* GitHub color */
     color: #fff;
 }
