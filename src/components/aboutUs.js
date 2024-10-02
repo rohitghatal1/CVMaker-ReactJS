@@ -8,7 +8,7 @@ export default function AboutUs() {
   return (
     <div>
       <div className="aboutUsConponent">
-        <h2>About Us</h2>
+        <h2>About</h2>
         <div className="aboutUsContainer">
           <fieldset className="owner">
             <legend>Developer</legend>

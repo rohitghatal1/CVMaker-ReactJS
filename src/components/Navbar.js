@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import logo from '../CVCraft.png'
 
 export default function Navbar({openForm}) {
@@ -9,11 +9,12 @@ export default function Navbar({openForm}) {
       <nav>
         <div className="navbar">
             <div className="logo"><img src={logo} alt="CVCraft" /></div>
+           
             <div className="navitems">
-                <Link to = "/" className="navlinks">Home</Link>
-                <Link to = "/templateTab" className="navlinks">Templates</Link>
-                <Link to = "/cvgenerator" className="navlinks">CV-Generator</Link>
-                <Link to = "/about" className="navlinks">About</Link>
+                <NavLink to = "/" className="navNavLinks" activeClassName ="active" exact>Home</NavLink>
+                <NavLink to = "/templateTab" className="navNavLinks" activeClassName ="active">Templates</NavLink>
+                <NavLink to = "/cvgenerator" className="navNavLinks" activeClassName ="active">CV-Generator</NavLink>
+                <NavLink to = "/about" className="navNavLinks" activeClassName ="active">About</NavLink>
             </div>
             <div className="loginSignup">
                 <button className='loginbtn' onClick={openForm}>Login / Register</button>
