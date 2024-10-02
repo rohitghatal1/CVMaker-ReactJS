@@ -35,8 +35,8 @@
 }
 
 .aboutUsConponent .aboutUsContainer .owner .developerPhoto {
-    width: 21rem;
-    height: 20rem;
+    width: 22rem;
+    height: 21rem;
     transition: all ease 0.8s;
 }
 
@@ -44,11 +44,20 @@
     width: 100%;
     height: 100%;
     border-radius: 0.4rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
-.aboutUsConponent .aboutUsContainer .owner:hover .developerPhoto {
+/* .aboutUsConponent .aboutUsContainer .owner:hover .developerPhoto {
     transform: scale(1.15);
-}
+} */
 
 .aboutUsConponent .aboutUsContainer .aboutApp {
     width: 70%;
