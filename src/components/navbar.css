@@ -40,36 +40,37 @@ nav{
 
 /* Base navbar styles */
 .navbar .navlinks {
-    position: relative;  /* For positioning the effect */
+    position: relative;  /* Necessary for pseudo-elements or relative positioning */
     text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: black;
     padding: 0.8rem 1.2rem;
     background-color: #f8f9fa;
-    border: 2px solid transparent;  /* Invisible border to avoid layout shifting */
+    border: 2px solid transparent;  /* Invisible border for layout stability */
     border-radius: 4px;
-    transition: all 0.2s ease;  /* Smooth transition for the press effect */
+    transition: all 0.2s ease;  /* Smooth transitions */
 }
 
 /* Hover effect */
 .navbar .navlinks:hover {
     background-color: #e9ecef;
     color: #007bff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Raised shadow on hover */
 }
 
 /* Active (Pressed) state */
 .navbar .navlinks.active {
     color: #1a1a7d;
     background-color: #dee2e6;
-    border: 2px solid #1a1a7d;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
-    transform: translateY(2px); 
-    font-weight: bold;
+    border: 2px solid #1a1a7d;  /* Add a border to define the pressed link */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 
+                inset 0 -2px 4px rgba(255, 255, 255, 0.1); /* Inset shadows for pressed effect */
+    transform: translateY(0);  /* Remove any outward movement */
+    font-weight: bold;  /* Bold text for active */
 }
 
-/* Transition effect */
+/* Add a visual cue for the active state */
 .navbar .navlinks.active::after {
     content: '';
     position: absolute;
@@ -77,11 +78,12 @@ nav{
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #007bff;
+    background-color: #1a1a7d;
     transform: scaleX(1);
     transform-origin: left;
     transition: background-color 0.3s ease;
 }
+
 
 .navbar .loginbtn{
     padding: 1rem;
