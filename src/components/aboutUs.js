@@ -14,9 +14,14 @@ export default function AboutUs() {
             <legend>Developer</legend>
             <div className="ownerInfo">
               <h3>Rohit Ghatal</h3>
+              <p>A passionate full stack Web Developer with a knack for designing user interfaces. 
+              My journey began with a deep curiosity for website design, which has since evolved into a 
+              fulfilling career dedicated to full stack Web Development.
+              </p>
 
               {/* Social Media Section */}
               <div className="social">
+              <h3>Follow me on:</h3>
                 <ul className="wrapper">
                   <li className="icon facebook">
                     <span className="tooltip">Facebook</span>
@@ -44,6 +49,7 @@ export default function AboutUs() {
               <img src={developerPhoto} alt="Developer" />
             </figure>
           </fieldset>
+
           <div className="aboutApp">
             {/* Additional content for the app description can go here */}
           </div>

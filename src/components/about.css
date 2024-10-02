@@ -26,7 +26,8 @@
 }
 
 .aboutUsConponent .aboutUsContainer .owner .ownerInfo {
-    text-align: center;
+    text-align: justify;
+    width: 24rem;
 }
 
 .aboutUsConponent .aboutUsContainer .owner .ownerInfo h3 {
@@ -59,13 +60,20 @@
     font-size: 15px;
 }
 
+.aboutUsConponent .social{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
 /* Social Links Styles */
 .social .wrapper {
+    margin-top: -0.5rem;
     display: inline-flex;
     list-style: none;
+    margin-left: -2.5rem;
     height: 120px;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 5px;
     justify-content: center;
 }
 
