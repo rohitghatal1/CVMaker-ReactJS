@@ -37,11 +37,18 @@ nav{
     justify-content: space-around;
     gap: 1rem;
 }
-.navbar .navlinks{
+
+.navbar .navlinks {
     text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: black;
+}
+
+.navbar .navlinks.active {
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
 }
 
 .navbar .loginbtn{
