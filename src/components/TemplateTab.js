@@ -10,8 +10,8 @@ export default function TemplateTab() {
         <p>Here is the list of <span>Templates</span> available!!!</p>
 
         <div className="templates-Container">
-            {templateData.map((template) => (
-                <div className="template-Card">
+            {templateData.map((template,index) => (
+                <div className="template-Card" key={index}>
                     <figure className='templateImage'>
                         <img src={template.image} alt={template.name} />
                     </figure>

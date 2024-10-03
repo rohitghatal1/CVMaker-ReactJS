@@ -38,51 +38,45 @@ nav{
     gap: 1rem;
 }
 
-/* Base navbar styles */
 .navbar .navlinks {
-    position: relative;  /* Necessary for pseudo-elements or relative positioning */
+    position: relative;
     text-decoration: none;
     font-size: 1.5rem;
-    cursor: pointer;
     color: black;
     padding: 0.8rem 1.2rem;
-    background-color: #f8f9fa;
-    border: 2px solid transparent;  /* Invisible border for layout stability */
-    border-radius: 4px;
-    transition: all 0.2s ease;  /* Smooth transitions */
-}
-
-/* Hover effect */
-.navbar .navlinks:hover {
-    background-color: #e9ecef;
-    color: #007bff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Raised shadow on hover */
-}
-
-/* Active (Pressed) state */
-.navbar .navlinks.active {
-    color: #1a1a7d;
-    background-color: #dee2e6;
-    border: 2px solid #1a1a7d;  /* Add a border to define the pressed link */
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 
-                inset 0 -2px 4px rgba(255, 255, 255, 0.1); /* Inset shadows for pressed effect */
-    transform: translateY(0);  /* Remove any outward movement */
-    font-weight: bold;  /* Bold text for active */
-}
-
-/* Add a visual cue for the active state */
-.navbar .navlinks.active::after {
+    /* background-color: #f8f9fa; */
+    transition: color 0.3s ease;
+  }
+  
+ 
+  .navbar .navlinks::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background-color: #1a1a7d;
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: background-color 0.3s ease;
-}
+    transition: width 0.7s ease;
+  }
+  
+
+  .navbar .navlinks:hover::after {
+    width: 100%; 
+  }
+  
+
+  .navbar .navlinks.active::after {
+    width: 100%;
+    background-color: #1a1a7d;
+    transition: none; 
+  }
+  
+  .navbar .navlinks.active {
+    color: #1a1a7d; 
+    font-weight: bold;
+  }
+  
 
 
 .navbar .loginbtn{

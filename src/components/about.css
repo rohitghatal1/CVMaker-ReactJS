@@ -55,10 +55,6 @@
     }
 }
 
-/* .aboutUsConponent .aboutUsContainer .owner:hover .developerPhoto {
-    transform: scale(1.15);
-} */
-
 .aboutUsConponent .aboutUsContainer .aboutApp {
     width: 70%;
     margin: auto;
