@@ -162,3 +162,19 @@
     background: #211F1F; /* GitHub color */
     color: #fff;
 }
+
+.aboutUsConponent .aboutUsContainer .sendMessageSection{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.aboutUsConponent .aboutUsContainer .sendMessageSection .sendMessageForm input{
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+    background-color: aliceblue;
+}
