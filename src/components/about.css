@@ -155,8 +155,15 @@
 }
 
 .aboutUsConponent .aboutUsContainer .sendMessageSection{
-    background-color: aliceblue;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1),
+    -8px -8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutUsConponent .aboutUsContainer .sendMessageSection .messageFormContainer{
     padding: 1rem;
+    padding-top: 0;
     width: 40%;
     margin: auto;
 }
