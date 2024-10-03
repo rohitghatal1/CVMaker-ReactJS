@@ -56,12 +56,13 @@ export default function AboutUs() {
 
           {/* send message section  */}
           <div className="sendMessageSection">
+          <h2>Send Message</h2>
             <form action="" className="sendMessageForm">
               <input type="text" name='uName' placeholder='Your Name' />
-              <input type="text" name='uEmail' placeholder='Your Email'/>
+              <input type="email" name='uEmail' placeholder='Your Email'/>
               <input type="text" name='uSubject' placeholder='Subject'/>
               <input type="text" name='uMessage' placeholder='Message'/>
-              
+
               <button className='sendMessageBtn' type='submit'>
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
