@@ -44,15 +44,6 @@
     width: 100%;
     height: 100%;
     border-radius: 0.4rem;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
 }
 
 .aboutUsConponent .aboutUsContainer .aboutApp {
@@ -159,13 +150,14 @@
 .social .github:hover,
 .social .github:hover .tooltip,
 .social .github:hover .tooltip::before {
-    background: #211F1F; /* GitHub color */
+    background: #211F1F;
     color: #fff;
 }
 
 .aboutUsConponent .aboutUsContainer .sendMessageSection{
+    background-color: aliceblue;
     padding: 1rem;
-    width: 50%;
+    width: 40%;
     margin: auto;
 }
 
