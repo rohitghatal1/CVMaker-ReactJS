@@ -152,21 +152,23 @@
 .googleLoginButton {
   display: flex;
   align-items: center;
-  background-color: #252525;
+  background-color: #4285F4; /* Default button color (using Google blue for a consistent look) */
   color: white;
   border: none;
   padding: 0.6em 1.5em;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, background 0.3s ease; /* Transition both properties */
 }
 
 .googleLoginButton:hover {
-  background-color: #357AE8;
+  background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853); /* Google colors */
+  background-color: transparent; /* Make the background color transparent to show the gradient */
 }
 
 .googleLoginButton .googleIcon {
   margin-right: 0.5em;
   font-size: 1.2em;
 }
+
