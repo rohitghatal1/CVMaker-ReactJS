@@ -142,19 +142,30 @@
   color: white;
 }
 
-.loginWithGoogleSection {
+.googleLoginSection {
   display: flex;
   justify-content: center;
-  margin-top: 0;
-  /* Space between Forgot Password and Google login */
+  align-items: center;
 }
 
-.googleLoginImg {
-  width: 10rem;
-  height: 3rem;
+.googleLoginButton {
+  display: flex;
+  align-items: center;
+  background-color: #252525;
+  color: white;
+  border: none;
+  padding: 0.6em 1.5em;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.googleLoginImg img {
-  width: 100%;
-  height: 100%;
+.googleLoginButton:hover {
+  background-color: #357AE8;
+}
+
+.googleLoginButton .googleIcon {
+  margin-right: 0.5em;
+  font-size: 1.2em;
 }
