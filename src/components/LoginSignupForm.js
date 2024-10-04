@@ -1,5 +1,5 @@
 import React from 'react'
-import googleLogin from '../assets/images/loginWithGoogle.png'
+import { FaGoogle } from 'react-icons/fa'  // Import Google icon from FontAwesome
 import './loginSignup.css'
 
 export default function LoginSignupForm({ closeLoginSignupForm }) {
@@ -53,11 +53,12 @@ export default function LoginSignupForm({ closeLoginSignupForm }) {
                         </div>
                         <button className="button3">Forgot Password</button>
 
-                        {/* Google Login Section Moved Here */}
+                        {/* Google Login Button */}
                         <div className="loginWithGoogleSection">
-                            <figure className='googleLoginImg'>
-                                <img src={googleLogin} alt="Login with Google" />
-                            </figure>
+                            <button className="googleLoginButton">
+                                <FaGoogle className="googleIcon" />
+                                <span>Login with Google</span>
+                            </button>
                         </div>
                     </form>
                 </div>
