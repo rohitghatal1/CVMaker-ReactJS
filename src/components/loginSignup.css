@@ -141,5 +141,21 @@
     color: white;
   }
 
+  .card .card2 .loginWithGoogleSection{
+    width: 30%;
+    margin: auto;
+  }
+
+  .card .card2 .loginWithGoogleSection .googleLoginImg{
+    width: 8rem;
+    height: 4rem;
+    overflow: hidden;
+  }
+
+  .card .card2 .loginWithGoogleSection .googleLoginImg img{
+    width: 100%;
+    height: 100%;
+  }
+
 
   
