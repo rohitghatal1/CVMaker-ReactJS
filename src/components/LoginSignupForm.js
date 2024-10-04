@@ -54,7 +54,7 @@ export default function LoginSignupForm({ closeLoginSignupForm }) {
                         <button className="button3">Forgot Password</button>
 
                         {/* Google Login Button */}
-                        <div className="loginWithGoogleSection">
+                        <div className="googleLoginSection">
                             <button className="googleLoginButton">
                                 <FaGoogle className="googleIcon" />
                                 <span>Login with Google</span>
