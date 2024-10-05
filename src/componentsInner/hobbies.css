@@ -1,0 +1,19 @@
+.hobbiesComponents{
+    width: 80%;
+    margin: auto;
+    margin-top: 6rem;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.hobbiesComponents h2{
+    font-size: 32px;
+}
+
+.hobbiesComponents .hobbiesSection{
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+}
