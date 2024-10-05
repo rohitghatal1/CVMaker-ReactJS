@@ -18,6 +18,10 @@
     margin: auto;
 }
 
+.hobbiesComponents .hobbiesSection p{
+    font-size: 14px;
+    color: #999;
+}
 .hobbiesComponents .hobbiesSection .newHobbies .addNewHobbybtn{
     padding: 0.8rem;
     background-color: #15bdfa;

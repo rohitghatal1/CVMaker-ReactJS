@@ -1,3 +1,6 @@
+body{
+    background-color: aliceblue;
+}
 /* Initially hiding scrollbar by making it transparent */
 body::-webkit-scrollbar {
     width: 7px;
