@@ -2,6 +2,9 @@ import React from 'react'
 import './hobbies.css'
 
 export default function Hobbies() {
+    const openAddHobbyModal = () => {
+
+    }
     return (
         <div>
             <div className="hobbiesComponents">
@@ -13,6 +16,7 @@ export default function Hobbies() {
                     </div>
                     <div className="newHobbies">
                         <p>New Hobby</p>
+                        <button className='addNewHobbybtn' onClick={openAddHobbyModal}><i className='fas fa-plus'></i> Add Experience</button>
                     </div>
                 </section>
             </div>
