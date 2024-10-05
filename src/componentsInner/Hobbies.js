@@ -1,7 +1,7 @@
 import React from 'react'
 import './hobbies.css'
 
-export default function Hobbies() {
+export default function Hobbies({goToPreviousStep, goToNextStep}) {
     const openAddHobbyModal = () => {
 
     }
