@@ -16,7 +16,21 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
     }
 
     const [hobbies, setHobbies] = useState([]);
-    const [newHobbies, setNewHobbies] = ({ hobbieName: ''})
+    const [newHobbies, setNewHobbies] = useState({ hobbieName: ''})
+
+    const submitHobbyForm = (e) => {
+        e.preventDefault();
+        if(newHobbies.hobbieName){
+            const updatedHobbies = [...hobbies, newHobbies];
+
+            setHobbies(updatedHobbies);
+            localStorage.setItem('hobbiesData', JSON.stringify(updatedHobbies));
+
+            setIsModalOpen(false);
+            setIsAddButtonVisible(true);
+            setNewHobbies({hobbieName:''});
+        }
+    }
     return (
         <div>
             <div className="hobbiesComponents">
@@ -30,7 +44,7 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                         <p>New Hobby</p>
 
                         {isModalOpen && <div className="hobbyModal">
-                            <form>
+                            <form onSubmit={submitHobbyForm}>
                                 <label htmlFor="title">Hobby Name:</label>
                                 <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' value={newHobbies.hobbieName} onChange={(e)=> setNewHobbies({...newHobbies, hobbieName: e.target.value})}/>
 
