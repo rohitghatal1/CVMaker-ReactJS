@@ -37,6 +37,34 @@
     margin-bottom: 0.4rem;
 }
 
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal .submitAndCloseBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal .submitAndCloseBtns button{
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal .submitAndCloseBtns .submitBtn{
+    background-color: #15bdfa;
+    color: #fff;
+    border: none;
+}
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal .submitAndCloseBtns .closeBtn{
+    background-color: #fff;
+    color: black;
+    border: 1px solid #aaa;
+}
+
 .hobbiesComponents .hobbiesSection .newHobbies .addNewHobbybtn{
     padding: 0.8rem;
     background-color: #15bdfa;
