@@ -14,6 +14,9 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
         setIsModalOpen(false);
         setIsAddButtonVisible(true);
     }
+
+    const [hobbies, setHobbies] = useState([]);
+    const [newHobbies, setNewHobbies] = ({ hobbieName: ''})
     return (
         <div>
             <div className="hobbiesComponents">
@@ -29,7 +32,7 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                         {isModalOpen && <div className="hobbyModal">
                             <form>
                                 <label htmlFor="title">Hobby Name:</label>
-                                <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' />
+                                <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' value={newHobbies.hobbieName} onChange={(e)=> setNewHobbies({...newHobbies, hobbieName: e.target.value})}/>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
