@@ -10,7 +10,6 @@ import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import TemplateTab from './components/TemplateTab';
 import 'nprogress/nprogress.css';
-// import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);

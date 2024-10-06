@@ -5,6 +5,10 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
     const openAddHobbyModal = () => {
 
     }
+
+    const handleCloseForm = () => {
+        
+    }
     return (
         <div>
             <div className="hobbiesComponents">
@@ -16,6 +20,17 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                     </div>
                     <div className="newHobbies">
                         <p>New Hobby</p>
+                        <div className="hobbyModal">
+                            <form>
+                                <label htmlFor="title">Hobby Name:</label>
+                                <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' />
+
+                                <div className="submitAndCloseBtns">
+                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
+                                    <button className='closeBtn' onClick={handleCloseForm}>Close</button>
+                                </div>
+                            </form>
+                        </div>
                         <button className='addNewHobbybtn' onClick={openAddHobbyModal}><i className='fas fa-plus'></i> Add Hobby</button>
                     </div>
                 </section>
