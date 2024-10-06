@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './hobbies.css'
 
 export default function Hobbies({goToPreviousStep, goToNextStep}) {
-    const openAddHobbyModal = () => {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
+    const openAddHobbyModal = () => {
+        setIsModalOpen(true);
+        setIsAddButtonVisible(false);
     }
 
     const handleCloseForm = () => {
-        
+        setIsModalOpen(false);
+        setIsAddButtonVisible(true);
     }
     return (
         <div>
@@ -20,7 +25,8 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                     </div>
                     <div className="newHobbies">
                         <p>New Hobby</p>
-                        <div className="hobbyModal">
+
+                        {isModalOpen && <div className="hobbyModal">
                             <form>
                                 <label htmlFor="title">Hobby Name:</label>
                                 <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' />
@@ -30,8 +36,9 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
                             </form>
-                        </div>
-                        <button className='addNewHobbybtn' onClick={openAddHobbyModal}><i className='fas fa-plus'></i> Add Hobby</button>
+                        </div>}
+
+                        {isAddButtonVisible && <button className='addNewHobbybtn' onClick={openAddHobbyModal}><i className='fas fa-plus'></i> Add Hobby</button>}
                     </div>
                 </section>
             </div>
