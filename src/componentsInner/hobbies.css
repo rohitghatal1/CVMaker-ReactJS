@@ -22,6 +22,21 @@
     font-size: 14px;
     color: #999;
 }
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal{
+    padding:  1rem;
+}
+
+.hobbiesComponents .hobbiesSection .newHobbies .hobbyModal input{
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
 .hobbiesComponents .hobbiesSection .newHobbies .addNewHobbybtn{
     padding: 0.8rem;
     background-color: #15bdfa;
