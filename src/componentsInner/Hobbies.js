@@ -75,7 +75,7 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
                                 <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' value={newHobbies.hobbieName} onChange={(e) => setNewHobbies({ ...newHobbies, hobbieName: e.target.value })} />
 
                                 <div className="submitAndCloseBtns">
-                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
+                                    <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane submitIcon"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
                             </form>
