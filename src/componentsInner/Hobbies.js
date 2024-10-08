@@ -40,7 +40,10 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
     },[])
 
     const deleteHobbie = (indexToDelete) => {
+        const updatedHobbyData = hobbies.filter((_, index) => index !== indexToDelete);
 
+        setHobbies(updatedHobbyData);
+        localStorage.setItem('hobbiesData', JSON.stringify(updatedHobbyData))
     }
 
     return (
