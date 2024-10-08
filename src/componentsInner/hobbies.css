@@ -23,11 +23,24 @@
     color: #999;
 }
 
+.hobbiesComponents .hobbiesSection .currentHobbies .hobbiesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .hobbiesComponents .hobbiesSection .currentHobbies .hobbieItem{
     display: flex;
+    align-items: center;
     gap: 2rem;
     padding: 1rem;
+    border: 1px solid #ccc;
 }
+
+.hobbiesComponents .hobbiesSection .currentHobbies .hobbieItem p{
+    color: black;
+}
+
 .hobbiesComponents .hobbiesSection .currentHobbies .hobbieItem .deleteHobbyBtn{
     background-color: #fff;
     color: red;
