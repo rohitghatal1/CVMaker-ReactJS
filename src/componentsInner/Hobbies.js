@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './hobbies.css'
 
 export default function Hobbies({goToPreviousStep, goToNextStep}) {
@@ -31,6 +31,14 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
             setNewHobbies({hobbieName:''});
         }
     }
+
+    useEffect(() =>{
+        const storedHobbyData = JSON.parse(localStorage.getItem('hobbiesData'));
+        if(storedHobbyData){
+            setHobbies(storedHobbyData)
+        }
+    },[])
+    
     return (
         <div>
             <div className="hobbiesComponents">
