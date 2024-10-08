@@ -39,6 +39,10 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
         }
     },[])
 
+    const deleteHobbie = (indexToDelete) => {
+
+    }
+
     return (
         <div>
             <div className="hobbiesComponents">
@@ -49,7 +53,10 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                         <p>Hobbies</p>
                         {hobbies.length>0 ? (
                             hobbies.map((hobby, index) =>(
+                                <div className="hobbieItem" key={index}>
                                 <p>{hobby.hobbieName}</p>
+                                <button className='deleteHobbyBtn' onClick={() => deleteHobbie(index)}><i className='fas fa-trash'></i></button>
+                                </div>
                             ))
                         )
                         :(<p>No Hobbies Added yet!!! </p>)}
