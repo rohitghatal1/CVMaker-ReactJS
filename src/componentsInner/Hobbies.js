@@ -38,7 +38,7 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
             setHobbies(storedHobbyData)
         }
     },[])
-    
+
     return (
         <div>
             <div className="hobbiesComponents">
@@ -47,6 +47,12 @@ export default function Hobbies({goToPreviousStep, goToNextStep}) {
                 <section className="hobbiesSection">
                     <div className="currentHobbies">
                         <p>Hobbies</p>
+                        {hobbies.length>0 ? (
+                            hobbies.map((hobby, index) =>(
+                                <p>{hobby.hobbieName}</p>
+                            ))
+                        )
+                        :(<p>No Hobbies Added yet!!! </p>)}
                     </div>
                     <div className="newHobbies">
                         <p>New Hobby</p>
