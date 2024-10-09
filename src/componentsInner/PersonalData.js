@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './personal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import personPhoto from '../assets/personPhotos/rohit2.jpg';
 
 export default function PersonalData({goToPreviousStep, goToNextStep}) {
 
@@ -142,7 +141,7 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
           <div className="photoSection">
             <figure className='personPhoto'>
             {photo ? (
-              <img src={photo} alt="User Photo" />
+              <img src={photo} alt="user" />
             ):(
               <FontAwesomeIcon icon = {faUser} size="3x" className = "defaultUserIcon" />
             )}
