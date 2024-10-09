@@ -83,6 +83,12 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
 
                         {isAddButtonVisible && <button className='addNewHobbybtn' onClick={openAddHobbyModal}><i className='fas fa-plus'></i> Add Hobby</button>}
                     </div>
+
+                    <div className="nextAndBackBtn">
+                        <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                        <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    
                 </section>
             </div>
         </div>
