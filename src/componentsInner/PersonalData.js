@@ -102,11 +102,9 @@ export default function PersonalData({goToPreviousStep, goToNextStep}) {
 
   // -------------------------------------------------------------------------------------------------------------------------
 
-  // for storing and retrieving social links 
   const [socialLinks, setSocialLinks] = useState([]);
   const [newLink, setNewLink] = useState({ platform: 'Facebook', url: '' });
 
-  // Load social links from local storage on component mount
   useEffect(() => {
     const storedLinks = JSON.parse(localStorage.getItem('socialLinks'));
     if (storedLinks) {
