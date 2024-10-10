@@ -2,14 +2,13 @@ import { useEffect, useState } from 'react';
 import NProgress from 'nprogress';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import LoginSignupForm from './components/LoginSignupForm';
-import './App.css'; // Import your custom CSS
+import './App.css';
 import AboutUs from './components/AboutUs';
 import CVgenerator from './components/CVgenerator';
 import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
 import Navbar from './components/Navbar';
 import TemplateTab from './components/TemplateTab';
-import 'nprogress/nprogress.css';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -48,13 +47,13 @@ function MainContent() {
   const location = useLocation();
 
   useEffect(() => {
-    NProgress.start(); // Start progress bar
+    NProgress.start();
   
-    // Optionally, you might want to finish the progress after a certain event.
-    NProgress.done(); // Complete progress immediately
+
+    NProgress.done();
   
     return () => {
-      NProgress.done(); // Ensure progress bar is cleaned up on unmount
+      NProgress.done();
     };
   }, [location]);
   
