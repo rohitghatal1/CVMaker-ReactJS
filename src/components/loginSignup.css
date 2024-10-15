@@ -172,3 +172,20 @@
   font-size: 1.2em;
 }
 
+.signupForm{
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: black;
+  color: #fff;
+}
+
+.signupForm .form{
+  padding: 0.4rem;
+  background-color: aliceblue;
+}
+
+.signupForm .form .input{
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+}
