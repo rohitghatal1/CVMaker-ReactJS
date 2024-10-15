@@ -68,6 +68,25 @@ export default function LoginSignupForm({ closeLoginSignupForm }) {
             <div className="signupForm">
                 <form action="">
                     <label htmlFor="name">Name</label>
+                    <input type="text" />
+
+                    <label htmlFor="name">Address</label>
+                    <input type="text" />
+
+                    <label htmlFor="name">DOB</label>
+                    <input type="date" />
+
+                    <label htmlFor="name">Email</label>
+                    <input type="text" />
+
+                    <label htmlFor="name">Username</label>
+                    <input type="text" />
+
+                    <label htmlFor="name">Password</label>
+                    <input type="text" />
+
+                    <label htmlFor="name">Cofirn Password</label>
+                    <input type="text" />
                 </form>
             </div>
         </div>
