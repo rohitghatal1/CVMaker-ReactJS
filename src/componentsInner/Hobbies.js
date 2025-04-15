@@ -47,6 +47,7 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
     }
 
     return (
+
         <div>
             <div className="hobbiesComponents">
                 <h2>Hobbies</h2>
@@ -88,7 +89,7 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
                         <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
                         <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    
+
                 </section>
             </div>
         </div>
