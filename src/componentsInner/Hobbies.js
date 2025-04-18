@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './hobbies.css'
+import { Input } from 'antd';
 
 export default function Hobbies({ goToPreviousStep, goToNextStep }) {
 
@@ -47,7 +48,6 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
     }
 
     return (
-
         <div>
             <div className="hobbiesComponents">
                 <h2>Hobbies</h2>
@@ -73,7 +73,7 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
                         {isModalOpen && <div className="hobbyModal">
                             <form onSubmit={submitHobbyForm}>
                                 <label htmlFor="title">Hobby Name:</label>
-                                <input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' value={newHobbies.hobbieName} onChange={(e) => setNewHobbies({ ...newHobbies, hobbieName: e.target.value })} />
+                                <Input type="text" name='hobbyName' placeholder='eg. Playing, Singing, Coding etc' value={newHobbies.hobbieName} onChange={(e) => setNewHobbies({ ...newHobbies, hobbieName: e.target.value })} />
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane submitIcon"></i> Submit</button>

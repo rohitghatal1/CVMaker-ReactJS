@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './experience.css'
+import { Input } from 'antd';
 
-export default function Experience({goToPreviousStep, goToNextStep}) {
+export default function Experience({ goToPreviousStep, goToNextStep }) {
 
     // use state for saving and settin new exp 
     const [newExperience, setNewExperience] = useState({
@@ -40,7 +41,7 @@ export default function Experience({goToPreviousStep, goToNextStep}) {
         const { name, value } = e.target;
         setNewExperience({ ...newExperience, [name]: value })
     }
-    
+
     const submitExperienceForm = (e) => {
         e.preventDefault();
 
@@ -102,19 +103,19 @@ export default function Experience({goToPreviousStep, goToNextStep}) {
                         {isModalOpen && <div className="addExperienceModal">
                             <form className='addExperienceForm' onSubmit={submitExperienceForm}>
                                 <label htmlFor="title">Job Title</label>
-                                <input type="text" name='jobTitle' value={newExperience.jobTitle} onChange={handleInputChange} />
+                                <Input type="text" name='jobTitle' value={newExperience.jobTitle} onChange={handleInputChange} />
 
                                 <label htmlFor="org">Organization</label>
-                                <input type="text" name='organization' value={newExperience.orgnaization} onChange={handleInputChange} />
+                                <Input type="text" name='organization' value={newExperience.orgnaization} onChange={handleInputChange} />
 
                                 <label htmlFor="location">Location</label>
-                                <input type="text" name='location' value={newExperience.location} onChange={handleInputChange} />
+                                <Input type="text" name='location' value={newExperience.location} onChange={handleInputChange} />
 
                                 <label htmlFor="startDate">Start Date</label>
-                                <input type="date" name='startDate' value={newExperience.startDate} onChange={handleInputChange} />
+                                <Input type="date" name='startDate' value={newExperience.startDate} onChange={handleInputChange} />
 
                                 <label htmlFor="endDate">End Date</label>
-                                <input type="date" name='endDate' value={newExperience.endDate} onChange={handleInputChange} />
+                                <Input type="date" name='endDate' value={newExperience.endDate} onChange={handleInputChange} />
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
