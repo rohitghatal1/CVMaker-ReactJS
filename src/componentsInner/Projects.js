@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './projects.css'
+import { Form, Input } from 'antd';
 
-export default function Projects({goToPreviousStep, goToNextStep}) {
+export default function Projects({ goToPreviousStep, goToNextStep }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
@@ -43,7 +44,6 @@ export default function Projects({goToPreviousStep, goToNextStep}) {
     }
   }
 
-  // to retrieve all project data from local storage 
   useEffect(() => {
     const storedProjects = JSON.parse(localStorage.getItem('projectData'));
     if (storedProjects) {
@@ -84,18 +84,18 @@ export default function Projects({goToPreviousStep, goToNextStep}) {
             <p>New Projects</p>
 
             {isModalOpen && <div className="addNewProjectModal">
-              <form className='projectForm' onSubmit={submitExperienceForm}>
+              <Form className='projectForm' onFinish={submitExperienceForm}>
                 <label htmlFor="pTitle">Project Title</label>
-                <input type="text" name="projectTitle" placeholder='Title of your project' value={newProjects.projectTitle} onChange={handleInputChange} />
+                <Input type="text" name="projectTitle" placeholder='Title of your project' value={newProjects.projectTitle} onChange={handleInputChange} />
 
                 <label htmlFor="pDescription">Description</label>
-                <input type="text" name='projectDesc' placeholder='tell what your project is about' value={newProjects.projectDesc} onChange={handleInputChange} />
+                <Input type="text" name='projectDesc' placeholder='tell what your project is about' value={newProjects.projectDesc} onChange={handleInputChange} />
 
                 <div className="submitAndCloseBtns">
                   <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                   <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                 </div>
-              </form>
+              </Form>
             </div>}
 
             {isAddButtonVisible && <button className='addNewProjectbtn' onClick={openAddProjectModal}><i className='fas fa-plus'></i> Add Project</button>}

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './achievements.css'
+import { Form, Input } from 'antd';
 
-export default function Achievements({goToPreviousStep, generateCV}) {
+export default function Achievements({ goToPreviousStep, generateCV }) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
@@ -80,18 +81,18 @@ export default function Achievements({goToPreviousStep, generateCV}) {
                         <p>New Achievement</p>
 
                         {isModalOpen && <div className="achievementModal">
-                            <form onSubmit={submitAchievementForm}>
+                            <Form onFinish={submitAchievementForm}>
                                 <label htmlFor="title">Title</label>
-                                <input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({ ...newAchievement, title: e.target.value })} />
+                                <Input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({ ...newAchievement, title: e.target.value })} />
 
                                 <label htmlFor="Description">Description</label>
-                                <textarea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></textarea>
+                                <Input.TextArea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></Input.TextArea>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>}
 
                         {isAddButtonVisible && <button className='addNewAchievementbtn' onClick={openAddAchievementModal}><i className='fas fa-plus'></i> Add Achievement</button>}
