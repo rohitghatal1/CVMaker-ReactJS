@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './skills.css'
+import { Form, Input, Select } from 'antd';
+const { Option } = Select;
 
-export default function Skills({goToPreviousStep, goToNextStep}) {
+export default function Skills({ goToPreviousStep, goToNextStep }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
@@ -63,7 +65,7 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
                 skills.map((skill, index) => (
                   <div className="skillItem" key={index}>
                     <div className="skillAndDeleteBtn">
-                      <p>{skill.skillName} <br/><span>{skill.skillLevel}</span></p>
+                      <p>{skill.skillName} <br /><span>{skill.skillLevel}</span></p>
                     </div>
                     <button className='deleteSkillBtn' onClick={() => deleteSkill(index)}><i className='fas fa-trash'></i></button>
                   </div>
@@ -79,17 +81,17 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
             <p>New Skills</p>
 
             {isModalOpen && <div className="addSkillModal">
-              <form className='addSkillForm' onSubmit={submitSkillForm}>
+              <Form className='addSkillForm' onFinish={submitSkillForm}>
                 <div className="row">
 
-                  <input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' value={newSkill.skillName} onChange={(e) => setNewSkill({ ...newSkill, skillName: e.target.value })} />
+                  <Input type="text" placeholder='eg. HTML, CSS, JAVA, C ...' value={newSkill.skillName} onChange={(e) => setNewSkill({ ...newSkill, skillName: e.target.value })} />
 
-                  <select name="skillLevel" value={newSkill.skillLevel} onChange={(e) => setNewSkill({ ...newSkill, skillLevel: e.target.value })}>
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Experienced">Experienced</option>
-                    <option value="Expert">Expert</option>
-                  </select>
+                  <Select showSearch allowClear name="skillLevel" value={newSkill.skillLevel} onChange={(e) => setNewSkill({ ...newSkill, skillLevel: e.target.value })}>
+                    <Option value="Beginner">Beginner</Option>
+                    <Option value="Intermediate">Intermediate</Option>
+                    <Option value="Experienced">Experienced</Option>
+                    <Option value="Expert">Expert</Option>
+                  </Select>
                 </div>
 
                 <div className="submitAndCloseBtns">
@@ -97,7 +99,7 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
                   <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                 </div>
 
-              </form>
+              </Form>
             </div>}
 
             {isAddButtonVisible && <button className='addNewSkillbtn' onClick={openAddSkillModal}><i className='fas fa-plus'></i> Add Skill</button>}
@@ -107,7 +109,7 @@ export default function Skills({goToPreviousStep, goToNextStep}) {
             <button className='prevBtn' onClick={goToPreviousStep}><i className="fa-solid fa-arrow-left"></i> Previous</button>
             <button className='nextBtn' onClick={goToNextStep}>Next <i className="fa-solid fa-arrow-right"></i></button>
           </div>
-          
+
         </section>
       </div>
     </div>
