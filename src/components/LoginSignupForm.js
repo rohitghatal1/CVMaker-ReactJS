@@ -1,8 +1,11 @@
 import React from 'react'
 import { FaGoogle } from 'react-icons/fa'  // Import Google icon from FontAwesome
 import './loginSignup.css'
+import { Form, Input } from 'antd'
+import { useForm } from 'antd/es/form/Form'
 
 export default function LoginSignupForm({ closeLoginSignupForm }) {
+    const [loginForm] = useForm();
     return (
         <div>
             <div className="loginForm">
@@ -66,28 +69,28 @@ export default function LoginSignupForm({ closeLoginSignupForm }) {
                 </div>
             </div>
             <div className="signupForm">
-                <form action="">
+                <Form action="" form={loginForm}>
                     <label htmlFor="name">Name</label>
-                    <input type="text" />
+                    <Input type="text" />
 
                     <label htmlFor="name">Address</label>
-                    <input type="text" />
+                    <Input type="text" />
 
                     <label htmlFor="name">DOB</label>
-                    <input type="date" />
+                    <Input type="date" />
 
                     <label htmlFor="name">Email</label>
-                    <input type="text" />
+                    <Input type="text" />
 
                     <label htmlFor="name">Username</label>
-                    <input type="text" />
+                    <Input type="text" />
 
                     <label htmlFor="name">Password</label>
-                    <input type="text" />
+                    <Input type="text" />
 
                     <label htmlFor="name">Cofirn Password</label>
-                    <input type="text" />
-                </form>
+                    <Input type="text" />
+                </Form>
             </div>
         </div>
     )
