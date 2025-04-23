@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './education.css'
+import { Input, Form } from 'antd';
 
-export default function Education({goToPreviousStep, goToNextStep}) {
+export default function Education({ goToPreviousStep, goToNextStep }) {
   const [education, setEducation] = useState([]);
   const [newEducation, setNewEducation] = useState({
     degree: '',
@@ -86,24 +87,24 @@ export default function Education({goToPreviousStep, goToNextStep}) {
             {isModalOpen && (
               <div className="addEducationModal">
                 <h4>Education Details</h4>
-                <form className="educationForm" onSubmit={handleFormSubmit}>
+                <Form className="educationForm" onFinish={handleFormSubmit}>
                   <label htmlFor="Degree">Degree:</label>
-                  <input type="text" placeholder='eg. Bachelors, masters etc.' name='degree' value={newEducation.degree} onChange={handleInputChange} />
+                  <Input type="text" placeholder='eg. Bachelors, masters etc.' name='degree' value={newEducation.degree} onChange={handleInputChange} />
 
                   <label htmlFor="clz">College Name:</label>
-                  <input type="text" placeholder='Enter name of college' name='college' value={newEducation.college} onChange={handleInputChange} />
+                  <Input type="text" placeholder='Enter name of college' name='college' value={newEducation.college} onChange={handleInputChange} />
 
                   <label htmlFor="started">Started Date</label>
-                  <input type="date" name='startDate' value={newEducation.startDate} onChange={handleInputChange} />
+                  <Input type="date" name='startDate' value={newEducation.startDate} onChange={handleInputChange} />
 
                   <label htmlFor="passedYear">Passed Date</label>
-                  <input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
+                  <Input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
 
                   <div className="submitAndCloseBtns">
                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                   </div>
-                </form>
+                </Form>
               </div>
             )}
             {isAddButtonVisible && (<button className='addNewEducationbtn' onClick={hanldeAddEducation}><i className='fas fa-plus'></i> Add Education</button>)}
