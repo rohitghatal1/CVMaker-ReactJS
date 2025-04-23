@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './experience.css'
-import { Input } from 'antd';
+import { Form, Input } from 'antd';
 
 export default function Experience({ goToPreviousStep, goToNextStep }) {
 
@@ -101,7 +101,7 @@ export default function Experience({ goToPreviousStep, goToNextStep }) {
                         <p>New details</p>
 
                         {isModalOpen && <div className="addExperienceModal">
-                            <form className='addExperienceForm' onSubmit={submitExperienceForm}>
+                            <Form className='addExperienceForm' onFinish={submitExperienceForm}>
                                 <label htmlFor="title">Job Title</label>
                                 <Input type="text" name='jobTitle' value={newExperience.jobTitle} onChange={handleInputChange} />
 
@@ -121,7 +121,7 @@ export default function Experience({ goToPreviousStep, goToNextStep }) {
                                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>
                                     <button className='closeBtn' onClick={handleCloseForm}>Close</button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>
                         }
 

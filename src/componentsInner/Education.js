@@ -13,7 +13,6 @@ export default function Education({ goToPreviousStep, goToNextStep }) {
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
   const [isModalOpen, setisModalOpen] = useState(false);
 
-  //load existing education data from local sotrage when component mounts
   useEffect(() => {
     const storedEducation = JSON.parse(localStorage.getItem('educationData'));
     if (storedEducation) {
