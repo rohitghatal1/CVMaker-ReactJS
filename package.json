@@ -11,6 +11,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.24.7",
+    "dayjs": "^1.11.13",
     "html2pdf.js": "^0.10.2",
     "nprogress": "^0.2.0",
     "postcss": "^8.5.3",
