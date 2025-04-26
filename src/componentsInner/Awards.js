@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './awards.css'
-import { faL } from '@fortawesome/free-solid-svg-icons';
-import { Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 
 export default function Awards({ goToPreviousStep, goToNextStep }) {
@@ -118,8 +117,8 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
                 <textarea rows={5} placeholder="Describe about the award" name='description' value={newAwards.description} onChange={handleInputChange}></textarea>
 
                 <div className="submitAndCloseBtns">
-                  <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
-                  <button className='closeBtn' onClick={handleCloseForm}>Close</button>
+                  <Button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</Button>
+                  <Button className='closeBtn' onClick={handleCloseForm}>Close</Button>
                 </div>
 
               </Form>
@@ -129,8 +128,8 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <Button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</Button>
+            <Button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></Button>
           </div>
         </section>
       </div>
