@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import templateData from '../templateSelector/templateData';
 import './templates.css';
+import { Button } from 'antd';
 
 export default function Templates() {
   const [currentSlide, setCurrentSlide] = useState(0); // For keeping track of the current slide
@@ -37,7 +38,7 @@ export default function Templates() {
         <div className="templateContainer">
           {/* Swiper Frame */}
           <div className="customSwiper">
-            <button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>&#60;</button>
+            <Button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>&#60;</Button>
             <div className="swiperWrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
               {templateData.map((template, index) => (
                 <div className="swiperSlide" key={template.id}>
@@ -52,7 +53,7 @@ export default function Templates() {
                 </div>
               ))}
             </div>
-            <button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>&#62;</button>
+            <Button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>&#62;</Button>
           </div>
           {/* Pagination */}
           <div className="pagination">
@@ -65,7 +66,7 @@ export default function Templates() {
             ))}
           </div>
         </div>
-        <button className="seeMoreTemplateBtn" onClick={handleSeeMore}>See More...</button>
+        <Button className="seeMoreTemplateBtn" onClick={handleSeeMore}>See More...</Button>
       </section>
     </div>
   );

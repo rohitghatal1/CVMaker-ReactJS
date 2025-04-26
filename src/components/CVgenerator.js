@@ -10,7 +10,6 @@ import Achievements from '../componentsInner/Achievements';
 import FinalCV from './FinalCV';
 import Awards from '../componentsInner/Awards';
 import Hobbies from '../componentsInner/Hobbies';
-import { Form, Input } from "antd";
 
 export default function CVgenerator() {
     const [activeStep, setActiveStep] = useState('Templates');

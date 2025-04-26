@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './projects.css'
-import { Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 
 export default function Projects({ goToPreviousStep, goToNextStep }) {
 
@@ -102,8 +102,8 @@ export default function Projects({ goToPreviousStep, goToNextStep }) {
           </div>
 
           <div className="nextAndBackBtn">
-            <button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</button>
-            <button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></button>
+            <Button className='prevBtn' onClick={goToPreviousStep}><i class="fa-solid fa-arrow-left"></i> Previous</Button>
+            <Button className='nextBtn' onClick={goToNextStep}>Next <i class="fa-solid fa-arrow-right"></i></Button>
           </div>
         </section>
       </div>
