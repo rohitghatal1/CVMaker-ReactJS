@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './awards.css'
 import { Button, Form, Input } from 'antd';
-import { useForm } from 'antd/es/form/Form';
 
 export default function Awards({ goToPreviousStep, goToNextStep }) {
-  const [awardForm] = useForm();
+  const [awardForm] = Form.useForm();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddButtonVisible, setIsAddButtonVisible] = useState(true);
 
@@ -76,8 +75,8 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
         <section className="awardsSection">
           <div className="addedAwards">
             <p>Added Awards</p>
-            {award.length > 0 ? (
-              award.map((Award, index) => (
+            {award?.length > 0 ? (
+              award?.map((Award, index) => (
                 <div className="awardItem" key={index}>
                   <div className="title">
                     <span>{Award.awardTitle}</span>
