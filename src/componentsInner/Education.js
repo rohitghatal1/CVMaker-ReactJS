@@ -61,17 +61,17 @@ export default function Education({ goToPreviousStep, goToNextStep }) {
         <section className='educationSection'>
           <div className="currentEducationDetails">
             <p>Current Details:</p>
-            {education.length > 0 ? (
-              education.map((edu, index) => (
+            {education?.length > 0 ? (
+              education?.map((edu, index) => (
                 <div className="educationItem" key={index}>
                   <div className="degree">
-                    <span>{edu.degree}</span>
+                    <span>{edu?.degree}</span>
                     <button className='deleteEducationBtn' onClick={() => deleteEducation(index)}><i className='fas fa-trash'></i></button>
                   </div>
                   <div className="collegeDetail">
-                    <p><strong>College:</strong> {edu.college}</p>
-                    <p><strong>Start Date:</strong> {edu.startDate}</p>
-                    <p><strong>Passed Date:</strong> {edu.passDate}</p>
+                    <p><strong>College:</strong> {edu?.college}</p>
+                    <p><strong>Start Date:</strong> {edu?.startDate}</p>
+                    <p><strong>Passed Date:</strong> {edu?.passDate}</p>
                   </div>
                 </div>
               ))
@@ -94,10 +94,10 @@ export default function Education({ goToPreviousStep, goToNextStep }) {
                   <Input type="text" placeholder='Enter name of college' name='college' value={newEducation.college} onChange={handleInputChange} />
 
                   <label htmlFor="started">Started Date</label>
-                  <Input type="date" name='startDate' value={newEducation.startDate} onChange={handleInputChange} />
+                  <Input type="date" name='startDate' value={newEducation?.startDate} onChange={handleInputChange} />
 
                   <label htmlFor="passedYear">Passed Date</label>
-                  <Input type="date" name='passDate' value={newEducation.passDate} onChange={handleInputChange} />
+                  <Input type="date" name='passDate' value={newEducation?.passDate} onChange={handleInputChange} />
 
                   <div className="submitAndCloseBtns">
                     <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>

@@ -83,9 +83,9 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
                     <button className='deleteAwardBtn' onClick={() => deleteAward(index)}><i className='fas fa-trash'></i></button>
                   </div>
                   <div className="awardDetails">
-                    <p>{Award.organization}</p>
-                    <p>{Award.location}</p>
-                    <p>{Award.receivedYear}</p>
+                    <p>{Award?.organization}</p>
+                    <p>{Award?.location}</p>
+                    <p>{Award?.receivedYear}</p>
                     <p>{Award.description}</p>
                   </div>
                 </div>
@@ -101,16 +101,16 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
               <Form onFinish={submitAwardForm} form={awardForm}>
 
                 <label htmlFor="awardTitle">Title</label>
-                <Input type="text" placeholder='eg: Best employee award' name='awardTitle' value={newAwards.awardTitle} onChange={handleInputChange} />
+                <Input type="text" placeholder='eg: Best employee award' name='awardTitle' value={newAwards?.awardTitle} onChange={handleInputChange} />
 
                 <label htmlFor="organization">Organization</label>
-                <Input type="text" placeholder='organization' name='organization' value={newAwards.organization} onChange={handleInputChange} />
+                <Input type="text" placeholder='organization' name='organization' value={newAwards?.organization} onChange={handleInputChange} />
 
                 <label htmlFor="location">Location</label>
-                <Input type="text" placeholder='location' name='location' value={newAwards.location} onChange={handleInputChange} />
+                <Input type="text" placeholder='location' name='location' value={newAwards?.location} onChange={handleInputChange} />
 
                 <label htmlFor="receivedYear">Received Year</label>
-                <Input type="text" placeholder='receivedYear' name='receivedYear' value={newAwards.receivedYear} onChange={handleInputChange} />
+                <Input type="text" placeholder='receivedYear' name='receivedYear' value={newAwards?.receivedYear} onChange={handleInputChange} />
 
                 <label htmlFor="desc">Description</label>
                 <textarea rows={5} placeholder="Describe about the award" name='description' value={newAwards.description} onChange={handleInputChange}></textarea>
