@@ -66,11 +66,11 @@ export default function Projects({ goToPreviousStep, goToNextStep }) {
         <section className="projectsSection">
           <div className="addedProjects">
             <p>Current Projects</p>
-            {projects.length > 0 ? (
-              projects.map((project, index) => (
+            {projects?.length > 0 ? (
+              projects?.map((project, index) => (
                 <div className="projectItem" key={index}>
                   <div className="projectTitleAndDeleteBtn">
-                    <span>{project.projectTitle}</span>
+                    <span>{project?.projectTitle}</span>
                     <button className='deleteProjectBtn' onClick={() => deleteProject(index)}><i className='fas fa-trash'></i></button>
                   </div>
                   <p>{project.projectDesc}</p>
@@ -86,10 +86,10 @@ export default function Projects({ goToPreviousStep, goToNextStep }) {
             {isModalOpen && <div className="addNewProjectModal">
               <Form className='projectForm' onFinish={submitExperienceForm}>
                 <label htmlFor="pTitle">Project Title</label>
-                <Input type="text" name="projectTitle" placeholder='Title of your project' value={newProjects.projectTitle} onChange={handleInputChange} />
+                <Input type="text" name="projectTitle" placeholder='Title of your project' value={newProjects?.projectTitle} onChange={handleInputChange} />
 
                 <label htmlFor="pDescription">Description</label>
-                <Input type="text" name='projectDesc' placeholder='tell what your project is about' value={newProjects.projectDesc} onChange={handleInputChange} />
+                <Input type="text" name='projectDesc' placeholder='tell what your project is about' value={newProjects?.projectDesc} onChange={handleInputChange} />
 
                 <div className="submitAndCloseBtns">
                   <button type='submit' className='submitBtn'><i class="fa-regular fa-paper-plane"></i> Submit</button>

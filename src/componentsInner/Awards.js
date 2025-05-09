@@ -113,7 +113,7 @@ export default function Awards({ goToPreviousStep, goToNextStep }) {
                 <Input type="text" placeholder='receivedYear' name='receivedYear' value={newAwards?.receivedYear} onChange={handleInputChange} />
 
                 <label htmlFor="desc">Description</label>
-                <textarea rows={5} placeholder="Describe about the award" name='description' value={newAwards.description} onChange={handleInputChange}></textarea>
+                <textarea rows={5} placeholder="Describe about the award" name='description' value={newAwards?.description} onChange={handleInputChange}></textarea>
 
                 <div className="submitAndCloseBtns">
                   <Button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</Button>
