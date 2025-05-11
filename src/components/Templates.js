@@ -5,12 +5,12 @@ import './templates.css';
 import { Button } from 'antd';
 
 export default function Templates() {
-  const [currentSlide, setCurrentSlide] = useState(0); // For keeping track of the current slide
-  const slidesPerPage = 2; // Number of visible slides per frame
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesPerPage = 2;
 
   const totalSlides = Math.ceil(templateData.length / slidesPerPage);
 
-  //initializing useNavigate hook
+
   const goToTemplate = useNavigate();
 
   const handleSeeMore = () => {
@@ -36,7 +36,7 @@ export default function Templates() {
         <h2>Here are the Best <span>Template Designs</span> for you</h2>
         <p>An outstanding resume opens the door. A great interview seals the deal</p>
         <div className="templateContainer">
-          {/* Swiper Frame */}
+
           <div className="customSwiper">
             <Button className="prevBtn" onClick={goPrev} disabled={currentSlide === 0}>&#60;</Button>
             <div className="swiperWrapper" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -55,7 +55,7 @@ export default function Templates() {
             </div>
             <Button className="nextBtn" onClick={goNext} disabled={currentSlide === totalSlides - 1}>&#62;</Button>
           </div>
-          {/* Pagination */}
+
           <div className="pagination">
             {Array.from({ length: totalSlides }, (_, i) => (
               <span
@@ -66,6 +66,7 @@ export default function Templates() {
             ))}
           </div>
         </div>
+
         <Button className="seeMoreTemplateBtn" onClick={handleSeeMore}>See More...</Button>
       </section>
     </div>
