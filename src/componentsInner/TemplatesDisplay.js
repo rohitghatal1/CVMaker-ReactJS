@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './templatesDisplay.css';
 import templateData from '../templateSelector/templateData';
-// import BasicTemplate from '../allTemplates/basicTemplate/BasicTemplate';
 
 export default function TemplatesDisplay({ selectedTemplate, setSelectedTemplate, goToNextStep }) {
-  const [selectedCardId, setSelectedCardId] = useState(null); // Track selected card ID
+  const [selectedCardId, setSelectedCardId] = useState(null);
 
   const handleCardClick = (template) => {
     setSelectedTemplate(template?.component);
-    setSelectedCardId(template.id); // Set the clicked template's ID as selected
+    setSelectedCardId(template?.id);
   };
 
   return (

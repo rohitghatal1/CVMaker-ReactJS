@@ -56,10 +56,10 @@ export default function Hobbies({ goToPreviousStep, goToNextStep }) {
                     <div className="currentHobbies">
                         <p>Hobbies</p>
                         <div className="hobbiesContainer">
-                            {hobbies.length > 0 ? (
-                                hobbies.map((hobby, index) => (
+                            {hobbies?.length > 0 ? (
+                                hobbies?.map((hobby, index) => (
                                     <div className="hobbieItem" key={index}>
-                                        <p>{hobby.hobbieName}</p>
+                                        <p>{hobby?.hobbieName}</p>
                                         <button className='deleteHobbyBtn' onClick={() => deleteHobbie(index)}><i className='fas fa-trash'></i></button>
                                     </div>
                                 ))
