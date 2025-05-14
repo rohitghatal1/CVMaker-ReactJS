@@ -54,21 +54,24 @@ export default function Achievements({ goToPreviousStep, generateCV }) {
     return (
         <div>
             <div className="achievementComponent">
+
                 <h2>Achievements</h2>
                 <p>Describe about what you have achieved yet</p>
 
                 <section className="achievementSection">
                     <div className="addedAchievement">
+
                         <p>Achievements</p>
+
                         <div className="achievementsContainer">
-                            {achievements.length > 0 ? (
-                                achievements.map((achievement, index) => (
+                            {achievements?.length > 0 ? (
+                                achievements?.map((achievement, index) => (
                                     <div className="achievementItem" key={index}>
                                         <div className="titleAndDeleteBtn">
-                                            <span>{achievement.title}</span>
+                                            <span>{achievement?.title}</span>
                                             <button className='deleteAchievementBtn' onClick={() => deleteAchievement(index)}><i className='fas fa-trash'></i></button>
                                         </div>
-                                        <p>{achievement.desc}</p>
+                                        <p>{achievement?.desc}</p>
                                     </div>
                                 ))
                             ) : (
@@ -83,10 +86,10 @@ export default function Achievements({ goToPreviousStep, generateCV }) {
                         {isModalOpen && <div className="achievementModal">
                             <Form onFinish={submitAchievementForm}>
                                 <label htmlFor="title">Title</label>
-                                <Input type="text" placeholder='What did you achieve?' value={newAchievement.title} onChange={(e) => setNewAchievement({ ...newAchievement, title: e.target.value })} />
+                                <Input type="text" placeholder='What did you achieve?' value={newAchievement?.title} onChange={(e) => setNewAchievement({ ...newAchievement, title: e.target.value })} />
 
                                 <label htmlFor="Description">Description</label>
-                                <Input.TextArea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></Input.TextArea>
+                                <Input.TextArea rows={5} placeholder='Write a short deescription about your achievement!!' value={newAchievement?.desc} onChange={(e) => setNewAchievement({ ...newAchievement, desc: e.target.value })}></Input.TextArea>
 
                                 <div className="submitAndCloseBtns">
                                     <button type='submit' className='submitBtn'><i className="fa-regular fa-paper-plane"></i> Submit</button>
