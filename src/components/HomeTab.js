@@ -1,11 +1,10 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import Templates from './Templates';
 import './home.css'
 
 export default function HomeTab() {
     const goToCVgenerator = useNavigate();
-    
+
     const goToGenerator = () => {
         goToCVgenerator('/cvgenerator')
     }
@@ -20,6 +19,7 @@ export default function HomeTab() {
                     <button className='getStartedbtn' onClick={goToGenerator}>Get Started !</button>
                 </div>
             </div>
+
             <section className="stepsInfo">
                 <div className="stepsContainer">
                     <h2>Create your perfect Resume in just few easy steps</h2>
