@@ -2,7 +2,6 @@ import React from 'react';
 import './professionalTemplate.css';
 
 export default function ProfessionalTemplate() {
-    // Fetch data from localStorage
     const storedPersonalData = localStorage.getItem('personalInfo');
     const personalData = storedPersonalData ? JSON.parse(storedPersonalData) : [];
 
@@ -36,10 +35,12 @@ export default function ProfessionalTemplate() {
                         <hr />
                         {personalData.map((personal, index) => (
                             <div key={index}>
+
                                 <p><strong>Name</strong><br /><span>{personal.fName} {personal.lName}</span></p>
                                 <p><strong>Address</strong><br /><span>{personal.PAddress}, {personal.city}</span></p>
                                 <p><strong>Phone number</strong><br /><span>{personal.contactNo}</span></p>
                                 <p><strong>Email</strong><br /><span>{personal.email}</span></p>
+
                                 {socialLinks.length > 0 && socialLinks.map((social, index) => (
                                     <p key={index}><strong>{social.platform}</strong><br /><span>{social.url}</span></p>
                                 ))}

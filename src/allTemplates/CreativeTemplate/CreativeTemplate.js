@@ -1,11 +1,9 @@
 import React from 'react';
-import personPhoto from '../../assets/personPhotos/rohit2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './creativeTemplate.css';
 
 export default function CreativeTemplate() {
-    // Fetch data from localStorage
     const storedUserPhoto = localStorage.getItem('userPhoto');
     const userPhoto = storedUserPhoto ? storedUserPhoto : null;
 
@@ -38,6 +36,7 @@ export default function CreativeTemplate() {
                             <FontAwesomeIcon icon={faUser} size="6x" />
                         )}
                     </div>
+
                     <div className="infoAndSkills">
                         {personalData.length > 0 && personalData.map((personal, index) => (
                             <div key={index} className="personInfo">
@@ -45,7 +44,9 @@ export default function CreativeTemplate() {
                                 <p>{personal.speciality}</p>
                             </div>
                         ))}
+
                         <hr />
+                        
                         <div className="contactAndSkills">
                             {skillData.length > 0 && (
                                 <div className="skills">
