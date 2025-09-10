@@ -3,7 +3,6 @@ import NProgress from 'nprogress';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import LoginSignupForm from './components/LoginSignupForm';
 import './App.css';
-import AboutUs from './components/AboutUs';
 import CVgenerator from './components/CVgenerator';
 import Footer from './components/Footer';
 import HomeTab from './components/HomeTab';
@@ -48,7 +47,6 @@ function MainContent() {
 
   useEffect(() => {
     NProgress.start();
-  
 
     NProgress.done();
   
@@ -66,7 +64,6 @@ function MainContent() {
         <Route path='/' element={<HomeTab />} />
         <Route path='/templateTab' element={<TemplateTab />} />
         <Route path='/cvgenerator' element={<CVgenerator />} />
-        <Route path='/about' element={<AboutUs />} />
       </Routes>
       {showFooter && <Footer />}
     </>
